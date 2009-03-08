@@ -1,0 +1,82 @@
+team:         Team
+race:         Race
+treasury:     Treasury
+headcoach:    Headcoach
+rerolls:      Rerolls
+fanfactor:    Fanfactor
+assistants:   Assistants
+cheerleaders: Cheerleader
+apothecary:   Apothecary
+value:        Value
+teamvalue:    Total Value of Team
+
+teampics_label: Customize Teampics
+teampics_text: |
+ Why don't you just enter the filenames of the pictures you want to use.
+ Player without custom pics will use the default pictures.
+
+background_label: Write Background
+background_text: Write a background for your team!
+
+player: Player
+journeymen: Journeymen
+journeymen_manage: manage
+journeymen_text: |
+ You may hire one or more of the journeymen you used after a match.
+ Simply click on the corresponding number (non-journeymen are not shown).
+
+skills: Skills
+skills_own: Own Skills
+skills_normal: Normal Repertory
+skills_double: Double Repertory
+skills_forbidden: Forbidden Skills
+
+stats: Stats
+stats_ma: MA
+stats_st: ST
+stats_ag: AG
+stats_av: AV
+
+injuries: Injuries
+injuries_mng: Miss Next Game
+injuries_m: "M"
+injuries_niggling: Niggling Injury
+injuries_n: "N"
+injuries_ok: Ready for Action
+
+button_edit: Edit
+button_close: Close
+button_add: Add
+button_remove: Remove
+button_cancel: Cancel
+button_validate: Validate
+button_return: Return to Start
+
+save: Save Roster
+
+player_name: Player´s Name
+player_position: Position
+
+spp: SPP
+spp_comp: COM
+spp_td: TD
+spp_int: INT
+spp_cas: CAS
+spp_mvp: MVP
+
+js_warnings:
+ - You cannot have more than
+ - You are not elligible for journeymen. Players fielded
+ - Please select a position for this player.
+ - You may not edit journeymen.
+ - Characteristics may not be increased by more than 2 points or above 10.
+ - Characteristics may not be decreased by more than 2 points or below 1.
+ - You cannot remove a starting skill.
+ - You cannot remove a stat increase!
+ - Value must be an integer.
+ - Please close the other open box.
+ - Up to 8 rerolls are allowed per team.
+ - Your team is excluded from the use of an apothecary.
+ - You may use up to one apothecary.
+ - You need a fancy name for your team!
+ - This player is already missing his next match.

@@ -1,0 +1,12 @@
+#skill_box, #inj_box, #jm_box, #pic_box, #background_box, h1, h2, a, p.control { display: none; }
+select, input { border-style: hidden; }
+table { border-collapse: collapse; border: 2px solid black; margin: 5px; padding: 0px; }
+td, tr { border: 1px solid gray; margin: 0px; padding: 2px; }
+tr.label { text-align: center; border-bottom: 2px solid black; }
+tr.separator { border-top: 2px solid black; }
+input.injured { text-decoration: line-through; }
+@page { size:landscape; }
+input.stats, input.spp, input.extras {
+    text-align: center;
+    width: 2em;
+}

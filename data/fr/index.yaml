@@ -1,0 +1,12 @@
+intro: |
+ Ce site t'aidera à gérer tes fichiers d'équipe de Tow Bowl Tactics.
+ Tu peux soit commencer une nouvelle équipe en choisissant une des races qui suit, 
+ ou bien charger une fiche d'équipe sauvegardée dans le format xml.
+ 
+new: Commencer une nouvelle équipe
+invalid_race: Selection d'équipe invalide.
+load: Charger une équipe sauvegardée
+
+upload_label: Envoyer ce fichier
+upload_error: Choisi un fichier.
+upload_submit: Envoyer

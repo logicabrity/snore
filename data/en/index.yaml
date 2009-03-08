@@ -1,0 +1,12 @@
+intro: |
+ This site will help you to manage your Tow Bowl Tactics Teamroster.
+ You can either start with a new team, choosing one of the following races,
+ or load a previously saved teamsheet in the xml format.
+
+new: Start a fresh team
+invalid_race: Invalid race selection.
+load: Load a saved team
+
+upload_label: Send this file
+upload_error: Please upload a file.
+upload_submit: Submit

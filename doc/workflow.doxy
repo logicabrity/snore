@@ -1,0 +1,62 @@
+/**
+
+@page Workflow
+@dontinclude index.php
+
+@section sec1 Program Flow
+
+The file index.php in the base directory controls the
+application's flow, which is composed of 4 different
+actions:
+- the user can save a roster he filled out
+- show an empty roster for a race the user selected
+- load a roster the user uploaded and show it
+- show the welcome page which serves as a gate for
+  the requests the user can make
+
+@section sec2 The four different actions
+
+To determine what to do, the application checks
+PHP's POST and GET variables in a specific order.
+
+@subsection sub1 Saving
+
+@skipline if
+@until }
+If $_POST['TEAM'] is set, it means the user has filled
+out a roster and clicked the submit button. The data
+is then delegated to the TeamSaver class, which processes
+the input and returns XML, which is presented to the user.
+
+@subsection sub2 New Roster
+
+If a valid race was selected, show an empty roster for
+that race.
+@skip elseif
+@until show_roster
+But if it is not valid, the user is redirected to the
+welcome page.
+@skip else
+@until show_index
+
+@subsection sub3 Loading
+
+If $_POST['upload'] is set, the user uploaded a roster.
+@skipline elseif
+The roster is loaded, and the roster is shown:
+@skipline $team
+@line show_roster
+Again, if there was a problem, the user is redirected to
+the welcome page. The var getError_upload is set to toggle
+the display of a warning to the user.
+@skipline getError
+@until show_index
+
+@subsection sub4 Default
+
+Finally, if nothing happened, show the welcome-page.
+
+@skip else
+@until }
+
+*/

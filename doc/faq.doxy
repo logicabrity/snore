@@ -1,0 +1,66 @@
+/**
+
+@page FAQ Frequently Anticipated Questions
+
+@section Installation How do I install SNORE?
+
+Copy all the files to your web server. The latter will need write
+access to the folders under @em views/tmp.
+
+SNORE was tested with Apache and Lighttpd, and will only work with
+version 5 of PHP (to the technically inclined: because of the use
+of the XmlWriter and XmlReader class).
+
+@section Smarty Do I need the Smarty Template Engine?
+
+SNORE comes bundled with the smarty template engine. You will
+find the installation in your snore directory under @em libs/smarty.
+
+However, if you want to use your own installation of smarty, feel free
+to adapt the line
+
+@code
+require_once PROJECT_DIR.'/libs/smarty/Smarty.class.php';
+@endcode
+
+in the config.php to point to the right file.
+
+@section Languages How do I add support for another language?
+
+- copy one of the existing folders in data (like 'en' for instance)
+
+- translate all the files inside it
+ - don't touch the tags in the xml files
+ - don't change the filenames
+ - don't change the order of the skills in skills.yaml
+
+- in @em config.php, add the short name of your language
+  (which has to be the same name as the directory) to
+  the $allowed_languages array.
+  @code
+    // Example:
+    $allowed_languages = array('en','de','fr'); // old
+    $allowed_languages = array('en','de','fr','es'); // new
+  @endcode
+
+- now you need to display the new language to the user so he can chose it.
+  In @em views/templates/index.tpl add another html block like the one beetween
+  line 20 and 23.
+  Example, for spanish:
+  @code
+  <form action="index.php" method="post" style="float: left;">
+   <input type="hidden" name="lang" value="es"></input>
+   <button type="submit"><img src="data/es/flag.jpg" alt="spanish flag" /></button>
+  </form>
+  @endcode
+
+@section How do I change the translated races.xml files automatically according to the english version?
+
+Assuming you don't want to touch the translated tages, do from the data directory: (replace fr with whatever you need)
+@code
+diff -C 1 --ignore-matching-lines="<title>\|<skill>\|<race \|<background>" fr/races.xml en/races.xml > fr/en.diff
+patch -p0 < fr/en.diff
+@endcode
+This creates a diff file which ignores the title, skill, race and background tags.
+
+*/

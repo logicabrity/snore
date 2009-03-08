@@ -1,0 +1,82 @@
+team:         Equipe
+race:         Race
+treasury:     Trésor
+headcoach:    Entraineur
+rerolls:      Relances
+fanfactor:    Popularité
+assistants:   Assistants
+cheerleaders: Pompon-Girls
+apothecary:   Secouriste
+value:        Coût
+teamvalue:    Coût Total
+
+teampics_label: Modifier les Images
+teampics_text: |
+ Entre le noms des fichiers que tu veux utiliser comme image. Une case vide
+ sera remplacée par l'image par défaut.
+
+background_label: Historique
+background_text: Écris l´histoire de ton équipe!
+
+player: Joueur
+journeymen: Journaliers
+journeymen_manage: gérer
+journeymen_text: |
+ Tu peux engager un des journaliers que tu as utilisé en cliquant dessus.
+ (les joueurs normaux ne sont pas montrés)
+
+skills: Compétences
+skills_own: Propres comp.
+skills_normal: Répertoire normal
+skills_double: Répertoire double
+skills_forbidden: Comp. interdites
+
+stats: Caractéristiques
+stats_ma: M
+stats_st: F
+stats_ag: AG
+stats_av: AR
+
+injuries: Blessures
+injuries_mng: manque un match
+injuries_m: "M"
+injuries_niggling: blessure persistante
+injuries_n: "N"
+injuries_ok: guéri
+
+button_edit: Editer
+button_close: Fermer
+button_add: Ajouter
+button_remove: Enlever
+button_cancel: Annuler
+button_validate: Affirmer
+button_return: Retourner à l´index
+
+save: Sauvegarder la Fiche
+
+player_name: Nom
+player_position: Position
+
+spp: SPP
+spp_comp: COM
+spp_td: TD
+spp_int: INT
+spp_cas: CAS
+spp_mvp: MVP
+
+js_warnings:
+ - Tu ne peux pas avoir plus de
+ - Tu n as pas accès aux journaliers. Joueurs:
+ - Choisis une position pour ce joueur.
+ - Tu ne peux pas modifier les caractéristiques d'un journalier.
+ - Une caractéristique ne peut pas être augmentée de plus de 2 points ou au-delà de 10.
+ - Une caractéristique ne peut pas être diminuée de plus de 2 points ou en-deça de 1.
+ - Tu ne peux pas supprimer une compétence de départ!
+ - Tu ne peux pas supprimer une augmentation de caractéristique!
+ - La valeur doit être entière.
+ - Ferme d'abord l'autre fenetre.
+ - Un maximum de 8 relances est autorisé par équipe.
+ - Ton équipe ne peut pas engager d'apothicaire.
+ - Tu as droit à un apothicaire au maximum.
+ - Il faut un nom original pour ton équipe!
+ - Ce joueur manque déja son prochain match.

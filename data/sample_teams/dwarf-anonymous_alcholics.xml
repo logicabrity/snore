@@ -1,0 +1,200 @@
+<?xml version="1.0"?>
+<team xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" BBversion="5" xsi:noNamespaceSchemaLocation="team.xsd" race="Dwarf" id="4" emblem="dwarves.jpg">
+  <name>Anonymous Alcoholics</name>
+  <coach>Ace</coach>
+  <bank></bank>
+  <reroll>2</reroll>
+  <fanfactor>3</fanfactor>
+  <assistant></assistant>
+  <cheerleader>0</cheerleader>
+  <apothecary>1</apothecary>
+  <players>
+    <player name="Olaf" number="1" position="Runner">
+      <ma>6</ma>
+      <st>3</st>
+      <ag>3</ag>
+      <av>8</av>
+      <cost>80000</cost>
+      <skill>Sure Hands</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Balin" number="2" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Durin" number="3" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Gloin" number="4" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Gimli" number="5" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Byron" number="6" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Midgard" number="7" position="Blocker">
+      <ma>4</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>9</av>
+      <cost>70000</cost>
+      <skill>Block</skill>
+      <skill>Tackle</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Kristen" number="8" position="Blitzer">
+      <ma>5</ma>
+      <st>3</st>
+      <ag>3</ag>
+      <av>9</av>
+      <cost>80000</cost>
+      <skill>Block</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Venegor" number="9" position="Blitzer">
+      <ma>5</ma>
+      <st>3</st>
+      <ag>3</ag>
+      <av>9</av>
+      <cost>80000</cost>
+      <skill>Block</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Stormhammer" number="10" position="Troll slayer">
+      <ma>5</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>8</av>
+      <cost>90000</cost>
+      <skill>Block</skill>
+      <skill>Dauntless</skill>
+      <skill>Frenzy</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+    <player name="Axebreaker" number="11" position="Troll slayer">
+      <ma>5</ma>
+      <st>3</st>
+      <ag>2</ag>
+      <av>8</av>
+      <cost>90000</cost>
+      <skill>Block</skill>
+      <skill>Dauntless</skill>
+      <skill>Frenzy</skill>
+      <skill>Thick Skull</skill>
+      <inj></inj>
+      <com></com>
+      <td></td>
+      <int></int>
+      <cas></cas>
+      <mvp></mvp>
+      <spp></spp>
+    </player>
+  </players>
+  <background>Dwarfs seem to be ideal Blood Bowl players, being compact, tough, well-armoured and having a stubborn knack of refusing to die! Most successful Dwarf teams work to the principle that if they can take out all the other team\'s potential scorers, and wear down the rest, then there won\'t be anybody left to stop them scoring the winning touchdowns!</background>
+</team>

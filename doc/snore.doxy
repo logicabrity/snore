@@ -1,0 +1,77 @@
+/**
+
+@mainpage SNORE
+@version SVN 71
+@author Marc-Antonio Bisotti
+@date 06.2008
+
+@section BloodBowl What is BloodBowl?
+@note From the Wikipedia Article http://en.wikipedia.org/wiki/Bloodbowl
+
+Blood Bowl is a two-player, turn-based board game that typically uses 28 mm miniatures
+to represent a contest between two teams on a playing field. A board containing a grid
+overlay represents the field. Using dice, cards, and counters, the players attempt to
+outscore each other by entering the opponent's end zone with a player who possesses
+the ball.
+
+The "Blood" in Blood Bowl is represented by the violent actions available to players.
+Game play is based on a hybrid of American Football, Rugby, and ultra-violent fictional
+sports events such as Rollerball. Players may attempt to injure or maim the opposition
+in order to make scoring easier by reducing the number of enemy players on the field.
+
+The player races are drawn from the ranks of fantasy races and have characteristics
+that reflect the abilities of those races. Elves tend to be agile and good at scoring,
+while Dwarves and Orcs are more suited to a grinding, physical style of play. Players
+are also divided up into positions suited to their role on the field, including
+Throwers, Catchers, and Linemen.
+
+In league play, players gain additional skills and abilities based on their
+accumulation of experience points. Players face potential injury or even death on the
+field throughout their careers. Teams improve by the purchase of off-field staff such
+as cheerleaders, assistant coaches, and apothecaries.
+
+@section TowBowlTactics What is TowBowlTactics?
+
+Towbowl Tactics est le portage informatique du célèbre jeu de plateau Blood Bowl.
+Projet né en 2001 de la volonté d'une seule personne : Pascal Bourut (Toweld), fan
+de BloodBowl et désirant retrouver sur machine les moments partagés autour d'une
+table de jeu.
+
+Depuis, de multiples versions se sont succédés suivant un rythme très aléatoire
+car on manque toujours de main d'œuvre et de compétences.
+
+SDL et IA bienvenus. Développeurs, le document de référence sur les avancées du code,
+les choix technologiques et les règles établies est à l'heure actuelle propal.pdf.
+Toute la documentation nécessaire (compilation, track...) se trouve sur le site, ici.
+Alors, si vous vous sentez une âme d'aventurier, si vous voulez participer à la
+programmation d'un jeu de football fantastique, n'hésitez pas à laisser un message sur
+le forum ou à contacter tuxrouge (admin-arobase-towbowltactics-point-com) qui se fera
+un plaisir de répondre à toutes vos questions et de vous harceler par la suite. Et,
+bien sûr, vous pouvez nous rejoindre à la taverne avec irc
+(serveur: irc.freenode.net canal: #tbt).
+
+@section SNORE What is SNORE?
+
+@subsection About1 About SNORE
+
+SNORE (Super New Online Roster Editor) is an online replacement for the paper rosters
+you would use for the board game. It helps you to keep track of your players during
+league play, or simply to line up a fresh team for your next friendly match.
+Saving and loading of rosters is supported, additionally, you can print out the
+rosters in a printer-friendly format.
+
+SNORE follows the rules of the LRB 5.0 (journeymen, grab/frenzy-exclusiveness, ...), but
+allows you to disobey the rules (you can't do so by inattention) should you wish to do so.
+
+The chosen license is the GPL V2.
+
+@subsection About2 About this Documentation
+
+This documentation tries to cover the server side of things, especially what one could
+call the Model and Controller aspects. If you want to learn about the templates, consult
+Smarty's (the used template engine) documentation here: http://www.smarty.net/docs.php
+
+To date, there is no documentation of the client side (i.e. Javascript). For help, check
+the project's forums: http://www.towbowltactics.com/e107_plugins/forum/forum.php
+
+*/

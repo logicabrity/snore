@@ -1,0 +1,82 @@
+team:         Team
+race:         Volk
+treasury:     Teamkasse
+headcoach:    Cheftrainer
+rerolls:      Training
+fanfactor:    Fan-Faktor
+assistants:   Assistenten
+cheerleaders: Cheerleader
+apothecary:   Sanitäter
+value:        Kosten
+teamvalue:    Gesamtkosten
+
+teampics_label: Teambilder ändern
+teampics_text: |
+ Gib doch einfach die Dateinamen der Bilder ein, die du benutzen möchtest.
+ Spieler ohne eigene Bilder werden die Standardbilder benutzen.
+
+background_label: Geschichte schreiben
+background_text: Schreibe eine Hintergrundgeschichte für dein Team!
+
+player: Spieler
+journeymen: Wandergesellen
+journeymen_manage: verwalten
+journeymen_text: |
+ Du kannst nach einem Spiel einen der Wandergesellen dauerhaft einstellen.
+ Klicke dazu auf die entsprechende Nummer (nicht-Gesellen werden nicht gezeigt).
+
+skills: Fähigkeiten
+skills_own: Eigene
+skills_normal: Normale
+skills_double: Pasch
+skills_forbidden: Verbotene
+
+stats: Werte
+stats_ma: BW
+stats_st: ST
+stats_ag: GE
+stats_av: RW
+
+injuries: Verletzungen
+injuries_mng: Ausfall
+injuries_m: "M"
+injuries_niggling: Bleibende Verletzung
+injuries_n: "N"
+injuries_ok: Genesen
+
+button_edit: Bearbeiten
+button_close: Schließen
+button_add: Hinzufügen
+button_remove: Entfernen
+button_cancel: Abbrechen
+button_validate: Bestätigen
+button_return: Zurück zur Hauptseite
+
+save: Teambogen speichern
+
+player_name: Spielername
+player_position: Position
+
+spp: SPP
+spp_comp: PASS
+spp_td: TD
+spp_int: ABG
+spp_cas: VSA
+spp_mvp: SDT
+
+js_warnings:
+ - Nicht erlaubt. Mehr als
+ - Dir stehen keine Wanderspieler zu. Aufgestellte Spieler
+ - Suche erst eine Position für deinen Spieler aus.
+ - Werte von Wanderspielern dürfen nicht verändert werden.
+ - Werte dürfen nicht um mehr als 2 Punkte oder über 10 erhöht werden.
+ - Werte dürfen nicht um mehr als 2 Punkte oder unter 1 verringert werden.
+ - Du darfst keine Anfangsfertigkeit entfernen.
+ - Du kannst keine Werterhöhung entfernen!
+ - Wert muss eine ganze Zahl sein. Bitte korrigier deine Eingabe.
+ - Bitte schließe das andere offene Fenster.
+ - Pro Mannschaft sind bis zu 8 Trainingsmarken erlaubt.
+ - Deine Mannschaft darf keinen Sanitäter verpflichten.
+ - Du kannst maximal einen Sanitäter verpflichten.
+ - Deine Mannschaft braucht noch einen tollen Namen!
+ - Dieser Spieler verpasst schon sein nächstes Spiel!

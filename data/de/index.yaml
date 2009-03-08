@@ -1,0 +1,12 @@
+intro: |
+ Diese Seite wird dir helfen, Deine Tow Bowl Tactics Teambögen zu
+ verwalten. Dazu kannst du entweder mit einer neuen Mannschaft anfangen,
+ oder einen bestehenden Teambogen im xml-Format laden.
+
+new: Neues Team beginnen
+invalid_race: Ungültige Mannschafts-Auswahl.
+load: Gespeicherte Mannschaft laden
+
+upload_label: Du kannst hier eine Datei hochladen
+upload_error: Bitte eine Datei hochladen.
+upload_submit: Abschicken
