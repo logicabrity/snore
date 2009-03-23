@@ -8,14 +8,15 @@
 require_once 'app/helper.php';
 require_once 'config.php';
 
-/* user submitted a roster => process it, return xml ******************************* */
+/* user saves a roster => process it, return xml ************************ */
 
 if ( isset($_POST['TEAM']) ) {
   header('Content-type: application/xml');
   header('Content-Disposition: attachment; filename="'.$_POST['TEAM'].'.xml"');
   echo TeamSaver::save($_POST);
 }
-/* user selected a race => show a roster ******************************************* */
+
+/* user selected a race => show a roster ************************************ */
 
 elseif ( isset($_GET['race']) ) {
   $race_id = htmlentities($_GET['race']);
@@ -27,7 +28,8 @@ elseif ( isset($_GET['race']) ) {
     show_index(); // race is not valid, show welcome-page instead of roster
   }
 }
-/* user uploaded a file => parse it, show a roster ********************************* */
+
+/* user uploaded a file => parse it, show a roster ************************** */
 
 elseif ( isset($_POST['upload']) ) {
   if (	$_POST['upload'] == true &&
@@ -40,7 +42,8 @@ elseif ( isset($_POST['upload']) ) {
     show_index(); // there was a problem with the upload, show welcome-page
   }
 }
-/* nothing happened => show the welcome-page *************************************** */
+
+/* nothing happened => show the welcome-page ******************************** */
 
 else {
   show_index();
