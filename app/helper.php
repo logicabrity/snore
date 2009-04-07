@@ -37,57 +37,21 @@ function __autoload($class_name) {
  * @brief shortcut for calls to the template engine
  */
 function show_index() {
-    $template = new mySmarty();
-    $cache_id = LANG;
-
-    if( !$template->is_cached('index.tpl', $cache_id) ) {
-        $template->assign('version', '1362');
-        $template->assign('t', UserInterface::get('index'));
-        $template->assign('races', Races::list_all());
-    }
-    $template->display('index.tpl', $cache_id);
+  global $errorCode;
+  $version    = '1362';
+  $t          = getTextOfPage("index", LANG);
+  $races      = translateRacesList(getRacesList(), LANG);
+  require_once "templates/index.php";
 }
 
 /**
  * @brief shortcut for calls to the template engine
  */
-function show_roster($race_id, $loaded_team=NULL) {
-    $template = new mySmarty();
-    $cache_id = LANG . $race_id;
-
-    if ( $loaded_team != NULL ) {
-      $template->caching = 0;
-      $template->assign('team', $loaded_team);
-    // to prevent showing a cached (empty!) roster:
-      $cache_id = NULL;
-    }
-
-    if( !$template->is_cached('roster.tpl', $cache_id) ) {
-        $template->assign('t', UserInterface::get('roster'));
-        $template->assign('skills', Skills::all_nested());
-        $template->assign('race', Races::get($race_id));
-    }
-    $template->display('roster.tpl', $cache_id);
-}
-
-/**
- * @brief template function to display an error message
- */
-function insert_getError_race($params) {
-    global $getError_race;
-    if ( $getError_race ) {
-        return $params['message'];
-    }
-}
-
-/**
- * @brief template function to display an error message
- */
-function insert_getError_upload($params) {
-    global $getError_upload;
-    if ( $getError_upload ) {
-        return $params['message'];
-    }
+function show_roster($raceId, $loadedTeam=NULL) {
+  $t          = getTextOfPage("roster", LANG);
+  $skills     = translateSkills(getSkillsNested(), LANG);
+  $race       = translateRaceInfo(getRaceInfo($raceId), LANG);
+  require_once "templates/roster.php";
 }
 
 ?>

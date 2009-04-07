@@ -32,11 +32,11 @@ class TeamSaver {
    * @param[in] $lang $language of the data
    * @param[out] $result xml string
    */
-  public static function save($post_data, $lang=LANG) {
+  public static function save($data, $lang=LANG) {
     $team = new TeamSaver();
-    $team->prepare($post_data);
-    $team->data = Translation::for_saving($post_data, $lang);
-    $team->race = Races::get($team->data['RACE_ID'], 'en');    
+    $team->prepare($data);
+    $team->data = $data;
+    $team->race = getRaceInfo($data['RACE_ID']);
     $team->write_team();
     //$team->correct_fullEndElement_bug(); // missing newline, see comment in function
     $result = $team->result;
@@ -159,7 +159,6 @@ class TeamSaver {
   private function write_player_attributes($index) {
     $this->XmlWriter->writeAttribute('name',$this->data['NAME'][$index]);
     $this->XmlWriter->writeAttribute('number',$index+1);
-    $race = Races::get($this->data['RACE_ID']);
     $position_id = $this->data['POSITION'][$index] - 1;
     $this->XmlWriter->writeAttribute('position', (string) $this->race->positions->position[$position_id]->title);
     $this->XmlWriter->writeAttribute('display', (string) $this->race->positions->position[$position_id]->display);

@@ -1,80 +1,74 @@
-General:
- - Blocken
- - Unerschrocken
- - Brutal
- - Abwehren
- - Rasend
- - Kicken
- - Anstoß erwarten
- - Pass verhindern
- - Profi
- - Manndeckung
- - Ball entreißen
- - Ballgefühl
- - Tackle
- - Niederringen
-Agility:
- - Fangsicher
- - Hechtsprung
- - Fliegender Tackle
- - Ausweichen
- - Abrollen
- - Springen
- - Gewandt
- - Heimtücke
- - Sprinten
- - Sprintsicher
-Passing:
- - Zielsicher
- - Abspiel
- - Hau Wech
- - Teamkapitän
- - Nerven aus Stahl
- - Wurfsicher
- - Sicherer Wurf
-Strength:
- - Tackle durchbrechen
- - Zupacken
- - Unterstützen
- - Dampfwalze
- - Knochenbrecher
- - Mehrfachblock
- - Zerquetschen
- - Standfest
- - Starker Wurfarm
- - Robust
-Mutation:
- - Große Hand
- - Klaue
- - Abstoßendes Aussehen
- - Zusätzliche Arme
- - Widerlicher Auftritt
- - Hörner
- - Klammerschwanz
- - Tentakel
- - Zwei Köpfe
- - Sehr lange Beine
-Extraordinary:
- - Nimmersatt
- - Ball und Kette
- - Blutlust
- - Bombardier
- - Blöd
- - Kettensäge
- - Verrotten
- - Fan Liebling
- - Hypnotischer Blick
- - Einzelgänger
- - Keine Hände
- - Nurgles Verwesung
- - Saublöd
- - Regeneration
- - Lebensmüde
- - Geheimwaffe
- - Stich
- - Pfahl
- - Kleinwüchsig
- - Wurzeln schlagen
- - Mitspieler werfen
- - Winzling
- - Tobende Bestie
+Block: Blocken
+Dauntless: Unerschrocken
+Dirty Player: Brutal
+Fend: Abwehren
+Frenzy: Rasend
+Kick: Kicken
+Off Return: Anstoß erwarten
+Pass Block: Pass verhindern
+Pro: Profi
+Shadowing: Manndeckung
+Strip Ball: Ball entreißen
+Sure Hands: Ballgefühl
+Tackle: Tackle
+Wrestle: Niederringen
+Catch: Fangsicher
+Diving Catch: Hechtsprung
+Diving Tackle: Fliegender Tackle
+Dodge: Ausweichen
+Jump Up: Abrollen
+Leap: Springen
+Side Step: Gewandt
+Sneaky Git: Heimtücke
+Sprint: Sprinten
+Sure Feet: Sprintsicher
+Accurate: Zielsicher
+Dump Off: Abspiel
+Hail Mary Pass: Hau Wech
+Leader: Teamkapitän
+Nerves of Steel: Nerven aus Stahl
+Pass: Wurfsicher
+Safe Throw: Sicherer Wurf
+Break Tackle: Tackle durchbrechen
+Grab: Zupacken
+Guard: Unterstützen
+Juggernaut: Dampfwalze
+Mighty Blow: Knochenbrecher
+Multiple Block: Mehrfachblock
+Piling On: Zerquetschen
+Stand Firm: Standfest
+Strong Arm: Starker Wurfarm
+Thick Skull: Robust
+Big Hand: Große Hand
+Claws: Klaue
+Disturbing Presence: Abstoßendes Aussehen
+Extra Arms: Zusätzliche Arme
+Foul Appearance: Widerlicher Auftritt
+Horns: Hörner
+Prehensile Tail: Klammerschwanz
+Tentacles: Tentakel
+Two Heads: Zwei Köpfe
+Very Long Legs: Sehr lange Beine
+Always Hungry: Nimmersatt
+Ball and Chain: Ball und Kette
+Blood Lust: Blutlust
+Bombardier: Bombardier
+Bone-Head: Blöd
+Chainsaw: Kettensäge
+Decay: Verrotten
+Fan Favourite: Fan Liebling
+Hypnotic Gaze: Hypnotischer Blick
+Loner: Einzelgänger
+No Hands: Keine Hände
+Nurgle's Rot: Nurgles Verwesung
+Really Stupid: Saublöd
+Regeneration: Regeneration
+Right Stuff: Lebensmüde
+Secret Weapon: Geheimwaffe
+Stab: Stich
+Stakes: Pfahl
+Stunty: Kleinwüchsig
+Take Root: Wurzeln schlagen
+Throw Team-Mate: Mitspieler werfen
+Titchy: Winzling
+Wild Animal: Tobende Bestie

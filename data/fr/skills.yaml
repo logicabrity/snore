@@ -1,80 +1,74 @@
-General:
- - Blocage
- - Intrépidité
- - Joueur Vicieux
- - Parade
- - Frénésie
- - Frappe Précise
- - Anticipation
- - Blocage de Passe
- - Pro
- - Poursuite
- - Arracher le Ballon
- - Dextérité
- - Tacle
- - Lutte
-Agility:
- - Réception
- - Plongeon
- - Tacle Plongeant
- - Esquive
- - Bond
- - Saut
- - Glissade Contrôlée
- - Sournois
- - Sprint
- - Equilibre
-Passing:
- - Précision
- - Passe Rapide
- - La Main de Dieu
- - Chef
- - Nerfs d'Acier
- - Passe
- - Lancer Précis
-Strength:
- - Esquive en Force
- - Projection
- - Garde
- - Juggernaut
- - Châtaigne
- - Blocage Multiple
- - Ecrasement
- - Stabilité
- - Costaud
- - Crâne Epais
-Mutation:
- - Main Démesurée
- - Pinces ou Griffes
- - Présence Perturbante
- - Bras Supplémentaires
- - Répulsion
- - Cornes
- - Queue Préhensile
- - Tentacules
- - Deux Têtes
- - Très Longues Jambes
-Extraordinary:
- - Toujours Affamé
- - Chaîne et Boulet
- - Soif de Sang
- - Bombardier
- - Cerveau Lent
- - Tronçonneuse
- - Décomposition
- - Idole des Foules
- - Regard Hypnotique
- - Solitaire
- - Manchot
- - Pourriture de Nurgle
- - Gros Débile
- - Régénération
- - Poids Plume
- - Arme Secrète
- - Poignard
- - Pieux
- - Minus
- - Prendre Racine
- - Lancer un Coéquipier
- - Microbe
- - Animal Sauvage
+Block: Blocage
+Dauntless: Intrépidité
+Dirty Player: Joueur Vicieux
+Fend: Parade
+Frenzy: Frénésie
+Kick: Frappe Précise
+Off Return: Anticipation
+Pass Block: Blocage de Passe
+Pro: Pro
+Shadowing: Poursuite
+Strip Ball: Arracher le Ballon
+Sure Hands: Dextérité
+Tackle: Tacle
+Wrestle: Lutte
+Catch: Réception
+Diving Catch: Plongeon
+Diving Tackle: Tacle Plongeant
+Dodge: Esquive
+Jump Up: Bond
+Leap: Saut
+Side Step: Glissade Contrôlée
+Sneaky Git: Sournois
+Sprint: Sprint
+Sure Feet: Equilibre
+Accurate: Précision
+Dump Off: Passe Rapide
+Hail Mary Pass: La Main de Dieu
+Leader: Chef
+Nerves of Steel: Nerfs d'Acier
+Pass: Passe
+Safe Throw: Lancer Précis
+Break Tackle: Esquive en Force
+Grab: Projection
+Guard: Garde
+Juggernaut: Juggernaut
+Mighty Blow: Châtaigne
+Multiple Block: Blocage Multiple
+Piling On: Ecrasement
+Stand Firm: Stabilité
+Strong Arm: Costaud
+Thick Skull: Crâne Epais
+Big Hand: Main Démesurée
+Claws: Pinces ou Griffes
+Disturbing Presence: Présence Perturbante
+Extra Arms: Bras Supplémentaires
+Foul Appearance: Répulsion
+Horns: Cornes
+Prehensile Tail: Queue Préhensile
+Tentacles: Tentacules
+Two Heads: Deux Têtes
+Very Long Legs: Très Longues Jambes
+Always Hungry: Toujours Affamé
+Ball and Chain: Chaîne et Boulet
+Blood Lust: Soif de Sang
+Bombardier: Bombardier
+Bone-Head: Cerveau Lent
+Chainsaw: Tronçonneuse
+Decay: Décomposition
+Fan Favourite: Idole des Foules
+Hypnotic Gaze: Regard Hypnotique
+Loner: Solitaire
+No Hands: Manchot
+Nurgle's Rot: Pourriture de Nurgle
+Really Stupid: Gros Débile
+Regeneration: Régénération
+Right Stuff: Poids Plume
+Secret Weapon: Arme Secrète
+Stab: Poignard
+Stakes: Pieux
+Stunty: Minus
+Take Root: Prendre Racine
+Throw Team-Mate: Lancer un Coéquipier
+Titchy: Microbe
+Wild Animal: Animal Sauvage

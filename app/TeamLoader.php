@@ -32,15 +32,8 @@ class TeamLoader {
   public static function load($file, $lang=LANG) {
     $team = new TeamLoader($file);
     $team->to_array();
-    //$team->sort_players(); // obsolete
-    $team->result['player'] = &$team->result['players'];
-    /* Translation::for_loading modifies the form of the array.
-     * the templates rely on this behaviour => it would be better
-     * if the transformations were already made here
-     * so that the english file wouldn't have to be translated
-     * if the language is english also */
-    $roster = Translation::for_loading($team->result, $lang);
-    return $roster;
+    $result = $team->result;
+    return $result;
   }
 
   /**
@@ -54,7 +47,7 @@ class TeamLoader {
     $this->XmlReader->open($file);
     $this->last_opened_element_name = "";
     $this->result = array();
-    $this->result['players'] = array();
+    $this->result['player'] = array();
     $this->temp_player = array();
   }
 
@@ -106,7 +99,7 @@ class TeamLoader {
           if ( $this->XmlReader->name == 'player' ) {
             // connect the $temp_player variable to the correct place in the team array
             $player_number = $this->temp_player['number'] - 1;
-            $this->result['players'][$player_number] = $this->temp_player;
+            $this->result['player'][$player_number] = $this->temp_player;
             unset($this->temp_player);
           }
           break;

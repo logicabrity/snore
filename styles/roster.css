@@ -55,6 +55,7 @@ select.position { width: 100% }
 select.wide { width: 100%; }
 select.fix { width: 250px; }
 button.box_control { float: right; }
+img.emblem { width:104px; height:140px; }
 
 /* boxes */
 

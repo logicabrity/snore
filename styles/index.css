@@ -71,7 +71,7 @@ span.error {
 	margin: 5px;
 	}
 
-a.block {
+a.race {
 	float: left;
 	cursor: pointer;
 	display: block;
@@ -82,19 +82,19 @@ a.block {
 	background-color: #EFEFEF;
 	}
 
-a.block:link {}
+a.race:link {}
 
-a.block:visited {
+a.race:visited {
 	color: #4D4D4D;
 	background-color: #FAFAFA;
 	}
 
-a.block:hover {
+a.race:hover {
 	color: white;
 	background-color: red;
 	}
 
-a.block:active {
+a.race:active {
 	background-color: navy;
 	}
 

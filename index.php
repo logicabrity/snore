@@ -6,14 +6,19 @@
  * See page @link Controller @endlink for more details.
  */
 require_once 'app/helper.php';
+require_once 'app/Translation.php';
+require_once 'app/Races.php';
+require_once 'app/Skills.php';
+require_once 'app/UserInterface.php';
 require_once 'config.php';
 
 /* user saves a roster => process it, return xml ************************ */
 
 if ( isset($_POST['TEAM']) ) {
+  $data = translatePostDataBeforeSaving($_POST, LANG);
   header('Content-type: application/xml');
   header('Content-Disposition: attachment; filename="'.$_POST['TEAM'].'.xml"');
-  echo TeamSaver::save($_POST);
+  echo TeamSaver::save($data);
 }
 
 /* user selected a race => show a roster ************************************ */
@@ -24,7 +29,7 @@ elseif ( isset($_GET['race']) ) {
     show_roster($race_id);
   }
   else {
-    $getError_race = TRUE; // for the template
+    $errorCode = 1; // for the template
     show_index(); // race is not valid, show welcome-page instead of roster
   }
 }
@@ -34,11 +39,12 @@ elseif ( isset($_GET['race']) ) {
 elseif ( isset($_POST['upload']) ) {
   if (	$_POST['upload'] == true &&
         $_FILES['userfile']['error'] != UPLOAD_ERR_NO_FILE ) {
-    $team = TeamLoader::load($_FILES['userfile']['tmp_name']);
+    $file = $_FILES['userfile']['tmp_name'];
+    $team = translateTeam(TeamLoader::load($file), LANG);
     show_roster($team['id'], $team);
   }
   else {
-    $getError_upload = TRUE; // for the template
+    $errorCode = 2; // for the template
     show_index(); // there was a problem with the upload, show welcome-page
   }
 }
