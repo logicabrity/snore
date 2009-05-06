@@ -16,7 +16,7 @@ error_reporting(E_ALL);
 define('PROJECT_DIR', getcwd());
 
 /* require spyc yaml library */
-require_once PROJECT_DIR . '/lib/spyc.php';
+require_once PROJECT_DIR . '/lib/ext/spyc.php';
 
 require_once PROJECT_DIR . '/lib/helper.php';
 require_once PROJECT_DIR . '/lib/Translation.php';
