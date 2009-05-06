@@ -210,7 +210,7 @@ function translateSkills($list, $lang) {
  *
  */
 function buildSkillsTranslation($lang) {
-  $t = Spyc::yaml_load("data/$lang/skills.yaml");
+  $t = Spyc::yaml_load("data/$lang/skills.yml");
   return $t;
 }
 

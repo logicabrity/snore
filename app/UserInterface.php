@@ -10,7 +10,7 @@ function getTextOfPage($page, $lang) {
   if ( $page != 'index' && $page != 'roster' ) {
     die("Page $page does not exist.");
   }
-  $file = "data/$lang/$page.yaml";
+  $file = "data/$lang/$page.yml";
   $data = Spyc::yaml_load($file);
   return $data;
 }
@@ -21,7 +21,7 @@ function getTextOfPage($page, $lang) {
  * @param[out] $stats numbered array where values are the abbrevations
  */
 function stats($lang=LANG) {
-  $file = 'data/' . $lang . '/roster.yaml';
+  $file = 'data/' . $lang . '/roster.yml';
   $data = Spyc::yaml_load($file);
 
   $stats = array();

@@ -9,7 +9,7 @@
  * to a sort of array.
  */
 function getRaceInfo($raceId) {
-  $file = 'data/en/races.xml';
+  $file = 'data/races.xml';
   $xml = simplexml_load_file($file);
   // as of PHP 5.2.3 don't remove the int typecast
   $data = $xml->race[(int)$raceId];
@@ -27,7 +27,7 @@ function getRaceInfo($raceId) {
  * and grab the race-names.
  */
 function getRacesList() {
-  $file = 'data/en/races.xml';
+  $file = 'data/races.xml';
 
   $XmlReader = new XmlReader();
   $XmlReader->open($file);
@@ -50,7 +50,7 @@ function getRacesList() {
  * @param[out] $list numbered array listing the names of all the positions
  */
 function listPositionsOfRace($raceId) {
-  $file = 'data/en/races.xml';
+  $file = 'data/races.xml';
   $xml = simplexml_load_file($file);
 
   $list = array();

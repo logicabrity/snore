@@ -8,7 +8,7 @@
  * to the skill-handling in the javascript.
  */
 function getSkillsNested() {
-  $yaml = file("data/en/skills.yaml", FILE_IGNORE_NEW_LINES);
+  $yaml = file("data/skills.yml", FILE_IGNORE_NEW_LINES);
   $last_opened_node = '';
 
   $list = array();
