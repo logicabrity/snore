@@ -21,7 +21,7 @@
           <div>
             <input type="hidden" name="lang" value="en"></input>
             <button type="submit">
-              <img src="data/pictures/en_flag.jpg" alt="union jack" />
+              <img src="data/en/flag.jpg" alt="union jack" />
             </button>
           </div>
         </form>
@@ -29,7 +29,7 @@
           <div>
             <input type="hidden" name="lang" value="fr"></input>
             <button type="submit">
-              <img src="data/pictures/fr_flag.jpg" alt="french flag" />
+              <img src="data/fr/flag.jpg" alt="french flag" />
             </button>
           </div>
         </form>
@@ -37,7 +37,7 @@
           <div>
             <input type="hidden" name="lang" value="de"></input>
             <button type="submit">
-              <img src="data/pictures/de_flag.jpg" alt="german flag" />
+              <img src="data/de/flag.jpg" alt="german flag" />
             </button>
           </div>
         </form>

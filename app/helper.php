@@ -37,7 +37,7 @@ function __autoload($class_name) {
  * @brief shortcut for calls to the template engine
  */
 function show_index( $errorCode=NULL ) {
-  $version    = '1526';
+  $version    = '1362';
   $t          = getTextOfPage("index", LANG);
   $races      = translateRacesList(getRacesList(), LANG);
   require_once "templates/index.php";
