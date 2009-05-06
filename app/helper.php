@@ -36,8 +36,7 @@ function __autoload($class_name) {
 /**
  * @brief shortcut for calls to the template engine
  */
-function show_index() {
-  global $errorCode;
+function show_index( $errorCode=NULL ) {
   $version    = '1362';
   $t          = getTextOfPage("index", LANG);
   $races      = translateRacesList(getRacesList(), LANG);
@@ -47,7 +46,7 @@ function show_index() {
 /**
  * @brief shortcut for calls to the template engine
  */
-function show_roster($raceId, $loadedTeam=NULL) {
+function show_roster( $raceId, $loadedTeam=NULL ) {
   $t          = getTextOfPage("roster", LANG);
   $skills     = translateSkills(getSkillsNested(), LANG);
   $race       = translateRaceInfo(getRaceInfo($raceId), LANG);

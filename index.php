@@ -30,7 +30,7 @@ elseif ( isset($_GET['race']) ) {
   }
   else {
     $errorCode = 1; // for the template
-    show_index(); // race is not valid, show welcome-page instead of roster
+    show_index($errorCode); // invalid race, show welcome-page instead of roster
   }
 }
 
@@ -45,7 +45,7 @@ elseif ( isset($_POST['upload']) ) {
   }
   else {
     $errorCode = 2; // for the template
-    show_index(); // there was a problem with the upload, show welcome-page
+    show_index($errorCode); // invalid upload, show welcome-page
   }
 }
 

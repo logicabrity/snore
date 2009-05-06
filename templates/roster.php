@@ -46,7 +46,7 @@
 <body onload="team_get_number_of_healthy();team_set_total_value();">
   <h1>Tow Bowl Tactics Teamroster</h1>
 
-  <form id="ROSTER" name="ROSTER" action="index.php" method="post" enctype="multipart/form-data">
+  <form id="ROSTER" action="index.php" method="post" enctype="multipart/form-data">
     <div>
       <input type="hidden" name="RACE_ID" value="<?php echo $race['id']; ?>" />
     </div>
@@ -56,22 +56,24 @@
     <table class="big">
 
       <thead>
-        <td>#</td>
-        <td><?php echo $t['player_name']; ?></td>
-        <td><?php echo $t['player_position']; ?></td>
-        <td><?php echo $t['stats_ma']; ?></td>
-        <td><?php echo $t['stats_st']; ?></td>
-        <td><?php echo $t['stats_ag']; ?></td>
-        <td><?php echo $t['stats_av']; ?></td>
-        <td><?php echo $t['skills']; ?></td>
-        <td><?php echo $t['injuries']; ?></td>
-        <td><?php echo $t['spp_comp']; ?></td>
-        <td><?php echo $t['spp_td']; ?></td>
-        <td><?php echo $t['spp_int']; ?></td>
-        <td><?php echo $t['spp_cas']; ?></td>
-        <td><?php echo $t['spp_mvp']; ?></td>
-        <td><?php echo $t['spp']; ?></td>
-        <td><?php echo $t['value']; ?></td>
+        <tr>
+          <td>#</td>
+          <td><?php echo $t['player_name']; ?></td>
+          <td><?php echo $t['player_position']; ?></td>
+          <td><?php echo $t['stats_ma']; ?></td>
+          <td><?php echo $t['stats_st']; ?></td>
+          <td><?php echo $t['stats_ag']; ?></td>
+          <td><?php echo $t['stats_av']; ?></td>
+          <td><?php echo $t['skills']; ?></td>
+          <td><?php echo $t['injuries']; ?></td>
+          <td><?php echo $t['spp_comp']; ?></td>
+          <td><?php echo $t['spp_td']; ?></td>
+          <td><?php echo $t['spp_int']; ?></td>
+          <td><?php echo $t['spp_cas']; ?></td>
+          <td><?php echo $t['spp_mvp']; ?></td>
+          <td><?php echo $t['spp']; ?></td>
+          <td><?php echo $t['value']; ?></td>
+        </tr>
       </thead>
 
       <!-- Start of Players -->
@@ -89,21 +91,21 @@
 <?php endforeach; ?>
           </select>
         </td>
-        <td><input class="stats" name="MA[]" type="text" readonly="readonly" value="<?php if (isset($p['ma'])): echo $p['ma']; endif; ?>" /></td>
-        <td><input class="stats" name="ST[]" type="text" readonly="readonly" value="<?php if (isset($p['st'])): echo $p['st']; endif; ?>" /></td>
-        <td><input class="stats" name="AG[]" type="text" readonly="readonly" value="<?php if (isset($p['ag'])): echo $p['ag']; endif; ?>" /></td>
-        <td><input class="stats" name="AV[]" type="text" readonly="readonly" value="<?php if (isset($p['av'])): echo $p['av']; endif; ?>" /></td>
+        <td><input class="stats" name="MA[]" type="text" readonly="readonly" value="<?php if (isset($p['ma'])) echo $p['ma']; ?>" /></td>
+        <td><input class="stats" name="ST[]" type="text" readonly="readonly" value="<?php if (isset($p['st'])) echo $p['st']; ?>" /></td>
+        <td><input class="stats" name="AG[]" type="text" readonly="readonly" value="<?php if (isset($p['ag'])) echo $p['ag']; ?>" /></td>
+        <td><input class="stats" name="AV[]" type="text" readonly="readonly" value="<?php if (isset($p['av'])) echo $p['av']; ?>" /></td>
         <td class="button" onclick="app_show_skill_box(<?php echo $i; ?>)">
-          <textarea class="skills" name="SKILLS[]" readonly="readonly"><?php if (isset($p['skill'])): echo implode(',', $p['skill']); endif; ?></textarea>
+          <textarea rows="2" cols="30" class="skills" name="SKILLS[]" readonly="readonly"><?php if (isset($p['skill'])): echo implode(',', $p['skill']); endif; ?></textarea>
         </td>
         <td class="button" onclick="app_show_injury_box(<?php echo $i; ?>)">
-          <textarea class="injuries" name="INJURIES[]" readonly="readonly"><?php if (isset($p['inj'])): echo implode(',', $p['inj']); endif; ?></textarea>
+          <textarea rows="2" cols="30" class="injuries" name="INJURIES[]" readonly="readonly"><?php if (isset($p['inj'])): echo implode(',', $p['inj']); endif; ?></textarea>
         </td>
-        <td><input class="spp" name="COMP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['com'])): echo $p['com']; endif; ?>" /></td>
-        <td><input class="spp" name="TD[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['td'])): echo $p['td']; endif; ?>" /></td>
-        <td><input class="spp" name="INT[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['int'])): echo $p['int']; endif; ?>" /></td>
-        <td><input class="spp" name="CAS[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['cas'])): echo $p['cas']; endif; ?>" /></td>
-        <td><input class="spp" name="MVP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['mvp'])): echo $p['mvp']; endif; ?>" /></td>
+        <td><input class="spp" name="COMP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['com'])) echo $p['com']; ?>" /></td>
+        <td><input class="spp" name="TD[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['td'])) echo $p['td']; ?>" /></td>
+        <td><input class="spp" name="INT[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['int'])) echo $p['int']; ?>" /></td>
+        <td><input class="spp" name="CAS[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['cas'])) echo $p['cas']; ?>" /></td>
+        <td><input class="spp" name="MVP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['mvp'])) echo $p['mvp']; ?>" /></td>
         <td><input class="spp" name="SPP[]" type="text" value="<?php if (isset($p['spp'])): echo $p['spp']; endif; ?>" readonly="readonly" /></td>
 <?php if (isset($p['inj']) && in_array($t['injuries_m'], $p['inj'])): $health_status="injured"; else: $health_status="healthy"; endif; ?>
         <td><input class="<?php echo $health_status; ?>" name="VALUE[]" type="text" value="<?php if (isset($p['cost'])): echo $p['cost']; endif; ?>" readonly="readonly" /></td>
@@ -123,48 +125,48 @@
        <td class="label" colspan="4" rowspan="2"><?php echo $t['team']; ?></td>
        <td rowspan="2"><input name="TEAM" type="text" value="<?php echo $loadedTeam['name']; ?>" /></td>
        <td class="label" colspan="3"><?php echo $t['rerolls']; ?></td>
-       <td colspan="1"><input class="extras" name="REROLLS" onchange="extras_set_reroll_value()" type="text" value="<?php echo $loadedTeam['reroll']; ?>" /></td>
+       <td colspan="1"><input class="extras" name="REROLLS" onchange="extras_set_reroll_value()" type="text" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']; ?>" /></td>
        <td colspan="3" class="label">x <?php echo $race->reroll->cost; ?></td>
-       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php echo $loadedTeam['reroll']*$race->reroll->cost; ?>" /></td>
+       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']*$race->reroll->cost; ?>" /></td>
       </tr>
 
       <tr>
        <td class="label" colspan="3"><?php echo $t['fanfactor']; ?></td>
-       <td colspan="1"><input class="extras" name="FANFACTOR" onchange="extras_set_fanfactor_value()" type="text" value="<?php echo $loadedTeam['fanfactor']; ?>" /></td>
+       <td colspan="1"><input class="extras" name="FANFACTOR" onchange="extras_set_fanfactor_value()" type="text" value="<?php if (isset($loadedTeam['fanfactor'])) echo $loadedTeam['fanfactor']; ?>" /></td>
        <td colspan="3" class="label">x 10000</td>
-       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php echo $loadedTeam['fanfactor']*10000; ?>" /></td>
+       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['fanfactor'])) echo $loadedTeam['fanfactor']*10000; ?>" /></td>
       </tr>
 
       <tr>
        <td class="label" colspan="4"><?php echo $t['player']; ?><a class="blue" href="javascript:app_show_journeymen_box()">(<?php echo $t['journeymen_manage']; ?>)</a></td>
        <td colspan="1"><input name="HEALTHY" type="text" readonly="readonly" /></td>
        <td colspan="3" class="label"><?php echo $t['assistants']; ?></td>
-       <td colspan="1"><input class="extras" name="COACHES" onchange="extras_set_coaches_value()" type="text" value="<?php echo $loadedTeam['assistant']; ?>" /></td>
+       <td colspan="1"><input class="extras" name="COACHES" onchange="extras_set_coaches_value()" type="text" value="<?php if (isset($loadedTeam['assistant'])) echo $loadedTeam['assistant']; ?>" /></td>
        <td colspan="3" class="label">x 10000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php echo $loadedTeam['assistant']*10000; ?>" /></td>
+       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['assistant'])) echo $loadedTeam['assistant']*10000; ?>" /></td>
       </tr>
 
       <tr>
        <td colspan="4" class="label"><?php echo $t['race']; ?></td>
        <td><input name="RACE" type="text" value="<?php echo $race['name']; ?>" readonly="readonly" /></td>
        <td colspan="3" class="label"><?php echo $t['cheerleaders']; ?></td>
-       <td colspan="1"><input class="extras" name="CHEERLEADERS" onchange="extras_set_cheerleaders_value()" type="text" value="<?php echo $loadedTeam['cheerleader']; ?>" /></td>
+       <td colspan="1"><input class="extras" name="CHEERLEADERS" onchange="extras_set_cheerleaders_value()" type="text" value="<?php if (isset($loadedTeam['cheerleader'])) echo $loadedTeam['cheerleader']; ?>" /></td>
        <td colspan="3" class="label">x 10000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php echo $loadedTeam['cheerleaders']*10000; ?>" /></td>
+       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['cheerleader'])) echo $loadedTeam['cheerleader']*10000; ?>" /></td>
       </tr>
 
       <tr>
        <td colspan="4" class="label"><?php echo $t['treasury']; ?></td>
-       <td><input name="TREASURY" type="text" value="<?php echo $loadedTeam['treasury']; ?>" /></td>
+       <td><input name="TREASURY" type="text" value="<?php if (isset($loadedTeam['treasury'])) echo $loadedTeam['treasury']; ?>" /></td>
        <td colspan="3" class="label"><?php echo $t['apothecary']; ?></td>
-       <td colspan="1"><input class="extras" name="APOTHECARY" onchange="extras_set_apothecary_value()" type="text" value="<?php echo $loadedTeam['apothecary']; ?>" /></td>
+       <td colspan="1"><input class="extras" name="APOTHECARY" onchange="extras_set_apothecary_value()" type="text" value="<?php if (isset($loadedTeam['apothecary'])) echo $loadedTeam['apothecary']; ?>" /></td>
        <td colspan="3" class="label">x 50000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php echo $loadedTeam['apothecary']*50000; ?>" /></td>
+       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['apothecary'])) echo $loadedTeam['apothecary']*50000; ?>" /></td>
       </tr>
 
       <tr>
        <td colspan="4" class="label"><?php echo $t['headcoach']; ?></td>
-       <td><input name="HEADCOACH" type="text" value="<?php echo $loadedTeam['coach']; ?>" /></td>
+       <td><input name="HEADCOACH" type="text" value="<?php if (isset($loadedTeam['coach'])) echo $loadedTeam['coach']; ?>" /></td>
        <td colspan="7" class="label"><?php echo $t['teamvalue']; ?></td>
        <td><input class="value" name="TEAMVALUE" type="text" readonly="readonly" value="" /></td>
       </tr>
@@ -328,7 +330,7 @@
         <tr><td class="label"><?php echo $ji; ?></td><td><input name="DISPLAY[]" type="text" value="" /></td></tr>
 <?php endfor; ?>
       </table>
-      <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('pic_box')">
+      <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('pic_box')" />
     </div>
 
     <!-- End of Pictures-Box -->

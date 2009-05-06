@@ -1,9 +1,9 @@
 // shortcut to form elements
 function $_(el) {
   if ( el == null ) {
-    return document.ROSTER
+    return document.getElementById("ROSTER")
   }
-    return document.ROSTER.elements[el]
+    return document.getElementById("ROSTER").elements[el]
 }
 
 /* submit the roster */

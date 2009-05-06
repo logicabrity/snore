@@ -2,7 +2,7 @@ body, p, h1, h2, h3, td, tr, input, select, a
 {
 	font-family: sans-serif;
 	text-decoration: none;
-    font-size: small;
+  font-size: small;
 	padding: 1px;
 	margin: 0px;
 }
