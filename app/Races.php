@@ -17,7 +17,7 @@ function getRaceInfo($raceId) {
 }
 
 /**
- * @brief list all races that exist
+ * @brief list all races that exist in english
  * @param[out] $list a numbered array
  *
  * The parsing is done with the XmlReader class, which is perhaps
@@ -45,7 +45,7 @@ function getRacesList() {
 }
 
 /**
- * @brief list the positionals of a specific race
+ * @brief list the positionals of a specific race in english
  * @param[in] $raceId the id attribute of the chosen race
  * @param[out] $list numbered array listing the names of all the positions
  */

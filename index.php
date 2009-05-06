@@ -5,11 +5,6 @@
  *
  * See page @link Controller @endlink for more details.
  */
-require_once 'app/helper.php';
-require_once 'app/Translation.php';
-require_once 'app/Races.php';
-require_once 'app/Skills.php';
-require_once 'app/UserInterface.php';
 require_once 'config.php';
 
 /* user saves a roster => process it, return xml ************************ */

@@ -11,28 +11,11 @@ SNORE was tested with Apache and Lighttpd, and will only work with
 version 5 of PHP (to the technically inclined: because of the use
 of the XmlWriter and XmlReader class).
 
-@section Smarty Do I need the Smarty Template Engine?
-
-SNORE comes bundled with the smarty template engine. You will
-find the installation in your snore directory under @em libs/smarty.
-
-However, if you want to use your own installation of smarty, feel free
-to adapt the line
-
-@code
-require_once PROJECT_DIR.'/libs/smarty/Smarty.class.php';
-@endcode
-
-in the config.php to point to the right file.
-
 @section Languages How do I add support for another language?
 
-- copy one of the existing folders in data (like 'en' for instance)
+- copy one of the existing translation-folders in data (like 'de' for instance)
 
 - translate all the files inside it
- - don't touch the tags in the xml files
- - don't change the filenames
- - don't change the order of the skills in skills.yaml
 
 - in @em config.php, add the short name of your language
   (which has to be the same name as the directory) to
@@ -53,14 +36,5 @@ in the config.php to point to the right file.
    <button type="submit"><img src="data/es/flag.jpg" alt="spanish flag" /></button>
   </form>
   @endcode
-
-@section How do I change the translated races.xml files automatically according to the english version?
-
-Assuming you don't want to touch the translated tages, do from the data directory: (replace fr with whatever you need)
-@code
-diff -C 1 --ignore-matching-lines="<title>\|<skill>\|<race \|<background>" fr/races.xml en/races.xml > fr/en.diff
-patch -p0 < fr/en.diff
-@endcode
-This creates a diff file which ignores the title, skill, race and background tags.
 
 */
