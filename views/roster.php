@@ -227,7 +227,7 @@
         <option></option>
       </select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('impossible')">
-        <img src="public/pisc/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pics/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
       <input style="display: none;" name="TEMP3" type="text" readonly="readonly" value="0" />

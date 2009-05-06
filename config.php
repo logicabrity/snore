@@ -3,8 +3,7 @@
  * @file
  * @brief configuration file.
  *
- * Define global constants used in the whole application,
- * and set up the template engine too.
+ * Define global constants used in the whole application.
  */
 
 error_reporting(E_ALL);
@@ -12,7 +11,7 @@ error_reporting(E_ALL);
 /**
  * @brief Base directory of the application.
  *
- * Used for includes, like in \link mySmarty \endlink.
+ * Used for includes.
  */
 define('PROJECT_DIR', getcwd());
 
