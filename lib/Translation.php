@@ -178,7 +178,7 @@ function translateRacesList($list, $lang) {
  *
  */
 function buildRacesTranslation($lang) {
-  $t = Spyc::yaml_load("data/$lang/races.yml");
+  $t = Spyc::YAMLLoad("data/$lang/races.yml");
   return $t;
 }
 
@@ -210,7 +210,7 @@ function translateSkills($list, $lang) {
  *
  */
 function buildSkillsTranslation($lang) {
-  $t = Spyc::yaml_load("data/$lang/skills.yml");
+  $t = Spyc::YAMLLoad("data/$lang/skills.yml");
   return $t;
 }
 
@@ -220,7 +220,7 @@ function buildSkillsTranslation($lang) {
  *
  */
 function buildPositionNamesTranslation($lang) {
-  $t = Spyc::yaml_load("data/$lang/positions.yml");
+  $t = Spyc::YAMLLoad("data/$lang/positions.yml");
   return $t;
 }
 

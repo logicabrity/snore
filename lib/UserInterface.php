@@ -11,7 +11,7 @@ function getTextOfPage($page, $lang) {
     die("Page $page does not exist.");
   }
   $file = "data/$lang/$page.yml";
-  $data = Spyc::yaml_load($file);
+  $data = Spyc::YAMLLoad($file);
   return $data;
 }
 
@@ -22,7 +22,7 @@ function getTextOfPage($page, $lang) {
  */
 function stats($lang=LANG) {
   $file = 'data/' . $lang . '/roster.yml';
-  $data = Spyc::yaml_load($file);
+  $data = Spyc::YAMLLoad($file);
 
   $stats = array();
   $stats[] = $data['stats_ma'];
