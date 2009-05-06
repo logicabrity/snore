@@ -3,10 +3,10 @@
 <head>
   <title>TBT Snore</title>
   <meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8" />
-  <link rel="stylesheet" type="text/css" media="screen" href="styles/roster.css" title="Default" />
-  <link rel="stylesheet" type="text/css" media="print" href="styles/print.css" title="Default" />
-  <script type="text/javascript" src="app/js/functions.js"></script>
-  <script type="text/javascript" src="app/js/roster.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="public/styles/roster.css" title="Default" />
+  <link rel="stylesheet" type="text/css" media="print" href="public/styles/print.css" title="Default" />
+  <script type="text/javascript" src="public/js/functions.js"></script>
+  <script type="text/javascript" src="public/js/roster.js"></script>
   <script type="text/javascript">
     skills      = new Array()
     skills['g'] = new Array("<?php echo implode('","', $skills['General']); ?>")
@@ -121,7 +121,7 @@
          <a href="javascript:app_save()"><?php echo $t['save']; ?></a>
         </p>
        </td>
-       <td rowspan="6" colspan="1"><img class="emblem" alt="a colorful picture" src="data/pics/logos/<?php echo $race->emblem; ?>" /></td>
+       <td rowspan="6" colspan="1"><img class="emblem" alt="a colorful picture" src="public/pics/logos/<?php echo $race->emblem; ?>" /></td>
        <td class="label" colspan="4" rowspan="2"><?php echo $t['team']; ?></td>
        <td rowspan="2"><input name="TEAM" type="text" value="<?php echo $loadedTeam['name']; ?>" /></td>
        <td class="label" colspan="3"><?php echo $t['rerolls']; ?></td>
@@ -181,7 +181,7 @@
 
     <div id="skill_box" class="element_hidden">
       <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('skill_box')">
-        <img src="data/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
+        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
       </button>
 
       <h2 class="popup">
@@ -194,7 +194,7 @@
         <option></option>
       </select>
       <button type="button" title="<?php echo $t['button_remove']; ?>" onclick="player_remove_skill()">
-       <img src="data/pics/remove_red.gif" alt="<?php echo $t['button_remove']; ?>" />
+       <img src="public/pics/remove_red.gif" alt="<?php echo $t['button_remove']; ?>" />
       </button>
       
       <h3><?php echo $t['button_add']; ?>:</h3>
@@ -202,13 +202,13 @@
       <p><?php echo $t['skills_normal']; ?></p>
       <select class="fix" name="REP_NORMAL"><option></option></select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('normal')">
-        <img src="data/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
       <p><?php echo $t['skills_double']; ?></p>
       <select class="fix" name="REP_DOUBLE"><option></option></select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('double')">
-        <img src="data/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
       <p><?php echo $t['stats']; ?></p>
@@ -219,7 +219,7 @@
         <option value="30000">+<?php echo $t['stats_av']; ?></option>
       </select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('stat')">
-        <img src="data/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
       <p><?php echo $t['skills_forbidden']; ?></p>
@@ -227,7 +227,7 @@
         <option></option>
       </select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('impossible')">
-        <img src="data/pisc/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pisc/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
       <input style="display: none;" name="TEMP3" type="text" readonly="readonly" value="0" />
@@ -239,7 +239,7 @@
 
     <div id="inj_box" class="element_hidden">
       <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('inj_box')">
-        <img src="data/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
+        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
       </button>
 
       <h2 class="popup">
@@ -250,7 +250,7 @@
         <option></option>
       </select>
       <button type="button" title="<?php echo $t['button_remove']; ?>" onclick="player_remove_injury()">
-        <img src="data/pics/remove_green.gif" alt="<?php echo $t['button_remove']; ?>" />
+        <img src="public/pics/remove_green.gif" alt="<?php echo $t['button_remove']; ?>" />
       </button>
       <br />
       <select class="fix" name="REP_INJURIES">
@@ -262,7 +262,7 @@
         <option>-<?php echo $t['stats_av']; ?></option>
       </select>
       <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_injury()">
-        <img src="data/pics/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
+        <img src="public/pics/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
       </button>
 
     </div>
@@ -273,7 +273,7 @@
 
     <div id="jm_box" class="element_hidden">
       <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('jm_box')">
-        <img src="data/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
+        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
       </button>
 
       <h2 class="popup"><?php echo $t['journeymen']; ?></h2>
@@ -298,7 +298,7 @@
 
     <div id="background_box" class="element_hidden">
       <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('background_box')">
-        <img src="data/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
+        <img src="public/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
       </button>
 
       <h2 class="popup"><?php echo $t['background_text']; ?></h2>
@@ -315,7 +315,7 @@
 
     <div id="pic_box" class="element_hidden">
       <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('pic_box')">
-        <img src="data/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
+        <img src="public/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
       </button>
 
       <h2 class="popup"><?php echo $t['teampics_label']; ?></h2>

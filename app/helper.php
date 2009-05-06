@@ -37,10 +37,10 @@ function __autoload($class_name) {
  * @brief shortcut for calls to the template engine
  */
 function show_index( $errorCode=NULL ) {
-  $version    = '1362';
+  $version    = '1529';
   $t          = getTextOfPage("index", LANG);
   $races      = translateRacesList(getRacesList(), LANG);
-  require_once "templates/index.php";
+  require_once "views/index.php";
 }
 
 /**
@@ -50,7 +50,7 @@ function show_roster( $raceId, $loadedTeam=NULL ) {
   $t          = getTextOfPage("roster", LANG);
   $skills     = translateSkills(getSkillsNested(), LANG);
   $race       = translateRaceInfo(getRaceInfo($raceId), LANG);
-  require_once "templates/roster.php";
+  require_once "views/roster.php";
 }
 
 ?>

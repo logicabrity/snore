@@ -9,7 +9,7 @@
     <meta name="keywords" content="Blood Bowl TowBowlTactics Team Editor Roster Editor" />
     <meta name="description" content="Manages TowBowlTactics Teamsheets according to the LRB 5.0" />
     <meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8" />
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/index.css" title="Default" />
+    <link rel="stylesheet" type="text/css" media="screen" href="public/styles/index.css" title="Default" />
   </head>
 
   <body>
@@ -21,7 +21,7 @@
           <div>
             <input type="hidden" name="lang" value="en"></input>
             <button type="submit">
-              <img src="data/pics/flags/en.jpg" alt="union jack" />
+              <img src="public/pics/flags/en.jpg" alt="union jack" />
             </button>
           </div>
         </form>
@@ -29,7 +29,7 @@
           <div>
             <input type="hidden" name="lang" value="fr"></input>
             <button type="submit">
-              <img src="data/pics/flags/fr.jpg" alt="french flag" />
+              <img src="public/pics/flags/fr.jpg" alt="french flag" />
             </button>
           </div>
         </form>
@@ -37,7 +37,7 @@
           <div>
             <input type="hidden" name="lang" value="de"></input>
             <button type="submit">
-              <img src="data/pics/flags/de.jpg" alt="german flag" />
+              <img src="public/pics/flags/de.jpg" alt="german flag" />
             </button>
           </div>
         </form>
@@ -60,7 +60,7 @@
 
       <h2><?php echo $t['load']; ?></h2><!-- Load an existing team. -->
       <span class="error"><?php if ( $errorCode == 2 ): echo $t['upload_error']; endif; ?></span>
-      <form action="index.php" method="post" enctype="multipart/form-data">
+      <form action="index.php" method="post" enctype="multipart/form-public">
         <p>
           <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
           <input type="hidden" name="upload" value="true" />
