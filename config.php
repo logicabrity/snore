@@ -16,13 +16,13 @@ error_reporting(E_ALL);
 define('PROJECT_DIR', getcwd());
 
 /* require spyc yaml library */
-require_once PROJECT_DIR . '/libs/spyc.php';
+require_once PROJECT_DIR . '/lib/spyc.php';
 
-require_once PROJECT_DIR . '/libs/helper.php';
-require_once PROJECT_DIR . '/libs/Translation.php';
-require_once PROJECT_DIR . '/libs/Races.php';
-require_once PROJECT_DIR . '/libs/Skills.php';
-require_once PROJECT_DIR . '/libs/UserInterface.php';
+require_once PROJECT_DIR . '/lib/helper.php';
+require_once PROJECT_DIR . '/lib/Translation.php';
+require_once PROJECT_DIR . '/lib/Races.php';
+require_once PROJECT_DIR . '/lib/Skills.php';
+require_once PROJECT_DIR . '/lib/UserInterface.php';
 
 /**
  * @brief Languages that are safe to use for SNORE.

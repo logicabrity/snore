@@ -30,7 +30,7 @@ function check_lang($allowed) {
  * @brief autoload magic as seen in http://de2.php.net/autoload
  */
 function __autoload($class_name) {
-  require_once 'libs/' . $class_name . '.php';
+  require_once 'lib/' . $class_name . '.php';
 }
 
 /**
