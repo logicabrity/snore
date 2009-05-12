@@ -4,8 +4,7 @@
 
 @section Installation How do I install SNORE?
 
-Copy all the files to your web server. The latter will need write
-access to the folders under @em views/tmp.
+Copy all the files to your web server.
 
 SNORE was tested with Apache and Lighttpd, and will only work with
 version 5 of PHP (to the technically inclined: because of the use
