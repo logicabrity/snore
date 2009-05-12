@@ -10,6 +10,7 @@ require_once 'config.php';
 /* user saves a roster => process it, return xml ************************ */
 
 if ( isset($_POST['TEAM']) ) {
+  require_once PROJECT_DIR . '/lib/TeamSaver.php';
   $data = translateTeamBeforeSaving($_POST, LANG);
   header('Content-type: application/xml');
   header('Content-Disposition: attachment; filename="'.$_POST['TEAM'].'.xml"');
@@ -35,6 +36,7 @@ elseif ( isset($_POST['upload']) ) {
   if (	$_POST['upload'] == true &&
         $_FILES['userfile']['error'] != UPLOAD_ERR_NO_FILE ) {
     $file = $_FILES['userfile']['tmp_name'];
+    require_once PROJECT_DIR . '/lib/TeamLoader.php';
     $team = translateTeamAfterLoading(TeamLoader::load($file), LANG);
     show_roster($team['id'], $team);
   }
@@ -49,4 +51,5 @@ elseif ( isset($_POST['upload']) ) {
 else {
   show_index();
 }
+
 ?>

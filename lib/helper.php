@@ -3,8 +3,8 @@
  * @file
  * @brief Miscellaneous helper funtions.
  *
- * Functions that are used on several occasions, but
- * don't fit into any particular class or group are declared here.
+ * Functions that don't fit into any particular class or group
+ * are declared here.
  *
  */
 
@@ -26,26 +26,18 @@ function check_lang($allowed) {
   }
 }
 
-/**
- * @brief autoload magic as seen in http://de2.php.net/autoload
- */
-function __autoload($class_name) {
-  require_once 'lib/' . $class_name . '.php';
-}
-
-/**
- * @brief shortcut for calls to the template engine
- */
 function show_index( $errorCode=NULL ) {
-  $version    = '1529';
-  $t          = getTextOfPage("index", LANG);
-  $races      = translateRacesList(getRacesList(), LANG);
-  require_once "views/index.php";
+  $cache = new Cache_Lite_Output(array('lifeTime' => NULL));
+
+  if ( !($cache->start("INDEX".LANG.$errorCode)) ) {
+    $version    = '1540';
+    $t          = getTextOfPage("index", LANG);
+    $races      = translateRacesList(getRacesList(), LANG);
+    require_once "views/index.php";
+    $cache->end();
+  }
 }
 
-/**
- * @brief shortcut for calls to the template engine
- */
 function show_roster( $raceId, $loadedTeam=NULL ) {
   $t          = getTextOfPage("roster", LANG);
   $skills     = translateSkillsList(getSkillsNested(), LANG);

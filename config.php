@@ -18,6 +18,9 @@ define('PROJECT_DIR', getcwd());
 /* require spyc yaml library */
 require_once PROJECT_DIR . '/lib/ext/spyc.php';
 
+/* require Cache_Lite PEAR module */
+require_once 'Cache/Lite/Output.php';
+
 require_once PROJECT_DIR . '/lib/helper.php';
 require_once PROJECT_DIR . '/lib/Translation.php';
 require_once PROJECT_DIR . '/lib/Races.php';
