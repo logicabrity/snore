@@ -48,7 +48,7 @@ function show_index( $errorCode=NULL ) {
  */
 function show_roster( $raceId, $loadedTeam=NULL ) {
   $t          = getTextOfPage("roster", LANG);
-  $skills     = translateSkills(getSkillsNested(), LANG);
+  $skills     = translateSkillsList(getSkillsNested(), LANG);
   $race       = translateRaceInfo(getRaceInfo($raceId), LANG);
   require_once "views/roster.php";
 }
