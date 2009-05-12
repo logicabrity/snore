@@ -27,15 +27,10 @@ function check_lang($allowed) {
 }
 
 function show_index( $errorCode=NULL ) {
-  $cache = new Cache_Lite_Output(array('lifeTime' => NULL));
-
-  if ( !($cache->start("INDEX".LANG.$errorCode)) ) {
-    $version    = '1540';
-    $t          = getTextOfPage("index", LANG);
-    $races      = translateRacesList(getRacesList(), LANG);
-    require_once "views/index.php";
-    $cache->end();
-  }
+  $version    = '1540';
+  $t          = getTextOfPage("index", LANG);
+  $races      = translateRacesList(getRacesList(), LANG);
+  require_once "views/index.php";
 }
 
 function show_roster( $raceId, $loadedTeam=NULL ) {
