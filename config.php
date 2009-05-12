@@ -22,7 +22,6 @@ require_once PROJECT_DIR . '/lib/helper.php';
 require_once PROJECT_DIR . '/lib/Translation.php';
 require_once PROJECT_DIR . '/lib/Races.php';
 require_once PROJECT_DIR . '/lib/Skills.php';
-require_once PROJECT_DIR . '/lib/UserInterface.php';
 
 /**
  * @brief Languages that are safe to use for SNORE.
