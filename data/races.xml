@@ -174,7 +174,7 @@
     </positions>
     <background>Chaos teams are not noted for the subtlety or originality of their game play. A simple drive up the centre of the pitch, maiming and injuring as many opposing players as possible, is about the limit of their game plan. They rarely, if ever, worry about such minor considerations like picking up the ball and scoring touchdowns not while there are any players left alive on the opposing team, anyway.</background>
   </race>
-  <race id="2" name="Chaos Dwarf">
+  <race id="2" name="Dark Dwarf">
     <emblem>chaosdwarves.jpg</emblem>
     <apothecary>true</apothecary>
     <reroll>
@@ -197,7 +197,7 @@
         <skills/>
       </position>
       <position>
-        <title>Chaos dwarf</title>
+        <title>Dark dwarf</title>
         <qty>6</qty>
         <cost>70000</cost>
         <ma>4</ma>
@@ -1013,7 +1013,7 @@
     </positions>
     <background>Although Human teams do not have the individual strengths or outstanding abilities available to other races, they do not suffer from any outstanding weakness either. This makes Human teams extremely flexible, equally at home running the ball, passing it, or ignoring it and pounding the opposition into the turf instead!</background>
   </race>
-  <race id="10" name="Khemri">
+  <race id="10" name="Shabti">
     <emblem>khemri.jpg</emblem>
     <apothecary>false</apothecary>
     <reroll>
@@ -1109,7 +1109,7 @@
     </positions>
     <background>Over 8,000 years ago, the Khemri played the first games of Blood Bowl against the Slann. But, as the Kingdom died off, so did the game until its rediscovery. And as the game returned, it was inevitable that the ancient players and stars of the Khemri would return to the pitch they once played on.</background>
   </race>
-  <race id="11" name="Lizardman">
+  <race id="11" name="Reptile">
     <emblem>lizardmen.jpg</emblem>
     <apothecary>true</apothecary>
     <reroll>
@@ -1434,7 +1434,7 @@
     </positions>
     <background>Norse teams have a well deserved reputation for ferocity both on and off the playing pitch. The Norse that takes up Blood Bowl is a truly unedifying specimen, interested only in beer, women and song off the playing pitch, and beer, women and bloody carnage while on it!</background>
   </race>
-  <race id="14" name="Nurgle">
+  <race id="14" name="Nergal">
     <emblem>nurgles.jpg</emblem>
     <apothecary>false</apothecary>
     <reroll>
@@ -1478,7 +1478,7 @@
         </skills>
       </position>
       <position>
-        <title>Nurgle warrior</title>
+        <title>Nergal warrior</title>
         <qty>4</qty>
         <cost>110000</cost>
         <ma>4</ma>
@@ -1497,7 +1497,7 @@
         </skills>
       </position>
       <position>
-        <title>Beast of Nurgle</title>
+        <title>Beast of Nergal</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>4</ma>
@@ -1533,7 +1533,7 @@
         <display>nurgle_j.png</display>
         <skills>
           <skill>Decay</skill>
-          <skill>Nurgle's Rot</skill>
+          <skill>Nergal's Rot</skill>
           <skill>Loner</skill>
         </skills>
       </position>
@@ -1738,7 +1738,7 @@
     </positions>
     <background>Orcs have been playing Blood Bowl since the game was invented, and Orc teams such as the Gouged Eye and Severed Heads are amongst the best in the league. Orc teams are tough and hard-hitting, grinding down the opposition's line to create gaps for their excellent Orc Blitzers to exploit.</background>
   </race>
-  <race id="17" name="Skaven">
+  <race id="17" name="Rodent">
     <emblem>skavens.jpg</emblem>
     <apothecary>true</apothecary>
     <reroll>
