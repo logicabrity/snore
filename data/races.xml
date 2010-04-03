@@ -25,7 +25,7 @@
         </skills>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -42,7 +42,7 @@
         </skills>
       </position>
       <position>
-        <title>Catcher</title>
+        <title>Receiver</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -59,7 +59,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Halfback</title>
         <qty>4</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -104,7 +104,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Beastman</title>
+        <title>Tackle</title>
         <qty>16</qty>
         <cost>60000</cost>
         <ma>6</ma>
@@ -120,7 +120,7 @@
         </skills>
       </position>
       <position>
-        <title>Chaos warrior</title>
+        <title>Guard</title>
         <qty>4</qty>
         <cost>100000</cost>
         <ma>5</ma>
@@ -134,7 +134,7 @@
         <skills/>
       </position>
       <position>
-        <title>Minotaur</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>150000</cost>
         <ma>5</ma>
@@ -183,7 +183,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Hobgoblin</title>
+        <title>Halfback</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -197,7 +197,7 @@
         <skills/>
       </position>
       <position>
-        <title>Dark dwarf</title>
+        <title>Tackle</title>
         <qty>6</qty>
         <cost>70000</cost>
         <ma>4</ma>
@@ -215,7 +215,7 @@
         </skills>
       </position>
       <position>
-        <title>Bull centaurs</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>130000</cost>
         <ma>6</ma>
@@ -233,7 +233,7 @@
         </skills>
       </position>
       <position>
-        <title>Minotaur</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>150000</cost>
         <ma>5</ma>
@@ -295,7 +295,7 @@
         <skills/>
       </position>
       <position>
-        <title>Runner</title>
+        <title>Halfback</title>
         <qty>2</qty>
         <cost>80000</cost>
         <ma>7</ma>
@@ -311,7 +311,7 @@
         </skills>
       </position>
       <position>
-        <title>Assassin</title>
+        <title>Linebacker</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -328,7 +328,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Safety</title>
         <qty>4</qty>
         <cost>100000</cost>
         <ma>7</ma>
@@ -344,7 +344,7 @@
         </skills>
       </position>
       <position>
-        <title>Witch elf</title>
+        <title>Slotback</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>7</ma>
@@ -389,7 +389,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Blocker</title>
+        <title>Guard</title>
         <qty>16</qty>
         <cost>70000</cost>
         <ma>4</ma>
@@ -407,7 +407,7 @@
         </skills>
       </position>
       <position>
-        <title>Runner</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>80000</cost>
         <ma>6</ma>
@@ -424,7 +424,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Halfback</title>
         <qty>2</qty>
         <cost>80000</cost>
         <ma>5</ma>
@@ -441,7 +441,7 @@
         </skills>
       </position>
       <position>
-        <title>Troll slayer</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>5</ma>
@@ -460,7 +460,7 @@
         </skills>
       </position>
       <position>
-        <title>Deathroller</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>160000</cost>
         <ma>4</ma>
@@ -526,7 +526,7 @@
         <skills/>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -542,7 +542,7 @@
         </skills>
       </position>
       <position>
-        <title>Catcher</title>
+        <title>Receiver</title>
         <qty>4</qty>
         <cost>100000</cost>
         <ma>8</ma>
@@ -559,7 +559,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Halfback</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>7</ma>
@@ -603,7 +603,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Goblin</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -621,7 +621,7 @@
         </skills>
       </position>
       <position>
-        <title>Bombardier</title>
+        <title>Quarterback</title>
         <qty>1</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -641,7 +641,7 @@
         </skills>
       </position>
       <position>
-        <title>Pogoer</title>
+        <title>Slotback</title>
         <qty>1</qty>
         <cost>40000</cost>
         <ma>7</ma>
@@ -662,7 +662,7 @@
         </skills>
       </position>
       <position>
-        <title>Looney</title>
+        <title>Safety</title>
         <qty>1</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -681,7 +681,7 @@
         </skills>
       </position>
       <position>
-        <title>Fanatic</title>
+        <title>Unsafety</title>
         <qty>1</qty>
         <cost>70000</cost>
         <ma>3</ma>
@@ -700,7 +700,7 @@
         </skills>
       </position>
       <position>
-        <title>Troll</title>
+        <title>Center</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>4</ma>
@@ -740,7 +740,7 @@
         </skills>
       </position>
     </positions>
-    <background>A Goblin team's game plan owes much more to hope than potential. Goblins can make quite good catchers because they are small and agile, but the art of throwing is sadly lost to them, while the chances of their blocking anything larger than a Halfling are remote to say the least. Still, this never seems to bother Goblin players, and occasionally the use of a particularly devious Secret Weapon will even allow a Goblin team to win a match.</background>
+    <background>A Goblin team's game plan owes much more to hope than potential. Goblins can make quite good Receivers because they are small and agile, but the art of throwing is sadly lost to them, while the chances of their blocking anything larger than a Halfling are remote to say the least. Still, this never seems to bother Goblin players, and occasionally the use of a particularly devious Secret Weapon will even allow a Goblin team to win a match.</background>
   </race>
   <race id="7" name="Halfling">
     <emblem>halflings.png</emblem>
@@ -751,7 +751,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Halfling</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>30000</cost>
         <ma>5</ma>
@@ -769,7 +769,7 @@
         </skills>
       </position>
       <position>
-        <title>Treeman</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>120000</cost>
         <ma>2</ma>
@@ -835,7 +835,7 @@
         <skills/>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -852,7 +852,7 @@
         </skills>
       </position>
       <position>
-        <title>Catcher</title>
+        <title>Receiver</title>
         <qty>4</qty>
         <cost>90000</cost>
         <ma>8</ma>
@@ -868,7 +868,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>100000</cost>
         <ma>7</ma>
@@ -925,7 +925,7 @@
         <skills/>
       </position>
       <position>
-        <title>Catcher</title>
+        <title>Receiver</title>
         <qty>4</qty>
         <cost>70000</cost>
         <ma>8</ma>
@@ -942,7 +942,7 @@
         </skills>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -959,7 +959,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Safety</title>
         <qty>4</qty>
         <cost>90000</cost>
         <ma>7</ma>
@@ -975,7 +975,7 @@
         </skills>
       </position>
       <position>
-        <title>Ogre</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>5</ma>
@@ -1022,7 +1022,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Skeleton</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>30000</cost>
         <ma>5</ma>
@@ -1038,7 +1038,7 @@
         </skills>
       </position>
       <position>
-        <title>Thro-Ras</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -1056,7 +1056,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitz-Ras</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -1073,7 +1073,7 @@
         </skills>
       </position>
       <position>
-        <title>Mummy</title>
+        <title>Center</title>
         <qty>4</qty>
         <cost>110000</cost>
         <ma>3</ma>
@@ -1118,7 +1118,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Skink</title>
+        <title>Halfback</title>
         <qty>16</qty>
         <cost>60000</cost>
         <ma>8</ma>
@@ -1135,7 +1135,7 @@
         </skills>
       </position>
       <position>
-        <title>Saurus</title>
+        <title>Lineman</title>
         <qty>6</qty>
         <cost>80000</cost>
         <ma>6</ma>
@@ -1149,7 +1149,7 @@
         <skills/>
       </position>
       <position>
-        <title>Kroxigor</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>6</ma>
@@ -1198,7 +1198,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Zombie</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>4</ma>
@@ -1214,7 +1214,7 @@
         </skills>
       </position>
       <position>
-        <title>Ghoul</title>
+        <title>Slotback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>7</ma>
@@ -1230,7 +1230,7 @@
         </skills>
       </position>
       <position>
-        <title>Wight</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -1247,7 +1247,7 @@
         </skills>
       </position>
       <position>
-        <title>Flesh golem</title>
+        <title>Center</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>4</ma>
@@ -1265,7 +1265,7 @@
         </skills>
       </position>
       <position>
-        <title>Werewolf</title>
+        <title>Gunner</title>
         <qty>2</qty>
         <cost>120000</cost>
         <ma>8</ma>
@@ -1327,7 +1327,7 @@
         </skills>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>6</ma>
@@ -1344,7 +1344,7 @@
         </skills>
       </position>
       <position>
-        <title>Runner</title>
+        <title>Slotback</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>7</ma>
@@ -1361,7 +1361,7 @@
         </skills>
       </position>
       <position>
-        <title>Berserker</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -1379,7 +1379,7 @@
         </skills>
       </position>
       <position>
-        <title>Ulfwerener</title>
+        <title>Guard</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>6</ma>
@@ -1395,7 +1395,7 @@
         </skills>
       </position>
       <position>
-        <title>Snow troll</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>5</ma>
@@ -1443,7 +1443,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Rotter</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>5</ma>
@@ -1460,7 +1460,7 @@
         </skills>
       </position>
       <position>
-        <title>Pestigor</title>
+        <title>Halfback</title>
         <qty>4</qty>
         <cost>80000</cost>
         <ma>6</ma>
@@ -1478,7 +1478,7 @@
         </skills>
       </position>
       <position>
-        <title>Nergal warrior</title>
+        <title>Guard</title>
         <qty>4</qty>
         <cost>110000</cost>
         <ma>4</ma>
@@ -1497,7 +1497,7 @@
         </skills>
       </position>
       <position>
-        <title>Beast of Nergal</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>4</ma>
@@ -1549,7 +1549,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Snotling</title>
+        <title>Slotback</title>
         <qty>16</qty>
         <cost>20000</cost>
         <ma>5</ma>
@@ -1569,7 +1569,7 @@
         </skills>
       </position>
       <position>
-        <title>Ogre</title>
+        <title>Lineman</title>
         <qty>6</qty>
         <cost>140000</cost>
         <ma>5</ma>
@@ -1634,7 +1634,7 @@
         <skills/>
       </position>
       <position>
-        <title>Goblin</title>
+        <title>Slotback</title>
         <qty>4</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -1652,7 +1652,7 @@
         </skills>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>5</ma>
@@ -1669,7 +1669,7 @@
         </skills>
       </position>
       <position>
-        <title>Black orc</title>
+        <title>Guard</title>
         <qty>4</qty>
         <cost>80000</cost>
         <ma>4</ma>
@@ -1683,7 +1683,7 @@
         <skills/>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Safety</title>
         <qty>4</qty>
         <cost>80000</cost>
         <ma>6</ma>
@@ -1699,7 +1699,7 @@
         </skills>
       </position>
       <position>
-        <title>Troll</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>110000</cost>
         <ma>4</ma>
@@ -1761,7 +1761,7 @@
         <skills/>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>70000</cost>
         <ma>7</ma>
@@ -1778,7 +1778,7 @@
         </skills>
       </position>
       <position>
-        <title>Gutter runner</title>
+        <title>Receiver</title>
         <qty>4</qty>
         <cost>80000</cost>
         <ma>9</ma>
@@ -1794,7 +1794,7 @@
         </skills>
       </position>
       <position>
-        <title>Blitzer</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>7</ma>
@@ -1810,7 +1810,7 @@
         </skills>
       </position>
       <position>
-        <title>Rat ogre</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>160000</cost>
         <ma>6</ma>
@@ -1857,7 +1857,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Skeleton</title>
+        <title>Lineman</title>
         <qty>16</qty>
         <cost>30000</cost>
         <ma>5</ma>
@@ -1873,7 +1873,7 @@
         </skills>
       </position>
       <position>
-        <title>Zombie</title>
+        <title>Tackle</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>4</ma>
@@ -1889,7 +1889,7 @@
         </skills>
       </position>
       <position>
-        <title>Ghoul</title>
+        <title>Slotback</title>
         <qty>4</qty>
         <cost>70000</cost>
         <ma>7</ma>
@@ -1905,7 +1905,7 @@
         </skills>
       </position>
       <position>
-        <title>Wight</title>
+        <title>Safety</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>6</ma>
@@ -1922,7 +1922,7 @@
         </skills>
       </position>
       <position>
-        <title>Mummy</title>
+        <title>Guard</title>
         <qty>2</qty>
         <cost>110000</cost>
         <ma>3</ma>
@@ -1967,7 +1967,7 @@
     </reroll>
     <positions>
       <position>
-        <title>Thrall</title>
+        <title>Lineback</title>
         <qty>16</qty>
         <cost>40000</cost>
         <ma>6</ma>
@@ -1981,7 +1981,7 @@
         <skills/>
       </position>
       <position>
-        <title>Vampire</title>
+        <title>Lineman</title>
         <qty>6</qty>
         <cost>110000</cost>
         <ma>6</ma>
@@ -2040,7 +2040,7 @@
         <skills/>
       </position>
       <position>
-        <title>Catcher</title>
+        <title>Receiver</title>
         <qty>4</qty>
         <cost>90000</cost>
         <ma>9</ma>
@@ -2057,7 +2057,7 @@
         </skills>
       </position>
       <position>
-        <title>Thrower</title>
+        <title>Quarterback</title>
         <qty>2</qty>
         <cost>90000</cost>
         <ma>7</ma>
@@ -2073,7 +2073,7 @@
         </skills>
       </position>
       <position>
-        <title>Wardancer</title>
+        <title>Slotback</title>
         <qty>2</qty>
         <cost>120000</cost>
         <ma>8</ma>
@@ -2091,7 +2091,7 @@
         </skills>
       </position>
       <position>
-        <title>Treeman</title>
+        <title>Center</title>
         <qty>1</qty>
         <cost>140000</cost>
         <ma>2</ma>
