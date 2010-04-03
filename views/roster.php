@@ -121,7 +121,7 @@
          <a href="javascript:app_save()"><?php echo $t['save']; ?></a>
         </p>
        </td>
-       <td rowspan="6" colspan="1"><img class="emblem" alt="a colorful picture" src="public/pics/logos/<?php echo $race->emblem; ?>" /></td>
+       <td rowspan="6" colspan="1"></td>
        <td class="label" colspan="4" rowspan="2"><?php echo $t['team']; ?></td>
        <td rowspan="2"><input name="TEAM" type="text" value="<?php echo $loadedTeam['name']; ?>" /></td>
        <td class="label" colspan="3"><?php echo $t['rerolls']; ?></td>
