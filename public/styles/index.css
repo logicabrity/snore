@@ -1,110 +1,36 @@
-body, p, h1, h2, a {
-	font-family: arial, helvetica, sans-serif;
-	color: black;
-	text-decoration: none;
-	padding: 0px;
-	margin: 0px;
-	}
-
-/* ################################################ */
-/* title contains the first header and the subtitle	*/
-/*   additionally, it includes the flags used to	*/
-/* 				select the language					*/
-/* ################################################ */
-
-#title {
-	width: 660px;
-	margin-top: 10px;
-	margin-left: 10px;
-	padding: 5px;
-	border: 2px solid navy;
-	}
-
-h1 {
-	font-size: 200%;
-	font-weight: bold;
-	color: navy;
-	}
-
-p.subtitle {
-	font-style: italic;
-	margin-left: 40px;
-	}
-
-a.imagelink {
-	border-style: none;
-	}
-
-#flags {
-	float: right;
+body {
+  background-color: #333333;
+  font-family: sans-serif;
+  margin: 0em;
+  padding: 0em;
 }
 
-/* ################################################ */
-/*	content holds some text, two level-2-headers	*/
-/*	the racelist and the upload form				*/
-/* ################################################ */
+h1, h2 { color: #EEEEEE; }
+p, span, div { color: #DDDDDD; }
+a { text-decoration: none; color: #3380CD; }
 
-#content {
-	padding: 5px;
-	width: 650px;
-	margin-top: 20px;
-	margin-left: 20px;
-	}
+#container {
+  width: 500px;
+  margin: auto;
+}
+#meta h1 {
+  font-size: 250%;
+  margin: 0.5em 0em 0.1em 0em;
+}
+#meta p {
+  margin: 0em 0em 0em 2em;
+  padding: 0em;
+  font-style: italic;
+  font-size: small;
+}
 
-#list {
-	margin-left: 20px;
-	width: 550px;
-	height: 220px;
-	}
+#language {
+  padding: 0em;
+  margin: 0em;
+  float: right;
+}
 
-h2 {
-	font-size: 130%;
-	font-weight: bold;
-	color: navy;
-	margin-top: 10px;
-	margin-bottom: 20px;
-	}
-
-span.error {
-	color: red;
-	font-weight: bold;
-	margin: 5px;
-	}
-
-a.race {
-	float: left;
-	cursor: pointer;
-	display: block;
-	width: 150px;
-	border: 1px dotted black;
-	margin: 1px;
-	padding: 3px;
-	background-color: #EFEFEF;
-	}
-
-a.race:link {}
-
-a.race:visited {
-	color: #4D4D4D;
-	background-color: #FAFAFA;
-	}
-
-a.race:hover {
-	color: white;
-	background-color: red;
-	}
-
-a.race:active {
-	background-color: navy;
-	}
-
-#foot {
-	text-align: right;
-	font-size: 80%;
-	font-style: italic;
-	width: 660px;
-	margin-top: 30px;
-	margin-left: 10px;
-	padding: 5px;
-	border: 2px solid navy;
-	}
+#language a {
+  font-size: small;
+  font-weight: bold;
+}

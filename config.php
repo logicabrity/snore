@@ -17,7 +17,6 @@ define('PROJECT_DIR', getcwd());
 
 /* require spyc yaml library */
 require_once PROJECT_DIR . '/lib/ext/spyc.php';
-
 require_once PROJECT_DIR . '/lib/helper.php';
 require_once PROJECT_DIR . '/lib/Translation.php';
 require_once PROJECT_DIR . '/lib/Races.php';
@@ -39,6 +38,14 @@ $allowed_languages = array('en','de','fr');
  * localisation-files are parsed, and thus the
  * language of the user-interface.
  */
-define('LANG', check_lang($allowed_languages));
+
+if ( isset($_GET['lang']) && in_array($_GET['lang'], $allowed_languages) ) {
+  $lang = $_GET['lang'];
+}
+else {
+  $lang = 'en';
+}
+
+define('LANG', $lang);
 
 ?>

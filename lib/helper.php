@@ -8,24 +8,6 @@
  *
  */
 
- /**
-  * @brief Returns the language the user set.
-  *
-  * Performs a check to see if the language is allowed in the config.
-  */
-function check_lang($allowed) {
-  if ( isset($_POST['lang']) && in_array($_POST['lang'], $allowed) ) {
-    setcookie('lang', $_POST['lang'], time()+60*60*24*364, '/', $_SERVER['HTTP_HOST'], 0);
-    header("Location: {$_SERVER['PHP_SELF']}");
-  }
-  elseif ( isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], $allowed) ) {
-    return $_COOKIE['lang'];
-  }
-  else {
-    return 'en';
-  }
-}
-
 function show_index( $errorCode=NULL ) {
   $version    = '1540';
   $t          = getTextOfPage("index", LANG);

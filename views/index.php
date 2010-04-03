@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
   <head>
-    <title>SNORE - TBT Roster Editor</title>
+    <title>SNORE</title>
     <meta name="author" content="Marc-Antonio Bisotti"/>
     <meta name="date" content="2008-04-29 T13:15:15+0100"/>
     <meta name="copyright" content="GNU General Public License" />
@@ -14,69 +14,49 @@
 
   <body>
 
-    <div id="title">
+    <div id="container">
 
-      <div id="flags">
-        <form action="index.php" method="post" style="float: left;">
-          <div>
-            <input type="hidden" name="lang" value="en"></input>
-            <button type="submit">
-              <img src="public/pics/flags/en.jpg" alt="union jack" />
-            </button>
-          </div>
-        </form>
-        <form action="index.php" method="post" style="float: left;">
-          <div>
-            <input type="hidden" name="lang" value="fr"></input>
-            <button type="submit">
-              <img src="public/pics/flags/fr.jpg" alt="french flag" />
-            </button>
-          </div>
-        </form>
-        <form action="index.php" method="post" style="float: left;">
-          <div>
-            <input type="hidden" name="lang" value="de"></input>
-            <button type="submit">
-              <img src="public/pics/flags/de.jpg" alt="german flag" />
-            </button>
-          </div>
-        </form>
-      </div><!-- id="flags" -->
+      <div id="language">
+        <a href="index.php?lang=en">english</a>
+        <a href="index.php?lang=fr">franc&#807;ais</a>
+        <a href="index.php?lang=de">deutsch</a>
+      </div>
 
-      <h1>TBT - SNORE</h1>
-      <p class="subtitle">the &quot;Super New Online Roster Editor&quot;</p>
-    </div><!-- id="title" -->
+      <div id="meta">
+        <h1>SNORE</h1>
+        <p>the &quot;Super New Online Roster Editor&quot;</p>
+      </div>
 
-    <div id="content">
-      <p><?php echo $t['intro']; ?></p>
+      <p>
+        <?php echo $t['intro']; ?>
+      </p>
 
-      <h2><?php echo $t['new']; ?></h2><!-- Start a new team -->
-      <span class="error"><?php if ( $errorCode == 1 ): echo $t['invalid_race']; endif; ?></span>
-      <div id="list">
-<?php foreach ( $races as $id => $race ): ?>
-        <a class="race" href="index.php?race=<?php echo $id; ?>"><?php echo $race; ?></a>
+      <!-- Start a new team -->
+      <h2><?php echo $t['new']; ?></h2>
+
+      <p class="error"><?php if ( $errorCode == 1 ): echo $t['invalid_race']; endif; ?></p>
+
+      <div id="races">&#9674;
+<?php $i=1; foreach ( $races as $id => $race ): ?>
+        <a href="index.php?lang=<?php echo LANG; ?>&race=<?php echo $id; ?>"><?php echo str_replace(" ", "&nbsp;", $race); ?></a> &#9674;
+<?php if ($i%5==0): echo "        <br />\n"; endif; $i++ ?>
 <?php endforeach; ?>
       </div>
 
-      <h2><?php echo $t['load']; ?></h2><!-- Load an existing team. -->
-      <span class="error"><?php if ( $errorCode == 2 ): echo $t['upload_error']; endif; ?></span>
-      <form action="index.php" method="post" enctype="multipart/form-public">
-        <p>
-          <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
-          <input type="hidden" name="upload" value="true" />
-        </p>
+      <!-- Load an existing team. -->
+      <h2><?php echo $t['load']; ?></h2>
+
+      <p class="error"><?php if ( $errorCode == 2 ): echo $t['upload_error']; endif; ?></p>
+
+      <form action="index.php?lang=<?php echo LANG; ?>" method="post" enctype="multipart/form-public">
+        <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
+        <input type="hidden" name="upload" value="true" />
         <p>
           <input name="userfile" type="file" />
           <input type="submit" />
         </p>
       </form>
 
-    </div><!-- id="content" -->
-
-    <div id="foot">
-      <p>r <?php echo $version; ?></p>
-    </div>
-    
+    </div><!-- id="container" -->
   </body>
-
 </html>
