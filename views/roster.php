@@ -117,7 +117,6 @@
       <tr class="separator">
        <td rowspan="6" colspan="2">
         <p>
-         <a href="javascript:var foo = app_show('background_box')"><?php echo $t['background_label']; ?></a><br />
          <a href="javascript:app_save()"><?php echo $t['save']; ?></a>
         </p>
        </td>
@@ -293,23 +292,6 @@
     </div>
 
     <!-- End of Journeymen-Box -->
-
-    <!-- Start of Background-Box -->
-
-    <div id="background_box" class="element_hidden">
-      <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('background_box')">
-        <img src="public/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
-      </button>
-
-      <h2 class="popup"><?php echo $t['background_text']; ?></h2>
-      <p>
-        <textarea class="background" name="BACKGROUND" cols="60" rows="7">
-<?php if ( isset($team['background']) ): echo $team['background']; else: echo wordwrap($race->background, 60, "\n"); endif; echo "\n"; ?>
-        </textarea>
-      </p>
-    </div>
-
-    <!-- End of Background-Box -->
     
     <!-- Start of Pictures-Box -->
 

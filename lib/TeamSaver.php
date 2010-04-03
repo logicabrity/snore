@@ -97,7 +97,6 @@ class TeamSaver {
     $this->XmlWriter->writeElement('cheerleader',$this->data['CHEERLEADERS']);
     $this->XmlWriter->writeElement('apothecary',$this->data['APOTHECARY']);
     $this->write_players();
-    $this->XmlWriter->writeElement('background',$this->data['BACKGROUND']);
     $this->XmlWriter->endDocument();
     $this->result = $this->XmlWriter->flush();
   }
