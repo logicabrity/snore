@@ -136,7 +136,7 @@ function translateSkillsList($list, $lang) {
 function translateRaceInfo($raceInfo, $lang) {
   if ( $lang == 'en' )
     return $raceInfo;
-  $raceInfo['name'] = _translateRaceName((string)$raceInfo['name'], $lang);
+  $raceInfo['race'] = _translateRaceName($raceInfo['race'], $lang);
   _translatePositionNamesInRaceInfo($raceInfo, $lang);
   _translateSkillsInRaceInfo($raceInfo, $lang);
   return $raceInfo;
@@ -157,10 +157,10 @@ function _translateRaceName( $raceName, $lang ) {
 
 function _translatePositionNamesInRaceInfo( &$raceInfo, $lang ) {
   $posTranslation = buildPositionNamesTranslation($lang);
-  for ( $i=0; $i<sizeof($raceInfo->positions->position); $i++) {
-    $pos = &$raceInfo->positions->position[$i];
-    if ( array_key_exists((string) $pos->title, $posTranslation) )
-      $pos->title = $posTranslation[(string) $pos->title];
+  for ( $i=0; $i<sizeof($raceInfo['positions']); $i++) {
+    $pos = &$raceInfo['positions'][$i];
+    if ( array_key_exists($pos['title'], $posTranslation) )
+      $pos['title'] = $posTranslation[$pos['title']];
   }
 }
 
@@ -170,11 +170,11 @@ function _translateSkillsInRaceInfo( &$raceInfo, $lang ) {
    * $skills = &$raceInfo->xPath("positions/position/skills/skill");
    * and a for loop through skills. it would not change the original.
    */
-  for ( $i=0; $i<sizeof($raceInfo->positions->position); $i++ ) {
-    $pos = &$raceInfo->positions->position[$i];
-    for ( $j=0; $j<sizeof($pos->skills->skill); $j++ ) {
-      if ( array_key_exists((string) $pos->skills->skill[$j], $skillTrans) )
-        $pos->skills->skill[$j] = $skillTrans[(string) $pos->skills->skill[$j]];
+  for ( $i=0; $i<sizeof($raceInfo['positions']); $i++ ) {
+    $pos = &$raceInfo['positions'][$i];
+    for ( $j=0; $j<sizeof($pos['skills']); $j++ ) {
+      if ( array_key_exists((string) $pos['skills'][$j], $skillTrans) )
+        $pos['skills'][$j] = $skillTrans[$pos['skills'][$j]];
     }
   }
 }

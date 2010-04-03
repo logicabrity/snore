@@ -109,7 +109,6 @@ class TeamSaver {
     $this->XmlWriter->writeAttribute('bb_version','5');
     $this->XmlWriter->writeAttribute('xsi:noNamespaceSchemaLocation','team.xsd');
     $this->XmlWriter->writeAttribute('race', $this->data['RACE']);
-    $this->XmlWriter->writeAttribute('id', $this->data['RACE_ID']);
     $this->XmlWriter->writeAttribute('emblem', $this->data['TEAMLOGO']);
   }
 
@@ -134,8 +133,8 @@ class TeamSaver {
   private function write_player($index) {
     $this->XmlWriter->startElement('player');
     $this->write_player_attributes($index);
-    $position_id = $this->data['POSITION'][$index] - 1;
-    $this->XmlWriter->writeElement('positionid', (int) $this->race->positions->position[$position_id]->positionid);
+    $position_id = $this->data['POSITION'][$index]-1;
+    $this->XmlWriter->writeElement('positionid', $this->race['positions'][$position_id]['id']);
     $this->XmlWriter->writeElement('ma',$this->data['MA'][$index]);
     $this->XmlWriter->writeElement('st',$this->data['ST'][$index]);
     $this->XmlWriter->writeElement('ag',$this->data['AG'][$index]);
@@ -158,9 +157,9 @@ class TeamSaver {
   private function write_player_attributes($index) {
     $this->XmlWriter->writeAttribute('name',$this->data['NAME'][$index]);
     $this->XmlWriter->writeAttribute('number',$index+1);
-    $position_id = $this->data['POSITION'][$index] - 1;
-    $this->XmlWriter->writeAttribute('position', (string) $this->race->positions->position[$position_id]->title);
-    $this->XmlWriter->writeAttribute('display', (string) $this->race->positions->position[$position_id]->display);
+    $position_id = $this->data['POSITION'][$index]-1;
+    $this->XmlWriter->writeAttribute('position', $this->race['positions'][$position_id]['title']);
+    $this->XmlWriter->writeAttribute('display', $this->race['positions'][$position_id]['display']);
   }
 
   /**

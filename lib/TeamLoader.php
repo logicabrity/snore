@@ -33,6 +33,7 @@ class TeamLoader {
     $team = new TeamLoader($file);
     $team->to_array();
     $result = $team->result;
+    $result['raceName'] = $result['race'];
     return $result;
   }
 

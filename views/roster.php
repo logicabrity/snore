@@ -27,29 +27,29 @@
     var ST = "<?php echo $t['stats_st']; ?>"
     var AG = "<?php echo $t['stats_ag']; ?>"
     var AV = "<?php echo $t['stats_av']; ?>"
-
+    
     stats     = new Array()
     stats[0]  = new Array("","","","","","",99,16)
     skills[0] = new Array()
-<?php $i=0; foreach ( $race->positions->position as $p ): $i++; ?>
-    stats[<?php echo $i; ?>]  = new Array(<?php echo "\"{$p->title}\",{$p->ma},{$p->st},{$p->ag},{$p->av},{$p->cost},{$p->qty},0,\"{$p->normal}\",\"{$p->double}\",\"{$p->display}\""; ?>)
-    skills[<?php echo $i; ?>] = new Array("<?php echo implode('","',$p->xpath("skills/skill")); ?>")
+<?php $i=0; foreach ( $race['positions'] as $p ): $i++; ?>
+    stats[<?php echo $i; ?>]  = new Array(<?php
+      echo '"',$p['title'],'",',implode(",",$p['stats']),',',$p['cost'],',',$p['limit'],',0,"',
+               $p['skills-access'][0],'","',$p['skills-access'][1],'","',$p['display'],'"'; ?>)
+    skills[<?php echo $i; ?>] = new Array("<?php echo implode('","', $p['skills']); ?>")
 <?php endforeach; ?>
 
-    var positions   = <?php echo count($race->positions->position)."\n"; ?>
-    var apothecary  = new Boolean(<?php echo $race->apothecary; ?>)
-    var reroll_cost = <?php echo $race->reroll->cost; ?> 
+    var positions   = <?php echo count($race['positions'])."\n"; ?>
+    var apothecary  = new Boolean(<?php echo $race['medic-allowed']; ?>)
+    var reroll_cost = <?php echo $race['reroll-cost']."\n"; ?>
     var box_visible = new Boolean(false)
   </script>
 </head>
-
 <body onload="team_get_number_of_healthy();team_set_total_value();">
   <h1>Tow Bowl Tactics Teamroster</h1>
 
   <form id="ROSTER" action="index.php" method="post" enctype="multipart/form-data">
-    <div>
-      <input type="hidden" name="RACE_ID" value="<?php echo $race['id']; ?>" />
-    </div>
+    <input name="RACE_ID" type="hidden" value="<?php echo $raceId; ?>" />
+    <input name="LANG"    type="hidden" value="<?php echo LANG; ?>" />
 
     <!-- Start of Roster -->
 
@@ -86,8 +86,8 @@
         <td>
           <select class="position" name="POSITION[]" onchange="player_set_position(<?php echo $i; ?>);team_get_number_of_healthy()">
             <option value="0"<?php if ( !isset($p['position']) ): echo ' selected="selected"'; endif; ?>></option>
-<?php $j=1; foreach ( $race->positions->position as $pos ): ?>
-            <option value="<?php echo $j; ?>"<?php if ( isset($p['position']) && $j==$p['position'] ): echo ' selected="selected"'; endif; ?>><?php echo $pos->title; $j++; ?></option>
+<?php $j=1; foreach ( $race['positions'] as $pos ): ?>
+            <option value="<?php echo $j; ?>"<?php if ( isset($p['positionid']) && $pos['title']==$p['position'] ): echo ' selected="selected"'; endif; ?>><?php echo $pos['title']; $j++; ?></option>
 <?php endforeach; ?>
           </select>
         </td>
@@ -96,10 +96,10 @@
         <td><input class="stats" name="AG[]" type="text" readonly="readonly" value="<?php if (isset($p['ag'])) echo $p['ag']; ?>" /></td>
         <td><input class="stats" name="AV[]" type="text" readonly="readonly" value="<?php if (isset($p['av'])) echo $p['av']; ?>" /></td>
         <td class="button" onclick="app_show_skill_box(<?php echo $i; ?>)">
-          <textarea rows="2" cols="30" class="skills" name="SKILLS[]" readonly="readonly"><?php if (isset($p['skill'])): echo implode(',', $p['skill']); endif; ?></textarea>
+          <textarea rows="2" cols="30" class="skills" name="SKILLS[]" readonly="readonly"><?php if (isset($p['skill'])): echo implode(', ', $p['skill']); endif; ?></textarea>
         </td>
         <td class="button" onclick="app_show_injury_box(<?php echo $i; ?>)">
-          <textarea rows="2" cols="30" class="injuries" name="INJURIES[]" readonly="readonly"><?php if (isset($p['inj'])): echo implode(',', $p['inj']); endif; ?></textarea>
+          <textarea rows="2" cols="30" class="injuries" name="INJURIES[]" readonly="readonly"><?php if (isset($p['inj'])): echo implode(', ', $p['inj']); endif; ?></textarea>
         </td>
         <td><input class="spp" name="COMP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['com'])) echo $p['com']; ?>" /></td>
         <td><input class="spp" name="TD[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['td'])) echo $p['td']; ?>" /></td>
@@ -125,8 +125,8 @@
        <td rowspan="2"><input name="TEAM" type="text" value="<?php echo $loadedTeam['name']; ?>" /></td>
        <td class="label" colspan="3"><?php echo $t['rerolls']; ?></td>
        <td colspan="1"><input class="extras" name="REROLLS" onchange="extras_set_reroll_value()" type="text" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']; ?>" /></td>
-       <td colspan="3" class="label">x <?php echo $race->reroll->cost; ?></td>
-       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']*$race->reroll->cost; ?>" /></td>
+       <td colspan="3" class="label">x <?php echo $race['reroll-cost']; ?></td>
+       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']*$race['reroll-cost']; ?>" /></td>
       </tr>
 
       <tr>
@@ -147,7 +147,7 @@
 
       <tr>
        <td colspan="4" class="label"><?php echo $t['race']; ?></td>
-       <td><input name="RACE" type="text" value="<?php echo $race['name']; ?>" readonly="readonly" /></td>
+       <td><input name="RACE" type="text" value="<?php echo $race['race']; ?>" readonly="readonly" /></td>
        <td colspan="3" class="label"><?php echo $t['cheerleaders']; ?></td>
        <td colspan="1"><input class="extras" name="CHEERLEADERS" onchange="extras_set_cheerleaders_value()" type="text" value="<?php if (isset($loadedTeam['cheerleader'])) echo $loadedTeam['cheerleader']; ?>" /></td>
        <td colspan="3" class="label">x 10000</td>
@@ -195,7 +195,7 @@
       <button type="button" title="<?php echo $t['button_remove']; ?>" onclick="player_remove_skill()">
        <img src="public/pics/remove_red.gif" alt="<?php echo $t['button_remove']; ?>" />
       </button>
-      
+
       <h3><?php echo $t['button_add']; ?>:</h3>
 
       <p><?php echo $t['skills_normal']; ?></p>
@@ -292,7 +292,7 @@
     </div>
 
     <!-- End of Journeymen-Box -->
-    
+
     <!-- Start of Pictures-Box -->
 
     <div id="pic_box" class="element_hidden">
@@ -306,7 +306,7 @@
       <table>
         <tr>
           <td class="label"><?php echo $t['team']; ?></td>
-          <td><input name="TEAMLOGO" type="text" value="<?php echo $race->emblem; ?>" /></td>
+          <td><input name="TEAMLOGO" type="text" value="<?php echo $race['emblem']; ?>" /></td>
         </tr>
 <?php for ( $ji=0; $ji<16; $ji++ ): ?>
         <tr><td class="label"><?php echo $ji; ?></td><td><input name="DISPLAY[]" type="text" value="" /></td></tr>

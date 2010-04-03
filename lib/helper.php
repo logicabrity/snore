@@ -11,7 +11,7 @@
 function show_index( $errorCode=NULL ) {
   $version    = '1540';
   $t          = getTextOfPage("index", LANG);
-  $races      = translateRacesList(getRacesList(), LANG);
+  $races      = translateRacesList(getRaceList(), LANG);
   require_once "views/index.php";
 }
 

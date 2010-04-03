@@ -39,8 +39,7 @@
       <div id="races">&#9674;
 <?php $i=1; foreach ( $races as $id => $race ): ?>
         <a href="index.php?lang=<?php echo LANG; ?>&race=<?php echo $id; ?>"><?php echo str_replace(" ", "&nbsp;", $race); ?></a> &#9674;
-<?php if ($i%5==0): echo "        <br />\n"; endif; $i++ ?>
-<?php endforeach; ?>
+<?php if ($i%5==0) { echo "        <br />\n"; } $i++; endforeach; ?>
       </div>
 
       <!-- Load an existing team. -->
@@ -49,6 +48,7 @@
       <p class="error"><?php if ( $errorCode == 2 ): echo $t['upload_error']; endif; ?></p>
 
       <form action="index.php?lang=<?php echo LANG; ?>" method="post" enctype="multipart/form-public">
+        <input type="hidden" name="LANG" value="<?php echo LANG; ?>" />
         <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
         <input type="hidden" name="upload" value="true" />
         <p>

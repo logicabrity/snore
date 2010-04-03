@@ -11,7 +11,7 @@ require_once 'config.php';
 
 if ( isset($_POST['TEAM']) ) {
   require_once PROJECT_DIR . '/lib/TeamSaver.php';
-  $data = translateTeamBeforeSaving($_POST, LANG);
+  $data = translateTeamBeforeSaving($_POST, $_POST['LANG']);
   header('Content-type: application/xml');
   header('Content-Disposition: attachment; filename="'.$_POST['TEAM'].'.xml"');
   echo TeamSaver::save($data);
@@ -33,12 +33,13 @@ elseif ( isset($_GET['race']) ) {
 /* user uploaded a file => parse it, show a roster ************************** */
 
 elseif ( isset($_POST['upload']) ) {
-  if (	$_POST['upload'] == true &&
+  if (	array_key_exists('userfile', $_FILES) &&
+        $_POST['upload'] == true &&
         $_FILES['userfile']['error'] != UPLOAD_ERR_NO_FILE ) {
     $file = $_FILES['userfile']['tmp_name'];
     require_once PROJECT_DIR . '/lib/TeamLoader.php';
-    $team = translateTeamAfterLoading(TeamLoader::load($file), LANG);
-    show_roster($team['id'], $team);
+    $team = translateTeamAfterLoading(TeamLoader::load($file), $_POST['LANG']);
+    show_roster($team['raceName'], $team);
   }
   else {
     $errorCode = 2; // for the template
