@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <races BBversion="5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="races.xsd">
   <race id="0" name="Amazon">
-    <emblem>amazon.jpg</emblem>
+    <emblem>amazons.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
@@ -96,7 +96,7 @@
     <background>Long ago, driven by a desire for adventure, the Valkyries of the Norse settlement in Lustria sailed away from their men-folk and founded a colony deep within the estuary of the river Amaxon. Now these ferocious warriors have taken to the Blood Bowl pitch and Nuffle save those who dare play against them!</background>
   </race>
   <race id="1" name="Chaos">
-    <emblem>chaos.jpg</emblem>
+    <emblem>chaos.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -175,7 +175,7 @@
     <background>Chaos teams are not noted for the subtlety or originality of their game play. A simple drive up the centre of the pitch, maiming and injuring as many opposing players as possible, is about the limit of their game plan. They rarely, if ever, worry about such minor considerations like picking up the ball and scoring touchdowns not while there are any players left alive on the opposing team, anyway.</background>
   </race>
   <race id="2" name="Dark Dwarf">
-    <emblem>chaosdwarves.jpg</emblem>
+    <emblem>darkdwarves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -193,7 +193,7 @@
         <normal>g</normal>
         <double>asp</double>
         <positionid>3</positionid>
-        <display>chaosdwarf_h.png</display>
+        <display>darkdwarf_h.png</display>
         <skills/>
       </position>
       <position>
@@ -207,7 +207,7 @@
         <normal>gs</normal>
         <double>apm</double>
         <positionid>2</positionid>
-        <display>chaosdwarf_b.png</display>
+        <display>darkdwarf_b.png</display>
         <skills>
           <skill>Block</skill>
           <skill>Tackle</skill>
@@ -225,7 +225,7 @@
         <normal>gs</normal>
         <double>ap</double>
         <positionid>1</positionid>
-        <display>chaosdwarf_c.png</display>
+        <display>darkdwarf_c.png</display>
         <skills>
           <skill>Sprint</skill>
           <skill>Sure Feet</skill>
@@ -243,7 +243,7 @@
         <normal>s</normal>
         <double>gapm</double>
         <positionid>0</positionid>
-        <display>chaosdwarf_m.png</display>
+        <display>darkdwarf_m.png</display>
         <skills>
           <skill>Loner</skill>
           <skill>Frenzy</skill>
@@ -264,7 +264,7 @@
         <normal>g</normal>
         <double>asp</double>
         <positionid>4</positionid>
-        <display>chaosdwarf_j.png</display>
+        <display>darkdwarf_j.png</display>
         <skills>
           <skill>Loner</skill>
         </skills>
@@ -273,7 +273,7 @@
     <background>Chaos Dwarfs are the twisted descendants of Dwarf explorers who have been terribly affected by the forces of Chaos, turning them into evil, self-centred creatures. In one way, however, they haven't changed at all, they still love playing Blood Bowl! Chaos Dwarfs are not very numerous and make great use of sneaky Hobgoblin slaves to perform all kinds of tasks, including playing on their Blood Bowl teams.</background>
   </race>
   <race id="3" name="Dark Elf">
-    <emblem>darkelves.jpg</emblem>
+    <emblem>darkelves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
@@ -381,7 +381,7 @@
     <background>Evil beyond belief, skilled without doubt, the Dark Elves take to the pitch to show the world their superiority. Dark Elf teams prefer a malevolent and spiteful running game over the passing of their goodly cousins. Backed up by the ruthless Witch Elves and dangerous assassins, a Dark Elf team has all the tools to power through rather than around any opposition line.</background>
   </race>
   <race id="4" name="Dwarf">
-    <emblem>dwarves.jpg</emblem>
+    <emblem>dwarves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>40000</cost>
@@ -504,7 +504,7 @@
     <background>Dwarfs seem to be ideal Blood Bowl players, being compact, tough, well-armoured and having a stubborn knack of refusing to die! Most successful Dwarf teams work to the principle that if they can take out all the other team's potential scorers, and wear down the rest, then there won't be anybody left to stop them scoring the winning touchdowns!</background>
   </race>
   <race id="5" name="Elf">
-    <emblem>elves.jpg</emblem>
+    <emblem>elves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
@@ -595,7 +595,7 @@
     <background>When the NAF collapsed, many Elven teams were left penniless. Those teams that have survived the fallout are not as rich as the High Elf teams nor as well equipped, but they sure know how to play the game. Sporting facemasks and mohawks, they take to the pitch to relive the glory days they once played in.</background>
   </race>
   <race id="6" name="Goblin">
-    <emblem>goblins.jpg</emblem>
+    <emblem>goblins.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -743,7 +743,7 @@
     <background>A Goblin team's game plan owes much more to hope than potential. Goblins can make quite good catchers because they are small and agile, but the art of throwing is sadly lost to them, while the chances of their blocking anything larger than a Halfling are remote to say the least. Still, this never seems to bother Goblin players, and occasionally the use of a particularly devious Secret Weapon will even allow a Goblin team to win a match.</background>
   </race>
   <race id="7" name="Halfling">
-    <emblem>halflings.jpg</emblem>
+    <emblem>halflings.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -813,7 +813,7 @@
     <background>The technical deficiency of Halfling teams is legendary. They're too short to throw or catch, they run at half pace, and the whole team can spend all afternoon trying to block an Ogre without any chance of success. Most Halfling coaches try to make up for quality with quantity. After all, if you can get half a dozen players in the opposing team's End Zone and, by some miracle, manage to end up with the ball, then there is a small chance that one or two of them won't be jelly by the time you throw the thing.</background>
   </race>
   <race id="8" name="High Elf">
-    <emblem>highelves.jpg</emblem>
+    <emblem>highelves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
@@ -903,7 +903,7 @@
     <background>The Elven Kingdom sponsored High Elf teams, feature a dangerous passing game and some of the most arrogant players you will find. Rich beyond the dreams of most teams, the High Elves often feature many Princes and noble born Elves on the team and what they cannot beat, they'll buy.</background>
   </race>
   <race id="9" name="Human">
-    <emblem>humans.jpg</emblem>
+    <emblem>humans.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
@@ -1014,7 +1014,7 @@
     <background>Although Human teams do not have the individual strengths or outstanding abilities available to other races, they do not suffer from any outstanding weakness either. This makes Human teams extremely flexible, equally at home running the ball, passing it, or ignoring it and pounding the opposition into the turf instead!</background>
   </race>
   <race id="10" name="Shabti">
-    <emblem>khemri.jpg</emblem>
+    <emblem>shabtis.png</emblem>
     <apothecary>false</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -1032,7 +1032,7 @@
         <normal>g</normal>
         <double>asp</double>
         <positionid>3</positionid>
-        <display>khemri_s.png</display>
+        <display>shabti_s.png</display>
         <skills>
           <skill>Regeneration</skill>
         </skills>
@@ -1048,7 +1048,7 @@
         <normal>gp</normal>
         <double>as</double>
         <positionid>2</positionid>
-        <display>khemri_t.png</display>
+        <display>shabti_t.png</display>
         <skills>
           <skill>Pass</skill>
           <skill>Regeneration</skill>
@@ -1066,7 +1066,7 @@
         <normal>gs</normal>
         <double>ap</double>
         <positionid>1</positionid>
-        <display>khemri_b.png</display>
+        <display>shabti_b.png</display>
         <skills>
           <skill>Block</skill>
           <skill>Regeneration</skill>
@@ -1083,7 +1083,7 @@
         <normal>s</normal>
         <double>gap</double>
         <positionid>0</positionid>
-        <display>khemri_m.png</display>
+        <display>shabti_m.png</display>
         <skills>
           <skill>Mighty Blow</skill>
           <skill>Regeneration</skill>
@@ -1100,7 +1100,7 @@
         <normal>g</normal>
         <double>asp</double>
         <positionid>4</positionid>
-        <display>khemri_j.png</display>
+        <display>shabti_j.png</display>
         <skills>
           <skill>Regeneration</skill>
           <skill>Loner</skill>
@@ -1110,7 +1110,7 @@
     <background>Over 8,000 years ago, the Khemri played the first games of Blood Bowl against the Slann. But, as the Kingdom died off, so did the game until its rediscovery. And as the game returned, it was inevitable that the ancient players and stars of the Khemri would return to the pitch they once played on.</background>
   </race>
   <race id="11" name="Reptile">
-    <emblem>lizardmen.jpg</emblem>
+    <emblem>reptiles.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -1128,7 +1128,7 @@
         <normal>a</normal>
         <double>gsp</double>
         <positionid>2</positionid>
-        <display>lizardman_sk.png</display>
+        <display>reptile_sk.png</display>
         <skills>
           <skill>Dodge</skill>
           <skill>Stunty</skill>
@@ -1145,7 +1145,7 @@
         <normal>gs</normal>
         <double>ap</double>
         <positionid>1</positionid>
-        <display>lizardman_sa.png</display>
+        <display>reptile_sa.png</display>
         <skills/>
       </position>
       <position>
@@ -1159,7 +1159,7 @@
         <normal>s</normal>
         <double>gap</double>
         <positionid>0</positionid>
-        <display>lizardman_k.png</display>
+        <display>reptile_k.png</display>
         <skills>
           <skill>Loner</skill>
           <skill>Bone-Head</skill>
@@ -1179,7 +1179,7 @@
         <normal>a</normal>
         <double>gsp</double>
         <positionid>3</positionid>
-        <display>lizardman_j.png</display>
+        <display>reptile_j.png</display>
         <skills>
           <skill>Dodge</skill>
           <skill>Stunty</skill>
@@ -1190,7 +1190,7 @@
     <background>The Mage-Priests foretold the game of Blood Bowl thousands of years before it was discovered by the Dwarf Roze-El. So it is no surprise that the Lizardmen play Blood Bowl. Providing an odd blend of dexterity and strength, the Lustrian team can almost last the distance against a power team such as Chaos, while remaining able to pull off the running plays of the Skaven.</background>
   </race>
   <race id="12" name="Necromantic">
-    <emblem>necromantics.jpg</emblem>
+    <emblem>necromantics.png</emblem>
     <apothecary>false</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -1303,7 +1303,7 @@
     <background>The damned and the cursed do not always lurk in the forests or in the graveyards of the Old World. Sometimes they come together, forming a group to hunt those more fortunate of souls. Finding relief in crazed outbursts of terrible violence, these groups do the best they can to ease their suffering - they pop off for a nice game of Blood Bowl.</background>
   </race>
   <race id="13" name="Norse">
-    <emblem>norses.jpg</emblem>
+    <emblem>norses.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -1435,7 +1435,7 @@
     <background>Norse teams have a well deserved reputation for ferocity both on and off the playing pitch. The Norse that takes up Blood Bowl is a truly unedifying specimen, interested only in beer, women and song off the playing pitch, and beer, women and bloody carnage while on it!</background>
   </race>
   <race id="14" name="Nergal">
-    <emblem>nurgles.jpg</emblem>
+    <emblem>nergals.png</emblem>
     <apothecary>false</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -1453,7 +1453,7 @@
         <normal>gm</normal>
         <double>asp</double>
         <positionid>3</positionid>
-        <display>nurgle_r.png</display>
+        <display>nergal_r.png</display>
         <skills>
           <skill>Decay</skill>
           <skill>Nurgle's Rot</skill>
@@ -1470,7 +1470,7 @@
         <normal>gsm</normal>
         <double>ap</double>
         <positionid>2</positionid>
-        <display>nurgle_p.png</display>
+        <display>nergal_p.png</display>
         <skills>
           <skill>Horns</skill>
           <skill>Nurgle's Rot</skill>
@@ -1488,7 +1488,7 @@
         <normal>gsm</normal>
         <double>ap</double>
         <positionid>1</positionid>
-        <display>nurgle_w.png</display>
+        <display>nergal_w.png</display>
         <skills>
           <skill>Disturbing Presence</skill>
           <skill>Foul Appearance</skill>
@@ -1507,7 +1507,7 @@
         <normal>s</normal>
         <double>gapm</double>
         <positionid>0</positionid>
-        <display>nurgle_b.png</display>
+        <display>nergal_b.png</display>
         <skills>
           <skill>Loner</skill>
           <skill>Disturbing Presence</skill>
@@ -1530,7 +1530,7 @@
         <normal>gm</normal>
         <double>asp</double>
         <positionid>4</positionid>
-        <display>nurgle_j.png</display>
+        <display>nergal_j.png</display>
         <skills>
           <skill>Decay</skill>
           <skill>Nergal's Rot</skill>
@@ -1541,7 +1541,7 @@
     <background>Nurgle teams are a form of Chaos team whose players worship the god Nurgle. Nurgle is the Chaos god of corruption and disease, and he rewards his players by granting them a rather unpleasant disease known as Nurgle's Rot. The fact that Nurgle teams smell awful is assumed rather than proven. True, they are all made up of semi decomposed flesh surrounded by swarms of flies, but by the time anyone gets close enough to get a really accurate whiff, he has inevitably caught one of Nurgle's nasty diseases, and he usually dies before he can suggest a new personal hygiene regime.</background>
   </race>
   <race id="15" name="Ogre">
-    <emblem>ogres.jpg</emblem>
+    <emblem>ogres.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -1612,7 +1612,7 @@
     <background>Ogre teams have existed since the forming of the NAF and have even had some success such as winning the XV Blood Bowl. However, as any right-minded person will tell you, having more than one Ogre in the same place at the same time is a disaster in the making. The key to an Ogre team is the Snotlings. If they are close enough to jab an Ogre in the leg to remind him that they are playing in a match then you may have the makings of a team.</background>
   </race>
   <race id="16" name="Orc">
-    <emblem>orc.jpg</emblem>
+    <emblem>orcs.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -1739,7 +1739,7 @@
     <background>Orcs have been playing Blood Bowl since the game was invented, and Orc teams such as the Gouged Eye and Severed Heads are amongst the best in the league. Orc teams are tough and hard-hitting, grinding down the opposition's line to create gaps for their excellent Orc Blitzers to exploit.</background>
   </race>
   <race id="17" name="Rodent">
-    <emblem>skavens.jpg</emblem>
+    <emblem>rodents.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>60000</cost>
@@ -1757,7 +1757,7 @@
         <normal>g</normal>
         <double>aspm</double>
         <positionid>4</positionid>
-        <display>skaven_l.png</display>
+        <display>rodent_l.png</display>
         <skills/>
       </position>
       <position>
@@ -1771,7 +1771,7 @@
         <normal>gp</normal>
         <double>asm</double>
         <positionid>3</positionid>
-        <display>skaven_t.png</display>
+        <display>rodent_t.png</display>
         <skills>
           <skill>Sure Hands</skill>
           <skill>Pass</skill>
@@ -1788,7 +1788,7 @@
         <normal>ga</normal>
         <double>spm</double>
         <positionid>2</positionid>
-        <display>skaven_r.png</display>
+        <display>rodent_r.png</display>
         <skills>
           <skill>Dodge</skill>
         </skills>
@@ -1804,7 +1804,7 @@
         <normal>gs</normal>
         <double>apm</double>
         <positionid>1</positionid>
-        <display>skaven_b.png</display>
+        <display>rodent_b.png</display>
         <skills>
           <skill>Block</skill>
         </skills>
@@ -1820,7 +1820,7 @@
         <normal>s</normal>
         <double>gapm</double>
         <positionid>0</positionid>
-        <display>skaven_o.png</display>
+        <display>rodent_o.png</display>
         <skills>
           <skill>Loner</skill>
           <skill>Frenzy</skill>
@@ -1840,7 +1840,7 @@
         <normal>g</normal>
         <double>aspm</double>
         <positionid>5</positionid>
-        <display>skaven_j.png</display>
+        <display>rodent_j.png</display>
         <skills>
           <skill>Loner</skill>
         </skills>
@@ -1849,7 +1849,7 @@
     <background>They may not be all that strong, they certainly aren't tough, but boy oh boy are Skaven fast! Many an opponent has been left in the starting blocks as fast-moving Skaven players scamper through a gap in the line and run in for a lightning fast touchdown.</background>
   </race>
   <race id="18" name="Undead">
-    <emblem>undeads.jpg</emblem>
+    <emblem>undeads.png</emblem>
     <apothecary>false</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -1959,7 +1959,7 @@
     <background>In the Old World the dead do not rest easy. Vampires lurk in haunted castles, Necromancers seek to escape death by searching for forbidden knowledge, the Liche-lords rule over legions of corpses, and on the Blood Bowl field players who died long ago return to the scenes of their former glory and play Blood Bowl once again'</background>
   </race>
   <race id="19" name="Vampire">
-    <emblem>vampires.jpg</emblem>
+    <emblem>vampires.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>70000</cost>
@@ -2018,7 +2018,7 @@
     <background>Although Vampire teams include a number of extremely capable players, they are let down by the unreliability of the Vampires. While they should be concentrating on the game, their attention often wanders to their hunger and before you know it they are off for a quick bite!</background>
   </race>
   <race id="20" name="Wood Elf">
-    <emblem>woodelves.jpg</emblem>
+    <emblem>woodelves.png</emblem>
     <apothecary>true</apothecary>
     <reroll>
       <cost>50000</cost>
