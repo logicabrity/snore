@@ -27,9 +27,9 @@ journeymen_text: |
 
 skills: Compétences
 skills_own: Propres comp.
-skills_normal: Répertoire normal
-skills_double: Répertoire double
-skills_forbidden: Comp. interdites
+skills_normal: normal
+skills_double: double
+skills_forbidden: interdit
 
 stats: Caractéristiques
 stats_ma: M

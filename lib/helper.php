@@ -15,10 +15,10 @@ function show_index( $errorCode=NULL ) {
   require_once "views/index.php";
 }
 
-function show_roster( $raceId, $loadedTeam=NULL ) {
+function show_roster( $raceId, $lt=NULL ) {
   $t          = getTextOfPage("roster", LANG);
-  $skills     = translateSkillsList(getSkillsNested(), LANG);
-  $race       = translateRaceInfo(getRaceInfo($raceId), LANG);
+  $s          = translateSkillsList(getSkillsNested(), LANG);
+  $r          = translateRaceInfo(getRaceInfo($raceId), LANG);
   require_once "views/roster.php";
 }
 
@@ -35,6 +35,14 @@ function getTextOfPage($page, $lang) {
   $file = "data/$lang/$page.yml";
   $data = Spyc::YAMLLoad($file);
   return $data;
+}
+
+function ak($arr, $key) {
+  if ( isset($arr) && array_key_exists($key, $arr) )
+    return $arr[$key];
+  if ( $key == 'skill' or $key=='inj' )
+    return array();
+  return "";
 }
 
 ?>

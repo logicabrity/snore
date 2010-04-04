@@ -1,78 +1,105 @@
-body, p, h1, h2, h3, td, tr, input, select, a
-{
-	font-family: sans-serif;
-	text-decoration: none;
-  font-size: small;
-	padding: 1px;
-	margin: 0px;
+/*******************************************************************************
+  Colors "Chaos Inc. 2.0" by godsofchaos
+  - chaos brown       hex #a7a78a     rgb 167,167,138
+  - vanishing ground  hex #211b17     rgb 33,27,23
+  - DS                hex #eaeaea     rgb 234,234,234
+  - Scandium          hex #252525     rgb 37,37,37
+  - Lilz Faded Blue   hex #617e8f     rgb 97,126,143
+*******************************************************************************/
+
+body { background-color: rgb(33,27,23);
+       color: rgb(234,234,234); }
+tbody, thead, tfoot { border-color: rgb(74,74,74); }
+td, th { border-color: rgb(37,37,37); }
+thead, td.label, h1, h2, h3 { color: rgb(167,167,138); font-variant: small-caps; }
+
+/******************************************************************************/
+
+td, th {
+  padding: 1px 3px 1px 3px;
+  border-style: solid;
+  border-width: 1px;
 }
 
-h1 { font-size: 150%; padding: 4px; }
-h2 { font-size: 125%; }
-h2.popup { margin-bottom: 15px; }
-h3 { font-weight: bold; }
+table#roster {
+  margin: 20px auto 20px auto;
+}
 
-table { border-collapse: collapse; border: 1px solid black; margin: 3px; }
-table.big { border: 2px solid black; margin: 10px; }
-thead { background-color: lightgrey; text-align: center; }
-tr.separator { border-top: 2px solid black; }
-td { border: 1px solid gray; }
-td.label { background-color: lightgrey; }
-td.button:hover { background-color: rgb(200,200,250); cursor:pointer; }
-td.wide { width: 25em; } /* fix opera behaviour */
+table {
+    border-collapse: collapse;
+}
 
-input, textarea {
-        border-style: hidden;
+thead, tbody, tfoot{
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 2px;
+}
+
+input { color: inherit;
+        background-color: inherit;
+        margin: 0px;
+        width: 100%;
+        border-style: none;
         cursor: inherit;
 }
+input.num-s { width: 2em; text-align: center; }
+input.num-m { width: 5em; }
+input.bignum-s { width: 2em; text-align: center; font-size: 90%; }
+input.txt-m { width: 8em; }
+input.txt-l { width: 25em; }
 
-textarea.background { border: 1px solid gray; }
-input.stats, input.spp, input.extras {
-    text-align: center;
-    width: 2em;
+a {
+  font-variant: normal;
+  color: rgb(97,126,143);
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
-textarea.injuries, textarea.skills {
-        height: 2.5em;
-        font-size: smaller;
-        background-color: transparent;
-}
-textarea.injuries { width: 7em; }
-textarea.skills { width: 100%; }
-
-/* ############################################################# */
-
-a.plus { color: green; font-size: x-large; }
-a.minus { color: red; font-size: x-large; }
-a.positive { color: green; }
-a.negative { color: red; }
-a.neutral { color: blue; }
-.element_visible { display: block; }
-.element_hidden { display: none; }
-input.value, input.healthy, input.injured { width: 4.5em; }
-input.injured { text-decoration: line-through; }
-select.position { width: 100% }
-select.wide { width: 100%; }
-select.fix { width: 250px; }
-button.box_control { float: right; }
-img.emblem { width:104px; height:140px; }
-
-/* boxes */
-
-#skill_box, #inj_box, #jm_box, #pic_box, #background_box
+#skill_box, #inj_box, #jm_box, #spp_box
 {
 	position: fixed;
 	z-index: 2;
 	top: 100px;
-	left: 100px;
+	right: 100px;
 	height: auto;
 	padding: 5px;
-	border-left: 2px solid #777777;
-	border-top: 2px solid #777777;
-	border-right: 3px solid #444444;
-	border-bottom: 3px solid #444444;
-	background-color: white;
+  border-width: 2px 3px 3px 2px;
+  border-style: solid;
+	border-left-color: #777777;
+	border-top-color: #777777;
+	border-right-color: #444444;
+	border-bottom-color: #444444;
+  background-color: rgb(33,27,23);
+  width: 23em;
 }
 
-#skill_box, #inj_box, #jm_box, #pic_box { width: 300px; }
-#background_box { width: auto; }
+.element_visible { display: block; }
+.element_hidden { display: none; }
+
+img {
+  width: 25px;
+}
+
+img.close {
+  float: right;
+}
+
+select.fix { width: 250px; }
+h1, h2, h3 { margin: 0px; padding: 0px; margin-bottom: 10px; }
+
+select {
+  background-color: inherit;
+  color: inherit;  
+}
+
+select.invisible {
+  border-style: none;
+}
+
+td.clickable {
+  cursor: pointer;
+}
+
+td.clickable:hover {
+  background-color: rgb(97,126,143);
+}

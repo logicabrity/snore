@@ -58,6 +58,24 @@ function app_show_journeymen_box() {
   }
 }
 
+function app_show_spp_box(clicked_row) {
+  if( player_is_assigned(clicked_row) != false ) {
+    if( app_show('spp_box') == true ) {
+      var player_number = clicked_row + 1
+      $_("TEMP4").value = player_number
+      $_("TEMPCOMP").value = $_("COMP[]")[clicked_row].value
+      $_("TEMPTD").value = $_("TD[]")[clicked_row].value
+      $_("TEMPINT").value = $_("INT[]")[clicked_row].value
+      $_("TEMPCAS").value = $_("CAS[]")[clicked_row].value
+      $_("TEMPMVP").value = $_("MVP[]")[clicked_row].value
+      $_("TEMPSPP").value = $_("SPP[]")[clicked_row].value
+    }
+  }
+  else {
+    alert(warning[2])
+  }
+}
+
 function app_show_skill_box(clicked_row) {
   // only for real players, and not journeymen
   if( player_is_assigned(clicked_row) == true ) {
@@ -139,7 +157,7 @@ function app_hide(ID) {
 // like assistant coaches, rerolls...
 function extras_get_total_value(j) {
   var extras_total_value = 0
-  for ( var i=16; i<=20; i++ ) {
+  for ( var i=16; i<=18; i++ ) {
     var value = parseInt($_("VALUE[]")[i].value)
     if ( isNaN(value) ) { value = 0 }
     extras_total_value += value
@@ -158,38 +176,28 @@ function extras_set_reroll_value() {
   team_set_total_value()
 }
 
-function extras_set_fanfactor_value() {
-  var count = $_("FANFACTOR").value
-  $_("VALUE[]")[17].value = count*10000
+function extras_set_fans_and_cheerleaders_value() {
+  var fcount = parseInt($_("FANFACTOR").value) || 0
+  var ccount = parseInt($_("CHEERLEADERS").value) || 0
+  $_("VALUE[]")[17].value = (fcount+ccount)*10000
   team_set_total_value()
 }
 
-function extras_set_coaches_value() {
-  var count = $_("COACHES").value
-  $_("VALUE[]")[18].value = count*10000
-  team_set_total_value()
-}
-
-function extras_set_cheerleaders_value() {
-  var count = $_("CHEERLEADERS").value
-  $_("VALUE[]")[19].value = count*10000
-  team_set_total_value()
-}
-
-function extras_set_apothecary_value() {
+function extras_set_medic_and_coaches_value() {
   if ( apothecary == true ) {
-    var count = $_("APOTHECARY").value
-    if ( count > 1 ) {
-      count = 1
-      $_("APOTHECARY").value = count
+    var mcount = parseInt($_("APOTHECARY").value) || 0
+    if ( mcount > 1 ) {
+      mcount = 1
+      $_("APOTHECARY").value = mcount
       alert(warning[12])
     }
   }
   else {
-    count = 0
+    mcount = 0
     alert(warning[11])
   }
-  $_("VALUE[]")[20].value = count*50000
+  var ccount = parseInt($_("COACHES").value) || 0
+  $_("VALUE[]")[18].value = mcount*50000 + ccount*10000
   team_set_total_value()
 }
 
@@ -223,14 +231,6 @@ function team_set_total_value() {
     }
   teamvalue += extras_get_total_value()
   $_("TEAMVALUE").value = teamvalue
-
-  // color teamvalue red if it is > 1.000.000 gp
-  if (teamvalue > 1000000) {
-    $_("TEAMVALUE").style.color = "red"
-  }
-  else {
-    $_("TEAMVALUE").style.color = "black"
-  }
 }
 
 // check before too many players of the same position are fielded
@@ -450,11 +450,19 @@ function player_set_skillchanges() {
   app_hide('skill_box')
 }
 
+function player_set_injured() {
+  for ( var i=0; i<16; i++ ) {
+    if ( $_("INJURIES[]")[i].value.match(RegExp("[^\-]?"+M)) ) {
+      $_("VALUE[]")[i].style.textDecoration = 'line-through'
+    }
+  }
+}
+
 /* write changes in injury-box to roster */
 function player_set_injurychanges() {
   var clicked_row = parseInt($_("TEMP2").value - 1)
   var options     = $_("OWN_INJURIES").options
-  $_("VALUE[]")[clicked_row].className = 'healthy'
+  $_("VALUE[]")[clicked_row].style.textDecoration = 'none'
 
   /* it is not possible to directly join the options elements */
   var injuries_arr = new Array()
@@ -462,7 +470,7 @@ function player_set_injurychanges() {
     if ( options[i].text != "" ) {
       injuries_arr.push(options[i].text)
       if ( options[i].text == M ) {
-        $_("VALUE[]")[clicked_row].className = 'injured'
+        $_("VALUE[]")[clicked_row].style.textDecoration = 'line-through'
       }
     }
   }
@@ -548,32 +556,26 @@ function player_set_stat_decrease(clicked_row, stat) {
 
 // go through all SPP-fields of a player
 // check them, and do the sum of SPP-points
-function player_set_spp(row) {
-  if(player_is_assigned(row) != false) {
-    var actions = new Array("COMP", "TD", "INT", "CAS", "MVP")
-    var actions_points = new Array(1, 3, 2, 2, 5)
-    var total_spp_points = 0
+function player_set_spp() {
+  var row = parseInt($_("TEMP4").value)-1
+  var actions = new Array("COMP", "TD", "INT", "CAS", "MVP")
+  var actions_points = new Array(1, 3, 2, 2, 5)
+  var total_spp_points = 0
 
-    for ( var i in actions ) {
-      var count = $_(actions[i]+"[]")[row].value
+  for ( var i in actions ) {
+    var count = $_("TEMP"+actions[i]).value
+    if ( isNaN(count) || count<0 ) {
+      count = prompt(warning[8])
       if ( isNaN(count) || count<0 ) {
-        count = prompt(warning[8])
-        if ( isNaN(count) || count<0 ) {
-          count = 0
-          $_(actions[i]+"[]")[row].value = count
-        }
+        count = 0
+        $_(actions[i]+"[]")[row].value = count
       }
-      total_spp_points += count * actions_points[i]
     }
-    $_("SPP[]")[row].value = total_spp_points
-  } else {
-    alert(warning[2])
-    $_("COMP[]")[row].value = ""
-    $_("TD[]")[row].value   = ""
-    $_("INT[]")[row].value  = ""
-    $_("CAS[]")[row].value  = ""
-    $_("MVP[]")[row].value  = ""
+    total_spp_points += count * actions_points[i]
+    $_(actions[i]+"[]")[row].value = count
   }
+  $_("TEMPSPP").value = total_spp_points
+  $_("SPP[]")[row].value = total_spp_points
 }
 
 function player_set_position(row) {
@@ -593,7 +595,7 @@ function player_set_position(row) {
   $_("ST[]")[row].value        = stats[position_id][2]
   $_("AG[]")[row].value        = stats[position_id][3]
   $_("AV[]")[row].value        = stats[position_id][4]
-  $_("VALUE[]")[row].className = 'healthy'
+  $_("VALUE[]")[row].style.textDecoration = 'none'
   $_("VALUE[]")[row].value     = stats[position_id][5]
   $_("POSITION[]")[row].value  = position_id
   $_("SKILLS[]")[row].value    = skills[position_id].join(", ")
@@ -616,7 +618,7 @@ function player_set_name(row) {
 }
 
 function player_is_injured(row) {
-  if ( $_("VALUE[]")[row].className == "injured" ) {
+  if ( $_("VALUE[]")[row].style.textDecoration == "line-through" ) {
     return true
   }
   return false

@@ -27,9 +27,9 @@ journeymen_text: |
 
 skills: Skills
 skills_own: Own Skills
-skills_normal: Normal Repertory
-skills_double: Double Repertory
-skills_forbidden: Forbidden Skills
+skills_normal: Normal
+skills_double: Double
+skills_forbidden: Forbidden
 
 stats: Stats
 stats_ma: MA
@@ -54,7 +54,7 @@ button_return: Return to Start
 
 save: Save Roster
 
-player_name: Player´s Name
+player_name: Name
 player_position: Position
 
 spp: SPP

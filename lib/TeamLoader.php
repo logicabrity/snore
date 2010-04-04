@@ -141,32 +141,30 @@ class TeamLoader {
       switch ($this->last_opened_element_name) {
         case 'team':
           $this->result[$this->XmlReader->name] = $this->XmlReader->value;
-          break;
+        break;
         case 'player':
           $this->temp_player[$this->XmlReader->name] = $this->XmlReader->value;
-          break;
+        break;
         case 'injuries':
           switch ($this->XmlReader->name) {
             case 'missNextMatch':
               $this->temp_player['inj'][] = 'M';
-              break;
+            break;
             case 'nigglingInjuries':
-              for ($i=0; $i < $this->XmlReader->value; $i++) {
+              for ($j=0; $j < $this->XmlReader->value; $j++) {
                 $this->temp_player['inj'][] = 'N';
               }
-              break;
+            break;
             default:
               // $this->XmlReader->name is something like AgReduction
               // so 'Ag' is extracted to have the injured stat.
               $str = '-' . strtoupper(substr($this->XmlReader->name, 0, 2));
-              for ($i=0; $i < $this->XmlReader->value; $i++) {
+              for ($k=0; $k < $this->XmlReader->value; $k++) {
                 $this->temp_player['inj'][] = $str;
               }
-              break;
+            break;
           }
-          break;
-        default:
-          break;
+        break;
       }
     }
   }

@@ -9,317 +9,231 @@
   <script type="text/javascript" src="public/js/roster.js"></script>
   <script type="text/javascript">
     skills      = new Array()
-    skills['g'] = new Array("<?php echo implode('","', $skills['General']); ?>")
-    skills['p'] = new Array("<?php echo implode('","', $skills['Passing']); ?>")
-    skills['a'] = new Array("<?php echo implode('","', $skills['Agility']); ?>")
-    skills['s'] = new Array("<?php echo implode('","', $skills['Strength']); ?>")
-    skills['m'] = new Array("<?php echo implode('","', $skills['Mutation']); ?>")
-    skills['e'] = new Array("<?php echo implode('","', $skills['Extraordinary']); ?>")
+    skills['g'] = new Array("<?= implode('","', $s['General']) ?>")
+    skills['p'] = new Array("<?= implode('","', $s['Passing']) ?>")
+    skills['a'] = new Array("<?= implode('","', $s['Agility']) ?>")
+    skills['s'] = new Array("<?= implode('","', $s['Strength']) ?>")
+    skills['m'] = new Array("<?= implode('","', $s['Mutation']) ?>")
+    skills['e'] = new Array("<?= implode('","', $s['Extraordinary']) ?>")
 
     warning = new Array()
 <?php foreach ( $t['js_warnings'] as $i => $w ): ?>
-    warning[<?php echo $i; ?>] = "<?php echo $w; ?>"
+    warning[<?= $i ?>] = "<?= $w ?>"
 <?php endforeach; ?>
 
-    var M  = "<?php echo $t['injuries_m']; ?>"
-    var N  = "<?php echo $t['injuries_n']; ?>"
-    var MA = "<?php echo $t['stats_ma']; ?>"
-    var ST = "<?php echo $t['stats_st']; ?>"
-    var AG = "<?php echo $t['stats_ag']; ?>"
-    var AV = "<?php echo $t['stats_av']; ?>"
-    
+    var M  = "<?= $t['injuries_m']; ?>"
+    var N  = "<?= $t['injuries_n']; ?>"
+    var MA = "<?= $t['stats_ma']; ?>"
+    var ST = "<?= $t['stats_st']; ?>"
+    var AG = "<?= $t['stats_ag']; ?>"
+    var AV = "<?= $t['stats_av']; ?>"
+
     stats     = new Array()
     stats[0]  = new Array("","","","","","",99,16)
     skills[0] = new Array()
-<?php $i=0; foreach ( $race['positions'] as $p ): $i++; ?>
+<?php $i=0; foreach ( $r['positions'] as $p ): $i++; ?>
     stats[<?php echo $i; ?>]  = new Array(<?php
       echo '"',$p['title'],'",',implode(",",$p['stats']),',',$p['cost'],',',$p['limit'],',0,"',
                $p['skills-access'][0],'","',$p['skills-access'][1],'","',$p['display'],'"'; ?>)
-    skills[<?php echo $i; ?>] = new Array("<?php echo implode('","', $p['skills']); ?>")
+    skills[<?= $i ?>] = new Array("<?= implode('","', $p['skills']); ?>")
 <?php endforeach; ?>
 
-    var positions   = <?php echo count($race['positions'])."\n"; ?>
-    var apothecary  = new Boolean(<?php echo $race['medic-allowed']; ?>)
-    var reroll_cost = <?php echo $race['reroll-cost']."\n"; ?>
+    var positions   = <?= count($r['positions']),"\n" ?>
+    var apothecary  = new Boolean(<?= $r['medic-allowed'] ?>)
+    var reroll_cost = <?= $r['reroll-cost'],"\n" ?>
     var box_visible = new Boolean(false)
   </script>
 </head>
-<body onload="team_get_number_of_healthy();team_set_total_value();">
-  <h1>Tow Bowl Tactics Teamroster</h1>
+  <body onload="player_set_injured();team_get_number_of_healthy();team_set_total_value();">
 
-  <form id="ROSTER" action="index.php" method="post" enctype="multipart/form-data">
-    <input name="RACE_ID" type="hidden" value="<?php echo $raceId; ?>" />
-    <input name="LANG"    type="hidden" value="<?php echo LANG; ?>" />
+    <form id="ROSTER" action="index.php" method="post" enctype="multipart/form-data">
+      <input name="RACE_ID"   type="hidden" value="<?= $raceId; ?>" />
+      <input name="LANG"      type="hidden" value="<?= LANG; ?>" />
+      <input name="TEAMLOGO"  type="hidden" value="<?= $r['emblem'] ?>" />
 
-    <!-- Start of Roster -->
+      <table id="roster">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th><?= $t['player_name'] ?></th>
+            <th><?= $t['player_position'] ?></th>
+            <th><?= $t['stats_ma'] ?></th>
+            <th><?= $t['stats_st'] ?></th>
+            <th><?= $t['stats_ag'] ?></th>
+            <th><?= $t['stats_av'] ?></th>
+            <th colspan="2"><?= $t['skills'] ?></th>
+            <th><?= $t['injuries'] ?></th>
+            <th><?= $t['spp'] ?></th>
+            <th><?= $t['value'] ?></th>
+          </tr>
+        </thead>
 
-    <table class="big">
+        <!-- Start of Players -->
+        <tbody>
+<?php foreach( range(0,15) as $i ): ?>
+<?php if ( ak($lt['player'],$i) != "" ): $lp = $lt['player'][$i]; else: $lp = NULL; endif; ?>
 
-      <thead>
-        <tr>
-          <td>#</td>
-          <td><?php echo $t['player_name']; ?></td>
-          <td><?php echo $t['player_position']; ?></td>
-          <td><?php echo $t['stats_ma']; ?></td>
-          <td><?php echo $t['stats_st']; ?></td>
-          <td><?php echo $t['stats_ag']; ?></td>
-          <td><?php echo $t['stats_av']; ?></td>
-          <td><?php echo $t['skills']; ?></td>
-          <td><?php echo $t['injuries']; ?></td>
-          <td><?php echo $t['spp_comp']; ?></td>
-          <td><?php echo $t['spp_td']; ?></td>
-          <td><?php echo $t['spp_int']; ?></td>
-          <td><?php echo $t['spp_cas']; ?></td>
-          <td><?php echo $t['spp_mvp']; ?></td>
-          <td><?php echo $t['spp']; ?></td>
-          <td><?php echo $t['value']; ?></td>
-        </tr>
-      </thead>
-
-      <!-- Start of Players -->
-<?php for ( $i=0; $i<16; $i++ ): $n = $i+1; if (isset($p)): unset($p); endif; ?>
-<?php if ( isset($loadedTeam['player'][$i]) ): $p = $loadedTeam['player'][$i]; endif; ?>
-
-      <tr><!-- The row for player number <?php echo $n; ?>. -->
-        <td class="label"><?php echo $n; ?></td>
-        <td><input name="NAME[]" onchange="player_set_name(<?php echo $i; ?>)" type="text" value="<?php if ( isset($p['name']) ): echo $p['name']; endif; ?>" /></td>
-        <td>
-          <select class="position" name="POSITION[]" onchange="player_set_position(<?php echo $i; ?>);team_get_number_of_healthy()">
-            <option value="0"<?php if ( !isset($p['position']) ): echo ' selected="selected"'; endif; ?>></option>
-<?php $j=1; foreach ( $race['positions'] as $pos ): ?>
-            <option value="<?php echo $j; ?>"<?php if ( isset($p['positionid']) && $pos['title']==$p['position'] ): echo ' selected="selected"'; endif; ?>><?php echo $pos['title']; $j++; ?></option>
+          <!-- row for player number <?= $i+1 ?> -->
+          <tr>
+            <td class="label"><?= $i+1 ?></td>
+            <td><input name="NAME[]" type="text" value="<?= ak($lp,'name') ?>" onchange="player_set_name(<?= $i ?>)" /></td>
+            <td>
+              <select name="POSITION[]" class="invisible" onchange="player_set_position(<?php echo $i; ?>);team_get_number_of_healthy()">
+                <option value="0"></option>
+<?php foreach ( $r['positions'] as $j => $p ): ?>
+                <option <?php if ( $p['title'] == ak($lp,'position') ): echo 'selected="selected"'; endif; ?> value="<?= $j+1 ?>"><?= $p['title'] ?></option>
 <?php endforeach; ?>
-          </select>
-        </td>
-        <td><input class="stats" name="MA[]" type="text" readonly="readonly" value="<?php if (isset($p['ma'])) echo $p['ma']; ?>" /></td>
-        <td><input class="stats" name="ST[]" type="text" readonly="readonly" value="<?php if (isset($p['st'])) echo $p['st']; ?>" /></td>
-        <td><input class="stats" name="AG[]" type="text" readonly="readonly" value="<?php if (isset($p['ag'])) echo $p['ag']; ?>" /></td>
-        <td><input class="stats" name="AV[]" type="text" readonly="readonly" value="<?php if (isset($p['av'])) echo $p['av']; ?>" /></td>
-        <td class="button" onclick="app_show_skill_box(<?php echo $i; ?>)">
-          <textarea rows="2" cols="30" class="skills" name="SKILLS[]" readonly="readonly"><?php if (isset($p['skill'])): echo implode(', ', $p['skill']); endif; ?></textarea>
-        </td>
-        <td class="button" onclick="app_show_injury_box(<?php echo $i; ?>)">
-          <textarea rows="2" cols="30" class="injuries" name="INJURIES[]" readonly="readonly"><?php if (isset($p['inj'])): echo implode(', ', $p['inj']); endif; ?></textarea>
-        </td>
-        <td><input class="spp" name="COMP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['com'])) echo $p['com']; ?>" /></td>
-        <td><input class="spp" name="TD[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['td'])) echo $p['td']; ?>" /></td>
-        <td><input class="spp" name="INT[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['int'])) echo $p['int']; ?>" /></td>
-        <td><input class="spp" name="CAS[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['cas'])) echo $p['cas']; ?>" /></td>
-        <td><input class="spp" name="MVP[]" onchange="player_set_spp(<?php echo $i; ?>)" type="text" value="<?php if (isset($p['mvp'])) echo $p['mvp']; ?>" /></td>
-        <td><input class="spp" name="SPP[]" type="text" value="<?php if (isset($p['spp'])): echo $p['spp']; endif; ?>" readonly="readonly" /></td>
-<?php if (isset($p['inj']) && in_array($t['injuries_m'], $p['inj'])): $health_status="injured"; else: $health_status="healthy"; endif; ?>
-        <td><input class="<?php echo $health_status; ?>" name="VALUE[]" type="text" value="<?php if (isset($p['cost'])): echo $p['cost']; endif; ?>" readonly="readonly" /></td>
-      </tr>
-<?php endfor; ?>
+              </select>
+            </td>
+            <td><input class="num-s" name="MA[]" type="text" value="<?= ak($lp,'ma') ?>" readonly="readonly" /></td>
+            <td><input class="num-s" name="ST[]" type="text" value="<?= ak($lp,'st') ?>" readonly="readonly" /></td>
+            <td><input class="num-s" name="AG[]" type="text" value="<?= ak($lp,'ag') ?>" readonly="readonly" /></td>
+            <td><input class="num-s" name="AV[]" type="text" value="<?= ak($lp,'av') ?>" readonly="readonly" /></td>
+            <td class="clickable" onclick="app_show_skill_box(<?= $i ?>)" colspan="2"><input class="txt-l" name="SKILLS[]" type="text" value="<?= implode(', ',ak($lp,'skill')) ?>" readonly="readonly" /></td>
+            <td class="clickable" onclick="app_show_injury_box(<?= $i ?>)"><input class="txt-m" name="INJURIES[]" type="text" value="<?= implode(', ',ak($lp,'inj')) ?>" readonly="readonly" /></td>
+            <td class="clickable" onclick="app_show_spp_box(<?= $i ?>)">
+              <input name="COMP[]" type="hidden" value="<?= ak($lp,'com') ?>" />
+              <input name="TD[]" type="hidden" value="<?= ak($lp,'td') ?>" />
+              <input name="INT[]" type="hidden" value="<?= ak($lp,'int') ?>" />
+              <input name="CAS[]" type="hidden" value="<?= ak($lp,'cas') ?>" />
+              <input name="MVP[]" type="hidden" value="<?= ak($lp,'mvp') ?>" />
+              <input class="num-s" name="SPP[]" type="text" value="<?= ak($lp,'spp') ?>" readonly="readonly" />
+            </td>
+            <td><input class="num-m" name="VALUE[]" type="text" value="<?= ak($lp,'cost') ?>" readonly="readonly" /></td>
+          </tr>
+<?php endforeach; ?>
+          
+        </tbody>
+        <!-- End of Players -->
 
-      <!-- End of Players -->
-
-      <tr class="separator">
-       <td rowspan="6" colspan="2">
-        <p>
-         <a href="javascript:app_save()"><?php echo $t['save']; ?></a>
-        </p>
-       </td>
-       <td rowspan="6" colspan="1"></td>
-       <td class="label" colspan="4" rowspan="2"><?php echo $t['team']; ?></td>
-       <td rowspan="2"><input name="TEAM" type="text" value="<?php echo $loadedTeam['name']; ?>" /></td>
-       <td class="label" colspan="3"><?php echo $t['rerolls']; ?></td>
-       <td colspan="1"><input class="extras" name="REROLLS" onchange="extras_set_reroll_value()" type="text" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']; ?>" /></td>
-       <td colspan="3" class="label">x <?php echo $race['reroll-cost']; ?></td>
-       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['reroll'])) echo $loadedTeam['reroll']*$race['reroll-cost']; ?>" /></td>
-      </tr>
-
-      <tr>
-       <td class="label" colspan="3"><?php echo $t['fanfactor']; ?></td>
-       <td colspan="1"><input class="extras" name="FANFACTOR" onchange="extras_set_fanfactor_value()" type="text" value="<?php if (isset($loadedTeam['fanfactor'])) echo $loadedTeam['fanfactor']; ?>" /></td>
-       <td colspan="3" class="label">x 10000</td>
-       <td><input  class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['fanfactor'])) echo $loadedTeam['fanfactor']*10000; ?>" /></td>
-      </tr>
-
-      <tr>
-       <td class="label" colspan="4"><?php echo $t['player']; ?><a class="blue" href="javascript:app_show_journeymen_box()">(<?php echo $t['journeymen_manage']; ?>)</a></td>
-       <td colspan="1"><input name="HEALTHY" type="text" readonly="readonly" /></td>
-       <td colspan="3" class="label"><?php echo $t['assistants']; ?></td>
-       <td colspan="1"><input class="extras" name="COACHES" onchange="extras_set_coaches_value()" type="text" value="<?php if (isset($loadedTeam['assistant'])) echo $loadedTeam['assistant']; ?>" /></td>
-       <td colspan="3" class="label">x 10000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['assistant'])) echo $loadedTeam['assistant']*10000; ?>" /></td>
-      </tr>
-
-      <tr>
-       <td colspan="4" class="label"><?php echo $t['race']; ?></td>
-       <td><input name="RACE" type="text" value="<?php echo $race['race']; ?>" readonly="readonly" /></td>
-       <td colspan="3" class="label"><?php echo $t['cheerleaders']; ?></td>
-       <td colspan="1"><input class="extras" name="CHEERLEADERS" onchange="extras_set_cheerleaders_value()" type="text" value="<?php if (isset($loadedTeam['cheerleader'])) echo $loadedTeam['cheerleader']; ?>" /></td>
-       <td colspan="3" class="label">x 10000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['cheerleader'])) echo $loadedTeam['cheerleader']*10000; ?>" /></td>
-      </tr>
-
-      <tr>
-       <td colspan="4" class="label"><?php echo $t['treasury']; ?></td>
-       <td><input name="TREASURY" type="text" value="<?php if (isset($loadedTeam['treasury'])) echo $loadedTeam['treasury']; ?>" /></td>
-       <td colspan="3" class="label"><?php echo $t['apothecary']; ?></td>
-       <td colspan="1"><input class="extras" name="APOTHECARY" onchange="extras_set_apothecary_value()" type="text" value="<?php if (isset($loadedTeam['apothecary'])) echo $loadedTeam['apothecary']; ?>" /></td>
-       <td colspan="3" class="label">x 50000</td>
-       <td><input class="value" name="VALUE[]" type="text" readonly="readonly" value="<?php if (isset($loadedTeam['apothecary'])) echo $loadedTeam['apothecary']*50000; ?>" /></td>
-      </tr>
-
-      <tr>
-       <td colspan="4" class="label"><?php echo $t['headcoach']; ?></td>
-       <td><input name="HEADCOACH" type="text" value="<?php if (isset($loadedTeam['coach'])) echo $loadedTeam['coach']; ?>" /></td>
-       <td colspan="7" class="label"><?php echo $t['teamvalue']; ?></td>
-       <td><input class="value" name="TEAMVALUE" type="text" readonly="readonly" value="" /></td>
-      </tr>
-
-    </table>
-
-    <!-- End of Roster -->
-
-    <!-- Start of Boxes -->
-
-    <!-- Start of Skill-Box -->
-
-    <div id="skill_box" class="element_hidden">
-      <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('skill_box')">
-        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
-      </button>
-
-      <h2 class="popup">
-        <?php echo $t['skills']; ?> - <?php $t['player']; ?>&nbsp;<input name="TEMP1" type="text" readonly="readonly" size="2" />
-      </h2>
-
-      <h3><?php echo $t['skills_own']; ?></h3>
-
-      <select class="fix" size="6" name="OWN_SKILLS">
-        <option></option>
-      </select>
-      <button type="button" title="<?php echo $t['button_remove']; ?>" onclick="player_remove_skill()">
-       <img src="public/pics/remove_red.gif" alt="<?php echo $t['button_remove']; ?>" />
-      </button>
-
-      <h3><?php echo $t['button_add']; ?>:</h3>
-
-      <p><?php echo $t['skills_normal']; ?></p>
-      <select class="fix" name="REP_NORMAL"><option></option></select>
-      <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('normal')">
-        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
-      </button>
-
-      <p><?php echo $t['skills_double']; ?></p>
-      <select class="fix" name="REP_DOUBLE"><option></option></select>
-      <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('double')">
-        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
-      </button>
-
-      <p><?php echo $t['stats']; ?></p>
-      <select class="fix" name="REP_STATS">
-        <option value="30000">+<?php echo $t['stats_ma']; ?></option>
-        <option value="50000">+<?php echo $t['stats_st']; ?></option>
-        <option value="40000">+<?php echo $t['stats_ag']; ?></option>
-        <option value="30000">+<?php echo $t['stats_av']; ?></option>
-      </select>
-      <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('stat')">
-        <img src="public/pics/add_green.gif" alt="<?php echo $t['button_add']; ?>" />
-      </button>
-
-      <p><?php echo $t['skills_forbidden']; ?></p>
-      <select class="fix" name="REP_FORBIDDEN">
-        <option></option>
-      </select>
-      <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_skill('impossible')">
-        <img src="public/pics/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
-      </button>
-
-      <input style="display: none;" name="TEMP3" type="text" readonly="readonly" value="0" />
-    </div>
-
-    <!-- End of Skill-Box -->
-
-    <!-- Start of Injury-Box -->
-
-    <div id="inj_box" class="element_hidden">
-      <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('inj_box')">
-        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
-      </button>
-
-      <h2 class="popup">
-        <?php echo $t['injuries']; ?> - <?php echo $t['player']; ?>&nbsp;<input name="TEMP2" type="text" readonly="readonly" size="2" />
-      </h2>
-
-      <select class="fix" name="OWN_INJURIES">
-        <option></option>
-      </select>
-      <button type="button" title="<?php echo $t['button_remove']; ?>" onclick="player_remove_injury()">
-        <img src="public/pics/remove_green.gif" alt="<?php echo $t['button_remove']; ?>" />
-      </button>
-      <br />
-      <select class="fix" name="REP_INJURIES">
-        <option><?php echo $t['injuries_m']; ?></option>
-        <option><?php echo $t['injuries_n']; ?></option>
-        <option>-<?php echo $t['stats_ma']; ?></option>
-        <option>-<?php echo $t['stats_st']; ?></option>
-        <option>-<?php echo $t['stats_ag']; ?></option>
-        <option>-<?php echo $t['stats_av']; ?></option>
-      </select>
-      <button type="button" title="<?php echo $t['button_add']; ?>" onclick="player_add_injury()">
-        <img src="public/pics/add_red.gif" alt="<?php echo $t['button_add']; ?>" />
-      </button>
-
-    </div>
-
-    <!-- End of Injury-Box -->
-
-    <!-- Start of Journeymen-Box -->
-
-    <div id="jm_box" class="element_hidden">
-      <button type="button" class="box_control" title="<?php echo $t['button_cancel']; ?>" onclick="app_hide('jm_box')">
-        <img src="public/pics/cancel.gif" alt="<?php echo $t['button_cancel']; ?>" />
-      </button>
-
-      <h2 class="popup"><?php echo $t['journeymen']; ?></h2>
-      <p style="text-align: justify; "><?php echo $t['journeymen_text']; ?></p>
-
-      <table>
-        <tr>
-<?php for ( $ji=0; $ji<16; $ji++ ): ?>
-          <td class= "button"><a id="jm<?php echo $ji; ?>" class="neutral" href="javascript:player_legalize(<?php echo $ji; ?>)"><?php echo $ji+1; ?></a></td>
-<?php if ($ji==7): // end the first row after half the players ?>
-        </tr>
-        <tr>
-<?php endif; ?>
-<?php endfor; ?>
-        </tr>
+        <tfoot>
+          <tr>
+            <!-- race, number of players, rerolls -->
+            <td rowspan="4"></td>
+            <td class="label"><?= $t['race'] ?></td>
+            <td colspan="5"><input name="RACE" type="text" value="<?= $r['race'] ?>" readonly="readonly" /></td>
+            <td class="label"><?= $t['player'] ?> (<a href="javascript:app_show_journeymen_box()"><?= $t['journeymen_manage'] ?></a>)</td>
+            <td><input class="num-s" name="HEALTHY" type="text" readonly="readonly" /></td>
+            <td class="label"><?= $t['rerolls'] ?></td>
+            <td><input class="num-s" name="REROLLS" type="text" value="<?= ak($lt,'reroll') ?>" onchange="extras_set_reroll_value()" /></td>
+            <td><input class="num-m" name="VALUE[]" type="text" value="<?= ak($lt,'reroll')*$r['reroll-cost'] ?>" readonly="readonly" /></td>
+          </tr>
+          <tr>
+            <!-- team-name, fanfactor, cheerleaders -->
+            <td class="label"><?= $t['team']; ?></td>
+            <td colspan="5"><input name="TEAM" type="text" value="<?= ak($lt,'name') ?>" /></td>
+            <td class="label"><?= $t['fanfactor'] ?></td>
+            <td><input class="num-s" name="FANFACTOR" type="text" value="<?= ak($lt,'fanfactor') ?>" onchange="extras_set_fans_and_cheerleaders_value()" /></td>
+            <td class="label"><?= $t['cheerleaders'] ?></td>
+            <td><input class="num-s" name="CHEERLEADERS" type="text" value="<?= ak($lt,'cheerleader') ?>" onchange="extras_set_fans_and_cheerleaders_value()" /></td>
+            <td><input class="num-m" name="VALUE[]" type="text" value="<?= (ak($lt,'fanfactor')+ak($lt,'cheerleader'))*10000 ?>" readonly="readonly" /></td>
+          </tr>
+          <tr>
+            <!-- coach-name, apothecary, assistant-coaches -->
+            <td class="label"><?= $t['headcoach'] ?></td>
+            <td colspan="5"><input name="HEADCOACH" type="text" value="<?= ak($lt,'coach') ?>" /></td>
+            <td class="label"><?= $t['apothecary'] ?></td>
+            <td><input class="num-s" name="APOTHECARY" type="text" value="<?= ak($lt,'apothecary') ?>" onchange="extras_set_medic_and_coaches_value()" /></td>
+            <td class="label"><?= $t['assistants'] ?></td>
+            <td><input class="num-s" name="COACHES" type="text" value="<?= ak($lt,'assistant') ?>" onchange="extras_set_medic_and_coaches_value()" /></td>
+            <td><input class="num-m" name="VALUE[]" type="text" value="<?= ak($lt,'apothecary')*50000+ak($lt,'assistant')*10000 ?>" readonly="readonly" /></td>
+          </tr>
+          <tr>
+            <!-- save, treasury, teamvalue -->
+            <td class="label">SNORE</td>
+            <td colspan="5"><a href="javascript:app_save()"><?= $t['save'] ?></a></td>
+            <td class="label"><?= $t['treasury'] ?></td>
+            <td><input class="num-m" name="TREASURY" type="text" value="<?= ak($lt,'treasury') ?>" /></td>
+            <td class="label" colspan="2"><?= $t['teamvalue'] ?></td>
+            <td><input class="num-m" name="TEAMVALUE" type="text" value="0" readonly="readonly" /></td>
+          </tr>
+        </tfoot>
       </table>
-    </div>
 
-    <!-- End of Journeymen-Box -->
+      <!-- Start of Journeymen-Box -->
+      <div id="jm_box" class="element_hidden">
+        <img class="close" src="public/pics/close.png" alt="<?= $t['button_cancel'] ?>" onclick="app_hide('jm_box')" />
+        <h2><?= $t['journeymen'] ?></h2>
+        <p><?= $t['journeymen_text'] ?></p>
+<?php foreach ( range(0, 15) as $k ): ?>
+        <a id="jm<?= $k ?>" href="javascript:player_legalize(<?= $k ?>)"><?= $k+1 ?></a>
+<?php endforeach; ?>
+      </div>
+      <!-- End of Journeymen-Box -->
 
-    <!-- Start of Pictures-Box -->
+      <!-- Start of Skill-Box -->
+      <div id="skill_box" class="element_hidden">
+        <img class="close" src="public/pics/close.png" alt="<?= $t['button_cancel'] ?>" onclick="app_hide('skill_box')" />
+        <h2><?= $t['skills'] ?> - <?= $t['player'] ?><input class="bignum-s" name="TEMP1" type="text" readonly="readonly" size="2" /></h2>
+        <select class="fix" size="6" name="OWN_SKILLS"><option></option></select>
+        <img src="public/pics/remove.png" alt="<?= $t['button_remove'] ?>" onclick="player_remove_skill()" /><br />
+        <select class="fix" name="REP_NORMAL"><option></option></select>
+        <img src="public/pics/add.png" alt="<?= $t['button_add'] ?>" onclick="player_add_skill('normal')" />
+        <?= $t['skills_normal'] ?><br />
+        <select class="fix" name="REP_DOUBLE"><option></option></select>
+        <img class="button" src="public/pics/add.png" alt="<?= $t['button_add'] ?>" onclick="player_add_skill('double')" />
+        <?= $t['skills_double'] ?><br />
+        <select class="fix" name="REP_STATS">
+          <option value="30000">+<?= $t['stats_ma'] ?></option>
+          <option value="50000">+<?= $t['stats_st'] ?></option>
+          <option value="40000">+<?= $t['stats_ag'] ?></option>
+          <option value="30000">+<?= $t['stats_av'] ?></option>
+        </select>
+        <img src="public/pics/add.png" alt="<?= $t['button_add'] ?>" onclick="player_add_skill('stat')" />
+        <?= substr($t['stats'], 0, 5) ?><br />
+        <select class="fix" name="REP_FORBIDDEN"><option></option></select>
+        <img src="public/pics/add.png" alt="<?= $t['button_add'] ?>" onclick="player_add_skill('impossible')" />
+        <?= $t['skills_forbidden'] ?><br />
+        <input name="TEMP3" type="hidden" readonly="readonly" value="0" />
+      </div>
+      <!-- End of Skill-Box -->
 
-    <div id="pic_box" class="element_hidden">
-      <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('pic_box')">
-        <img src="public/pics/check.gif" alt="<?php echo $t['button_validate']; ?>" />
-      </button>
+      <!-- Start of Injury-Box -->
+      <div id="inj_box" class="element_hidden">
+        <img class="close" src="public/pics/close.png" alt="<?= $t['button_cancel'] ?>" onclick="app_hide('inj_box')" />
+        <h2><?= $t['injuries'] ?> - <?= $t['player'] ?><input class="bignum-s" name="TEMP2" type="text" readonly="readonly" size="2" /></h2>
+        <select class="fix" name="OWN_INJURIES"><option></option></select>
+        <img src="public/pics/remove.png" alt="<?= $t['button_remove'] ?>" onclick="player_remove_injury()" />
+        <br />
+        <select class="fix" name="REP_INJURIES">
+          <option><?php echo $t['injuries_m']; ?></option>
+          <option><?php echo $t['injuries_n']; ?></option>
+          <option>-<?php echo $t['stats_ma']; ?></option>
+          <option>-<?php echo $t['stats_st']; ?></option>
+          <option>-<?php echo $t['stats_ag']; ?></option>
+          <option>-<?php echo $t['stats_av']; ?></option>
+        </select>
+        <img class="button" src="public/pics/add.png" alt="<?= $t['button_add'] ?>" onclick="player_add_injury()" />
+      </div>
+      <!-- End of Injury-Box -->
 
-      <h2 class="popup"><?php echo $t['teampics_label']; ?></h2>
-      <p style="text-align: justify;"><?php echo $t['teampics_text']; ?></p>
+      <!-- Start of SPP-Box -->
+      <div id="spp_box" class="element_hidden">
+        <img class="close" src="public/pics/close.png" alt="<?= $t['button_cancel'] ?>" onclick="app_hide('spp_box')" />
+        <h2><?= $t['spp'] ?> - <?= $t['player'] ?><input class="bignum-s" name="TEMP4" type="text" readonly="readonly" size="2" /></h2>
+        <table>
+          <tr>
+            <td class="label"><?= $t['spp_comp'] ?></td>
+            <td><input class="num-s" name="TEMPCOMP" type="text" value="" onchange="player_set_spp()" /></td>
+            <td class="label"><?= $t['spp_td'] ?></td>
+            <td><input class="num-s" name="TEMPTD" type="text" value="" onchange="player_set_spp()" /></td>
+          </tr>
+          <tr>
+            <td class="label"><?= $t['spp_int'] ?></td>
+            <td><input class="num-s" name="TEMPINT" type="text" value="" onchange="player_set_spp()" /></td>
+            <td class="label"><?= $t['spp_cas'] ?></td>
+            <td><input class="num-s" name="TEMPCAS" type="text" value="" onchange="player_set_spp()" /></td>
+          </tr>
+          <tr>
+            <td class="label"><?= $t['spp_mvp'] ?></td>
+            <td><input class="num-s" name="TEMPMVP" type="text" value="" onchange="player_set_spp()" /></td>
+            <td class="label"><?= $t['spp'] ?></td>
+            <td><input class="num-s" name="TEMPSPP" type="text" value="" readonly="readonly" /></td>
+          </tr>
+        </table>
+      </div>
+      <!-- End of SPP-Box -->
 
-      <table>
-        <tr>
-          <td class="label"><?php echo $t['team']; ?></td>
-          <td><input name="TEAMLOGO" type="text" value="<?php echo $race['emblem']; ?>" /></td>
-        </tr>
-<?php for ( $ji=0; $ji<16; $ji++ ): ?>
-        <tr><td class="label"><?php echo $ji; ?></td><td><input name="DISPLAY[]" type="text" value="" /></td></tr>
-<?php endfor; ?>
-      </table>
-      <button type="button" class="box_control" title="<?php echo $t['button_validate']; ?>" onclick="app_hide('pic_box')" />
-    </div>
-
-    <!-- End of Pictures-Box -->
-
-    <!-- End of Boxes -->
-
-  </form>
-
-</body>
+    </form>
+  </body>
 </html>
