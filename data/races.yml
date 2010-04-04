@@ -1,0 +1,1117 @@
+---
+-
+  race:               Amazon
+  emblem:             amazons.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Linewoman
+      display:        amazon_l.png
+      id:             3
+      limit:          16
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge]
+      skills-access:  [g, asp]
+    -
+      title:          Quarterback
+      display:        amazon_t.png
+      id:             1
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge, Pass]
+      skills-access:  [gp, as]
+    -
+      title:          Receiver
+      display:        amazon_c.png
+      id:             2
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge, Catch]
+      skills-access:  [ga, sp]
+    -
+      title:          Halfback
+      display:        amazon_b.png
+      id:             0
+      limit:          4
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge, Block]
+      skills-access:  [gs, ap]
+    -
+      title:          Journeywoman
+      display:        amazon_j.png
+      id:             5
+      limit:          11
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge, Loner]
+      skills-access:  [g, asp]
+-
+  race:               Chaos
+  emblem:             chaos.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Tackle
+      display:        chaos_b.png
+      id:             2
+      limit:          16
+      cost:           60000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Horns]
+      skills-access:  [gsm, ap]
+    -
+      title:          Guard
+      display:        chaos_w.png
+      id:             1
+      limit:          4
+      cost:           100000
+      stats:          {MA: 5, ST: 4, AG: 3, AV: 9}
+      skills:         []
+      skills-access:  [gsm, ap]
+    -
+      title:          Center
+      display:        chaos_m.png
+      id:             0
+      limit:          1
+      cost:           150000
+      stats:          {MA: 5, ST: 5, AG: 2, AV: 8}
+      skills:         [Loner, Frenzy, Horns, Mighty Blow, Thick Skull, Wild Animal]
+      skills-access:  [sm, gap]
+    -
+      title:          Journeyman
+      display:        chaos_j.png
+      id:             3
+      limit:          11
+      cost:           60000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Horns, Loner]
+      skills-access:  [gsm, ap]
+-
+  race:               Dark Dwarf
+  emblem:             darkdwarves.png
+  medic-allowed:      true
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Halfback
+      display:        darkdwarf_h.png
+      id:             3
+      limit:          16
+      cost:           40000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         []
+      skills-access:  [g, asp]
+    -
+      title:          Tackle
+      display:        darkdwarf_b.png
+      id:             2
+      limit:          6
+      cost:           70000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 9}
+      skills:         [Block, Tackle, Thick Skull]
+      skills-access:  [gs, apm]
+    -
+      title:          Safety
+      display:        darkdwarf_c.png
+      id:             1
+      limit:          2
+      cost:           130000
+      stats:          {MA: 6, ST: 4, AG: 2, AV: 9}
+      skills:         [Sprint, Sure Feet, Thick Skull]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        darkdwarf_m.png
+      id:             0
+      limit:          1
+      cost:           150000
+      stats:          {MA: 5, ST: 5, AG: 2, AV: 8}
+      skills:         [Loner, Frenzy, Horns, Mighty Blow, Thick Skull, Wild Animal]
+      skills-access:  [s,g, a, p, m]
+    -
+      title:          Journeyman
+      display:        darkdwarf_j.png
+      id:             4
+      limit:          11
+      cost:           40000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Loner]
+      skills-access:  [g, asp]
+-
+  race:               Dark Elf
+  emblem:             darkelves.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Lineman
+      display:        darkelf_l.png
+      id:             4
+      limit:          16
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 8}
+      skills:         []
+      skills-access:  [ga, sp]
+    -
+      title:          Halfback
+      display:        darkelf_r.png
+      id:             2
+      limit:          2
+      cost:           80000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 7}
+      skills:         [Dump Off]
+      skills-access:  [gap, s]
+    -
+      title:          Linebacker
+      display:        darkelf_a.png
+      id:             3
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 7}
+      skills:         [Shadowing, Stab]
+      skills-access:  [ga, sp]
+    -
+      title:          Safety
+      display:        darkelf_b.png
+      id:             1
+      limit:          4
+      cost:           100000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 8}
+      skills:         [Block]
+      skills-access:  [ga, sp]
+    -
+      title:          Slotback
+      display:        darkelf_w.png
+      id:             0
+      limit:          2
+      cost:           110000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 7}
+      skills:         [Frenzy, Dodge, Jump Up]
+      skills-access:  [ga, sp]
+    -
+      title:          Journeyman
+      display:        darkelf_j.png
+      id:             5
+      limit:          11
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 8}
+      skills:         [Loner]
+      skills-access:  [ga, sp]
+-
+  race:               Dwarf
+  emblem:             dwarves.png
+  medic-allowed:      true
+  reroll-cost:        40000
+  positions:
+    -
+      title:          Guard
+      display:        dwarf_bk.png
+      id:             4
+      limit:          16
+      cost:           70000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 9}
+      skills:         [Block, Tackle, Thick Skull]
+      skills-access:  [gs, ap]
+    -
+      title:          Quarterback
+      display:        dwarf_r.png
+      id:             3
+      limit:          2
+      cost:           80000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Sure Hands, Thick Skull]
+      skills-access:  [gp, as]
+    -
+      title:          Halfback
+      display:        dwarf_bz.png
+      id:             2
+      limit:          2
+      cost:           80000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 9}
+      skills:         [Block, Thick Skull]
+      skills-access:  [gs, ap]
+    -
+      title:          Safety
+      display:        dwarf_t.png
+      id:             1
+      limit:          2
+      cost:           90000
+      stats:          {MA: 5, ST: 3, AG: 2, AV: 8}
+      skills:         [Block, Dauntless, Frenzy, Thick Skull]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        dwarf_d.png
+      id:             0
+      limit:          1
+      cost:           160000
+      stats:          {MA: 4, ST: 7, AG: 1, AV: 10}
+      skills:         [Break Tackle, Dirty Player, Juggernaut, Mighty Blow, No Hands, Secret Weapon, Stand Firm]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        dwarf_j.png
+      id:             5
+      limit:          11
+      cost:           70000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 9}
+      skills:         [Block, Tackle, Thick Skull, Loner]
+      skills-access:  [gs, ap]
+-
+  race:               Elf
+  emblem:             elves.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Lineman
+      display:        elf_l.png
+      id:             3
+      limit:          16
+      cost:           60000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 7}
+      skills:         []
+      skills-access:  [ga, sp]
+    -
+      title:          Quarterback
+      display:        elf_t.png
+      id:             2
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 7}
+      skills:         [Pass]
+      skills-access:  [gap, s]
+    -
+      title:          Receiver
+      display:        elf_c.png
+      id:             1
+      limit:          4
+      cost:           100000
+      stats:          {MA: 8, ST: 3, AG: 4, AV: 7}
+      skills:         [Catch, Nerves of Steel]
+      skills-access:  [ga, sp]
+    -
+      title:          Halfback
+      display:        elf_b.png
+      id:             0
+      limit:          2
+      cost:           110000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 8}
+      skills:         [Block, Side Step]
+      skills-access:  [ga, sp]
+    -
+      title:          Journeyman
+      display:        elf_j.png
+      id:             4
+      limit:          11
+      cost:           60000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 7}
+      skills:         [Loner]
+      skills-access:  [ga, sp]
+-
+  race:               Goblin
+  emblem:             goblins.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Lineman
+      display:        goblin_g.png
+      id:             5
+      limit:          16
+      cost:           40000
+      stats:          {MA: 6, ST: 2, AG: 3, AV: 7}
+      skills:         [Dodge, Right Stuff, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Quarterback
+      display:        goblin_b.png
+      id:             4
+      limit:          1
+      cost:           40000
+      stats:          {MA: 6, ST: 2, AG: 3, AV: 7}
+      skills:         [Bombardier, Dodge, No Hands, Secret Weapon, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Slotback
+      display:        goblin_p.png
+      id:             3
+      limit:          1
+      cost:           40000
+      stats:          {MA: 7, ST: 2, AG: 3, AV: 7}
+      skills:         [Dirty Player, Dodge, Leap, Secret Weapon, Stunty, Very Long Legs]
+      skills-access:  [a, gsp]
+    -
+      title:          Safety
+      display:        goblin_l.png
+      id:             2
+      limit:          1
+      cost:           40000
+      stats:          {MA: 6, ST: 2, AG: 3, AV: 7}
+      skills:         [Chainsaw, No Hands, Secret Weapon, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Unsafety
+      display:        goblin_f.png
+      id:             1
+      limit:          1
+      cost:           70000
+      stats:          {MA: 3, ST: 7, AG: 3, AV: 7}
+      skills:         [Ball and Chain, No Hands, Secret Weapon, Stunty]
+      skills-access:  [s, gap]
+    -
+      title:          Center
+      display:        goblin_t.png
+      id:             0
+      limit:          2
+      cost:           110000
+      stats:          {MA: 4, ST: 5, AG: 1, AV: 9}
+      skills:         [Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        goblin_j.png
+      id:             6
+      limit:          11
+      cost:           40000
+      stats:          {MA: 6, ST: 2, AG: 3, AV: 7}
+      skills:         [Dodge, Right Stuff, Stunty, Loner]
+      skills-access:  [a, gsp]
+-
+  race:               Halfling
+  emblem:             halflings.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Lineman
+      display:        halfling_h.png
+      id:             1
+      limit:          16
+      cost:           30000
+      stats:          {MA: 5, ST: 2, AG: 3, AV: 6}
+      skills:         [Dodge, Right Stuff, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Quarterback
+      display:        halfling_t.png
+      id:             0
+      limit:          2
+      cost:           120000
+      stats:          {MA: 2, ST: 6, AG: 1, AV: 10}
+      skills:         [Loner, Mighty Blow, Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        halfling_j.png
+      id:             2
+      limit:          11
+      cost:           30000
+      stats:          {MA: 5, ST: 2, AG: 3, AV: 6}
+      skills:         [Dodge, Right Stuff, Stunty, Loner]
+      skills-access:  [a, gsp]
+-
+  race:               High Elf
+  emblem:             highelves.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Lineman
+      display:        highelf_l.png
+      id:             3
+      limit:          16
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 8}
+      skills:         []
+      skills-access:  [ga, sp]
+    -
+      title:          Quarterback
+      display:        highelf_t.png
+      id:             2
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 8}
+      skills:         [Pass, Safe Throw]
+      skills-access:  [gap, s]
+    -
+      title:          Receiver
+      display:        highelf_c.png
+      id:             1
+      limit:          4
+      cost:           90000
+      stats:          {MA: 8, ST: 3, AG: 4, AV: 7}
+      skills:         [Catch]
+      skills-access:  [ga, sp]
+    -
+      title:          Safety
+      display:        highelf_b.png
+      id:             0
+      limit:          2
+      cost:           100000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 8}
+      skills:         [Block]
+      skills-access:  [ga, sp]
+    -
+      title:          Journeyman
+      display:        highelf_j.png
+      id:             4
+      limit:          11
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 4, AV: 8}
+      skills:         [Loner]
+      skills-access:  [ga, sp]
+-
+  race:               Human
+  emblem:             humans.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Lineman
+      display:        human_l.png
+      id:             4
+      limit:          16
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         []
+      skills-access:  [g, asp]
+    -
+      title:          Receiver
+      display:        human_c.png
+      id:             3
+      limit:          4
+      cost:           70000
+      stats:          {MA: 8, ST: 2, AG: 3, AV: 7}
+      skills:         [Catch, Dodge]
+      skills-access:  [ga, sp]
+    -
+      title:          Quarterback
+      display:        human_t.png
+      id:             2
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Sure Hands, Pass]
+      skills-access:  [gp, as]
+    -
+      title:          Safety
+      display:        human_b.png
+      id:             1
+      limit:          4
+      cost:           90000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 8}
+      skills:         [Block]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        human_o.png
+      id:             0
+      limit:          1
+      cost:           140000
+      stats:          {MA: 5, ST: 5, AG: 2, AV: 9}
+      skills:         [Loner, Bone-Head, Mighty Blow, Thick Skull, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        human_j.png
+      id:             5
+      limit:          11
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Loner]
+      skills-access:  [g, asp]
+-
+  race:               Shabti
+  emblem:             shabtis.png
+  medic-allowed:      false
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Lineman
+      display:        shabti_s.png
+      id:             3
+      limit:          16
+      cost:           30000
+      stats:          {MA: 5, ST: 3, AG: 2, AV: 7}
+      skills:         [Regeneration]
+      skills-access:  [g, asp]
+    -
+      title:          Quarterback
+      display:        shabti_t.png
+      id:             2
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 2, AV: 7}
+      skills:         [Pass, Regeneration, Sure Hands]
+      skills-access:  [gp, as]
+    -
+      title:          Safety
+      display:        shabti_b.png
+      id:             1
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 2, AV: 8}
+      skills:         [Block, Regeneration]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        shabti_m.png
+      id:             0
+      limit:          4
+      cost:           110000
+      stats:          {MA: 3, ST: 5, AG: 1, AV: 9}
+      skills:         [Mighty Blow, Regeneration]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        shabti_j.png
+      id:             4
+      limit:          11
+      cost:           30000
+      stats:          {MA: 5, ST: 3, AG: 2, AV: 7}
+      skills:         [Regeneration, Loner]
+      skills-access:  [g, asp]
+-
+  race:               Reptile
+  emblem:             reptiles.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Halfback
+      display:        reptile_sk.png
+      id:             2
+      limit:          16
+      cost:           60000
+      stats:          {MA: 8, ST: 2, AG: 3, AV: 7}
+      skills:         [Dodge, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Lineman
+      display:        reptile_sa.png
+      id:             1
+      limit:          6
+      cost:           80000
+      stats:          {MA: 6, ST: 4, AG: 1, AV: 9}
+      skills:         []
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        reptile_k.png
+      id:             0
+      limit:          1
+      cost:           140000
+      stats:          {MA: 6, ST: 5, AG: 1, AV: 9}
+      skills:         [Loner, Bone-Head, Mighty Blow, Prehensile Tail, Thick Skull]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        reptile_j.png
+      id:             3
+      limit:          11
+      cost:           60000
+      stats:          {MA: 8, ST: 2, AG: 3, AV: 7}
+      skills:         [Dodge, Stunty, Loner]
+      skills-access:  [a, gsp]
+-
+  race:               Necromantic
+  emblem:             necromantics.png
+  medic-allowed:      false
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Lineman
+      display:        necromantic_z.png
+      id:             4
+      limit:          16
+      cost:           40000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 8}
+      skills:         [Regeneration]
+      skills-access:  [g, asp]
+    -
+      title:          Slotback
+      display:        necromantic_g.png
+      id:             3
+      limit:          2
+      cost:           70000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge]
+      skills-access:  [ga, sp]
+    -
+      title:          Safety
+      display:        necromantic_wi.png
+      id:             2
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Block, Regeneration]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        necromantic_f.png
+      id:             1
+      limit:          2
+      cost:           110000
+      stats:          {MA: 4, ST: 4, AG: 2, AV: 9}
+      skills:         [Regeneration, Stand Firm, Thick Skull]
+      skills-access:  [gs, ap]
+    -
+      title:          Gunner
+      display:        necromantic_we.png
+      id:             0
+      limit:          2
+      cost:           120000
+      stats:          {MA: 8, ST: 3, AG: 3, AV: 8}
+      skills:         [Claws, Frenzy, Regeneration]
+      skills-access:  [ga, sp]
+    -
+      title:          Journeyman
+      display:        necromantic_j.png
+      id:             5
+      limit:          11
+      cost:           40000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 8}
+      skills:         [Regeneration, Loner]
+      skills-access:  [g, asp]
+-
+  race:               Norse
+  emblem:             norses.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Lineman
+      display:        norse_l.png
+      id:             5
+      limit:          16
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Block]
+      skills-access:  [g, asp]
+    -
+      title:          Quarterback
+      display:        norse_t.png
+      id:             4
+      limit:          2
+      cost:           70000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Block, Pass]
+      skills-access:  [gp, as]
+    -
+      title:          Slotback
+      display:        norse_r.png
+      id:             3
+      limit:          2
+      cost:           90000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         [Block, Dauntless]
+      skills-access:  [ga, sp]
+    -
+      title:          Safety
+      display:        norse_b.png
+      id:             2
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Block, Frenzy, Jump Up]
+      skills-access:  [gs, ap]
+    -
+      title:          Guard
+      display:        norse_u.png
+      id:             1
+      limit:          2
+      cost:           110000
+      stats:          {MA: 6, ST: 4, AG: 2, AV: 8}
+      skills:         [Frenzy]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        norse_s.png
+      id:             0
+      limit:          1
+      cost:           140000
+      stats:          {MA: 5, ST: 5, AG: 1, AV: 8}
+      skills:         [Loner, Claws, Disturbing Presence, Frenzy, Wild Animal]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        norse_j.png
+      id:             6
+      limit:          11
+      cost:           50000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Block, Loner]
+      skills-access:  [g, asp]
+-
+  race:               Nergal
+  emblem:             nergals.png
+  medic-allowed:      false
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Lineman
+      display:        nergal_r.png
+      id:             3
+      limit:          16
+      cost:           40000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 8}
+      skills:         [Decay, Nurgle's Rot]
+      skills-access:  [gm, asp]
+    -
+      title:          Halfback
+      display:        nergal_p.png
+      id:             2
+      limit:          4
+      cost:           80000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Horns, Nurgle's Rot, Regeneration]
+      skills-access:  [gsm, ap]
+    -
+      title:          Guard
+      display:        nergal_w.png
+      id:             1
+      limit:          4
+      cost:           110000
+      stats:          {MA: 4, ST: 4, AG: 2, AV: 9}
+      skills:         [Disturbing Presence, Foul Appearance, Nurgle's Rot, Regeneration]
+      skills-access:  [gsm, ap]
+    -
+      title:          Center
+      display:        nergal_b.png
+      id:             0
+      limit:          1
+      cost:           140000
+      stats:          {MA: 4, ST: 5, AG: 1, AV: 9}
+      skills:         [Loner, Disturbing Presence, Foul Appearance, Mighty Blow, Nurgle's Rot, Really Stupid, Regeneration, Tentacles]
+      skills-access:  [s,g, a, p, m]
+    -
+      title:          Journeyman
+      display:        nergal_j.png
+      id:             4
+      limit:          11
+      cost:           40000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 8}
+      skills:         [Decay, Nergal's Rot, Loner]
+      skills-access:  [gm, asp]
+-
+  race:               Ogre
+  emblem:             ogres.png
+  medic-allowed:      true
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Slotback
+      display:        ogre_s.png
+      id:             1
+      limit:          16
+      cost:           20000
+      stats:          {MA: 5, ST: 1, AG: 3, AV: 5}
+      skills:         [Dodge, Right Stuff, Side Step, Stunty, Titchy]
+      skills-access:  [a, gsp]
+    -
+      title:          Lineman
+      display:        ogre_o.png
+      id:             0
+      limit:          6
+      cost:           140000
+      stats:          {MA: 5, ST: 5, AG: 2, AV: 9}
+      skills:         [Bone-Head, Mighty Blow, Thick Skull, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        ogre_j.png
+      id:             2
+      limit:          11
+      cost:           20000
+      stats:          {MA: 5, ST: 1, AG: 3, AV: 5}
+      skills:         [Dodge, Right Stuff, Side Step, Stunty, Titchy, Loner]
+      skills-access:  [a, gsp]
+-
+  race:               Orc
+  emblem:             orcs.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Lineman
+      display:        orc_l.png
+      id:             5
+      limit:          16
+      cost:           50000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 9}
+      skills:         []
+      skills-access:  [g, asp]
+    -
+      title:          Slotback
+      display:        orc_g.png
+      id:             4
+      limit:          4
+      cost:           40000
+      stats:          {MA: 6, ST: 2, AG: 3, AV: 7}
+      skills:         [Right Stuff, Dodge, Stunty]
+      skills-access:  [a, gsp]
+    -
+      title:          Quarterback
+      display:        orc_t.png
+      id:             3
+      limit:          2
+      cost:           70000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 8}
+      skills:         [Sure Hands, Pass]
+      skills-access:  [gp, as]
+    -
+      title:          Guard
+      display:        orc_bo.png
+      id:             2
+      limit:          4
+      cost:           80000
+      stats:          {MA: 4, ST: 4, AG: 2, AV: 9}
+      skills:         []
+      skills-access:  [gs, ap]
+    -
+      title:          Safety
+      display:        orc_b.png
+      id:             1
+      limit:          4
+      cost:           80000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 9}
+      skills:         [Block]
+      skills-access:  [gs, ap]
+    -
+      title:          Center
+      display:        orc_tl.png
+      id:             0
+      limit:          1
+      cost:           110000
+      stats:          {MA: 4, ST: 5, AG: 1, AV: 9}
+      skills:         [Loner, Always Hungry, Mighty Blow, Really Stupid, Regeneration, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        orc_j.png
+      id:             6
+      limit:          11
+      cost:           50000
+      stats:          {MA: 5, ST: 3, AG: 3, AV: 9}
+      skills:         [Loner]
+      skills-access:  [g, asp]
+-
+  race:               Rodent
+  emblem:             rodents.png
+  medic-allowed:      true
+  reroll-cost:        60000
+  positions:
+    -
+      title:          Lineman
+      display:        rodent_l.png
+      id:             4
+      limit:          16
+      cost:           50000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         []
+      skills-access:  [g,a, s, p, m]
+    -
+      title:          Quarterback
+      display:        rodent_t.png
+      id:             3
+      limit:          2
+      cost:           70000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         [Sure Hands, Pass]
+      skills-access:  [gp, asm]
+    -
+      title:          Receiver
+      display:        rodent_r.png
+      id:             2
+      limit:          4
+      cost:           80000
+      stats:          {MA: 9, ST: 2, AG: 4, AV: 7}
+      skills:         [Dodge]
+      skills-access:  [ga, spm]
+    -
+      title:          Safety
+      display:        rodent_b.png
+      id:             1
+      limit:          2
+      cost:           90000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 8}
+      skills:         [Block]
+      skills-access:  [gs, apm]
+    -
+      title:          Center
+      display:        rodent_o.png
+      id:             0
+      limit:          1
+      cost:           160000
+      stats:          {MA: 6, ST: 5, AG: 2, AV: 8}
+      skills:         [Loner, Frenzy, Mighty Blow, Prehensile Tail, Wild Animal]
+      skills-access:  [s,g, a, p, m]
+    -
+      title:          Journeyman
+      display:        rodent_j.png
+      id:             5
+      limit:          11
+      cost:           50000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         [Loner]
+      skills-access:  [g,a, s, p, m]
+-
+  race:               Undead
+  emblem:             undeads.png
+  medic-allowed:      false
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Lineman
+      display:        undead_s.png
+      id:             4
+      limit:          16
+      cost:           30000
+      stats:          {MA: 5, ST: 3, AG: 2, AV: 7}
+      skills:         [Regeneration]
+      skills-access:  [g, asp]
+    -
+      title:          Tackle
+      display:        undead_z.png
+      id:             3
+      limit:          16
+      cost:           40000
+      stats:          {MA: 4, ST: 3, AG: 2, AV: 8}
+      skills:         [Regeneration]
+      skills-access:  [g, asp]
+    -
+      title:          Slotback
+      display:        undead_g.png
+      id:             2
+      limit:          4
+      cost:           70000
+      stats:          {MA: 7, ST: 3, AG: 3, AV: 7}
+      skills:         [Dodge]
+      skills-access:  [ga, sp]
+    -
+      title:          Safety
+      display:        undead_w.png
+      id:             1
+      limit:          2
+      cost:           90000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 8}
+      skills:         [Block, Regeneration]
+      skills-access:  [gs, ap]
+    -
+      title:          Guard
+      display:        undead_m.png
+      id:             0
+      limit:          2
+      cost:           110000
+      stats:          {MA: 3, ST: 5, AG: 1, AV: 9}
+      skills:         [Mighty Blow, Regeneration]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        undead_j.png
+      id:             5
+      limit:          11
+      cost:           30000
+      stats:          {MA: 5, ST: 3, AG: 2, AV: 7}
+      skills:         [Regeneration, Loner]
+      skills-access:  [g, asp]
+-
+  race:               Vampire
+  emblem:             vampires.png
+  medic-allowed:      true
+  reroll-cost:        70000
+  positions:
+    -
+      title:          Linebacker
+      display:        vampire_t.png
+      id:             1
+      limit:          16
+      cost:           40000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         []
+      skills-access:  [g, asp]
+    -
+      title:          Lineman
+      display:        vampire_v.png
+      id:             0
+      limit:          6
+      cost:           110000
+      stats:          {MA: 6, ST: 4, AG: 4, AV: 8}
+      skills:         [Blood Lust, Hypnotic Gaze, Regeneration]
+      skills-access:  [gas, p]
+    -
+      title:          Journeyman
+      display:        vampire_j.png
+      id:             2
+      limit:          11
+      cost:           40000
+      stats:          {MA: 6, ST: 3, AG: 3, AV: 7}
+      skills:         [Loner]
+      skills-access:  [g, asp]
+-
+  race:               Wood Elf
+  emblem:             woodelves.png
+  medic-allowed:      true
+  reroll-cost:        50000
+  positions:
+    -
+      title:          Lineman
+      display:        woodelf_l.png
+      id:             4
+      limit:          16
+      cost:           70000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 7}
+      skills:         []
+      skills-access:  [ga, sp]
+    -
+      title:          Receiver
+      display:        woodelf_c.png
+      id:             3
+      limit:          4
+      cost:           90000
+      stats:          {MA: 9, ST: 2, AG: 4, AV: 7}
+      skills:         [Catch, Dodge]
+      skills-access:  [ga, sp]
+    -
+      title:          Quarterback
+      display:        woodelf_t.png
+      id:             2
+      limit:          2
+      cost:           90000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 7}
+      skills:         [Pass]
+      skills-access:  [gap, s]
+    -
+      title:          Slotback
+      display:        woodelf_w.png
+      id:             1
+      limit:          2
+      cost:           120000
+      stats:          {MA: 8, ST: 3, AG: 4, AV: 7}
+      skills:         [Block, Dodge, Leap]
+      skills-access:  [ga, sp]
+    -
+      title:          Center
+      display:        woodelf_t.png
+      id:             0
+      limit:          1
+      cost:           140000
+      stats:          {MA: 2, ST: 6, AG: 1, AV: 10}
+      skills:         [Loner, Mighty Blow, Stand Firm, Strong Arm, Take Root, Thick Skull, Throw Team-Mate]
+      skills-access:  [s, gap]
+    -
+      title:          Journeyman
+      display:        woodelf_j.png
+      id:             5
+      limit:          11
+      cost:           70000
+      stats:          {MA: 7, ST: 3, AG: 4, AV: 7}
+      skills:         [Loner]
+      skills-access:  [ga, sp]
