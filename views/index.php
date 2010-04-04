@@ -6,8 +6,8 @@
     <meta name="author" content="Marc-Antonio Bisotti"/>
     <meta name="date" content="2008-04-29 T13:15:15+0100"/>
     <meta name="copyright" content="GNU General Public License" />
-    <meta name="keywords" content="Blood Bowl TowBowlTactics Team Editor Roster Editor" />
-    <meta name="description" content="Manages TowBowlTactics Teamsheets according to the LRB 5.0" />
+    <meta name="keywords" content="TowBowlTactics Team Editor Roster Editor" />
+    <meta name="description" content="Manages TowBowlTactics Teamsheets" />
     <meta http-equiv="content-type" content="application/xhtml+xml;charset=utf-8" />
     <link rel="stylesheet" type="text/css" media="screen" href="public/styles/index.css" title="Default" />
   </head>
@@ -52,7 +52,7 @@
         <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
         <input type="hidden" name="upload" value="true" />
         <p>
-          <input name="userfile" type="file" />
+          <input name="userfile" type="file" class="file" />
           <input type="submit" />
         </p>
       </form>

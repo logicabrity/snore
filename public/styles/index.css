@@ -1,17 +1,28 @@
+/*
+  Colors "Chaos Inc. 2.0" by godsofchaos
+  - chaos brown       hex #a7a78a     rgb 167,167,138
+  - vanishing ground  hex #211b17     rgb 33,27,23
+  - DS                hex #eaeaea     rgb 234,234,234
+  - Scandium          hex #252525     rgb 37,37,37
+  - Lilz Faded Blue   hex #617e8f     rgb 97,126,143
+*/
+
 body {
-  background-color: #333333;
+  background-color: #211b17;
   font-family: sans-serif;
   margin: 0em;
   padding: 0em;
 }
 
-h1, h2 { color: #EEEEEE; }
-p, span, div { color: #DDDDDD; }
-a { text-decoration: none; color: #3380CD; }
+h1, h2 { color: #a7a78a; }
+p, span, div { color: #eaeaea; }
+a { text-decoration: none; color: #617e8f; }
 
 #container {
+  padding: 5px;
   width: 500px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 #meta h1 {
   font-size: 250%;
@@ -23,7 +34,9 @@ a { text-decoration: none; color: #3380CD; }
   font-style: italic;
   font-size: small;
 }
-
+input.file {
+  background-color: #a7a78a;
+}
 #language {
   padding: 0em;
   margin: 0em;
